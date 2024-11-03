@@ -49,8 +49,8 @@ function ImageGallery() {
                                     <ImageCard
                                         key={image.date}
                                         date={image.date}
-                                        preview={image.image_k}
-                                        full={image.image}
+                                        preview={'.' + image.image_k}
+                                        full={'.' + image.image}
                                         setSelectedImage={setSelectedImage}
                                     />
                                 ))}
