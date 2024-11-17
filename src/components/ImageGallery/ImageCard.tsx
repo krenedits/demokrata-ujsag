@@ -9,7 +9,12 @@ export const ImageCard: React.FC<ImageCardProps> = ({
     setSelectedImage,
 }) => (
     <div className='image-card' onClick={() => setSelectedImage(full)}>
-        <img src={preview || full} alt={date} className='image-preview' />
+        <img
+            src={preview || full}
+            alt={date}
+            className='image-preview'
+            loading='lazy'
+        />
         <p className='image-date'>{+date.split('-')[2]}. oldal</p>
     </div>
 );

@@ -4,7 +4,13 @@
       {
         "date": "1989-01-01",
         "image": "/images/1989/1989-01-01.jpg",
-        "image_k": "/images/1989/1989-01-01_k.jpg"
+        "image_k": "/images/1989/1989-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Nagyon nagy a tét"
+          }
+        ]
       },
       {
         "date": "1989-01-02",
@@ -14,7 +20,13 @@
       {
         "date": "1989-01-03",
         "image": "/images/1989/1989-01-03.jpg",
-        "image_k": "/images/1989/1989-01-03_k.jpg"
+        "image_k": "/images/1989/1989-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Településeink sorsa"
+          }
+        ]
       },
       {
         "date": "1989-01-04",
@@ -29,27 +41,61 @@
       {
         "date": "1989-01-06",
         "image": "/images/1989/1989-01-06.jpg",
-        "image_k": "/images/1989/1989-01-06_k.jpg"
+        "image_k": "/images/1989/1989-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Félrehallások, avagy nyelvoktatásunk margójára"
+          }
+        ]
       },
       {
         "date": "1989-01-07",
         "image": "/images/1989/1989-01-07.jpg",
-        "image_k": "/images/1989/1989-01-07_k.jpg"
+        "image_k": "/images/1989/1989-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Mint oldott kéve"
+          }
+        ]
       },
       {
         "date": "1989-01-08",
         "image": "/images/1989/1989-01-08.jpg",
-        "image_k": "/images/1989/1989-01-08_k.jpg"
+        "image_k": "/images/1989/1989-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "A Kéve három napja"
+          }
+        ]
       },
       {
         "date": "1989-01-09",
         "image": "/images/1989/1989-01-09.jpg",
-        "image_k": "/images/1989/1989-01-09_k.jpg"
+        "image_k": "/images/1989/1989-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "In memoriam Csudi"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Gyűjtők és mindenki figyelem!"
+          }
+        ]
       },
       {
         "date": "1989-01-10",
         "image": "/images/1989/1989-01-10.jpg",
-        "image_k": "/images/1989/1989-01-10_k.jpg"
+        "image_k": "/images/1989/1989-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Mi a cserkészet?"
+          }
+        ]
       },
       {
         "date": "1989-01-11",
@@ -59,7 +105,13 @@
       {
         "date": "1989-01-12",
         "image": "/images/1989/1989-01-12.jpg",
-        "image_k": "/images/1989/1989-01-12_k.jpg"
+        "image_k": "/images/1989/1989-01-12_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Viszony"
+          }
+        ]
       },
       {
         "date": "1989-01-13",
@@ -69,12 +121,24 @@
       {
         "date": "1989-01-14",
         "image": "/images/1989/1989-01-14.jpg",
-        "image_k": "/images/1989/1989-01-14_k.jpg"
+        "image_k": "/images/1989/1989-01-14_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Lesz-e Veresegyháznak címere?"
+          }
+        ]
       },
       {
         "date": "1989-01-15",
         "image": "/images/1989/1989-01-15.jpg",
-        "image_k": "/images/1989/1989-01-15_k.jpg"
+        "image_k": "/images/1989/1989-01-15_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "A magyar nép soha nem fog kiveszni"
+          }
+        ]
       },
       {
         "date": "1989-01-16",
@@ -86,42 +150,110 @@
       {
         "date": "1989-02-01",
         "image": "/images/1989/1989-02-01.jpg",
-        "image_k": "/images/1989/1989-02-01_k.jpg"
+        "image_k": "/images/1989/1989-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Miért nem akarok kommunizmust?"
+          }
+        ]
       },
       {
         "date": "1989-02-02",
         "image": "/images/1989/1989-02-02.jpg",
-        "image_k": "/images/1989/1989-02-02_k.jpg"
+        "image_k": "/images/1989/1989-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Közlemény, körözés <I>(humor)</I>"
+          }
+        ]
       },
       {
         "date": "1989-02-03",
         "image": "/images/1989/1989-02-03.jpg",
-        "image_k": "/images/1989/1989-02-03_k.jpg"
+        "image_k": "/images/1989/1989-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Isten mentő szeretete"
+          }
+        ]
       },
       {
         "date": "1989-02-04",
         "image": "/images/1989/1989-02-04.jpg",
-        "image_k": "/images/1989/1989-02-04_k.jpg"
+        "image_k": "/images/1989/1989-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "1944. december 10-11. <i>(Emlékezés a \"felszabadulásra\")</i>"
+          },
+          {
+            "author": "Rácz Ivánné",
+            "title": "Én láttam Sztálin ledöntését"
+          }
+        ]
       },
       {
         "date": "1989-02-05",
         "image": "/images/1989/1989-02-05.jpg",
-        "image_k": "/images/1989/1989-02-05_k.jpg"
+        "image_k": "/images/1989/1989-02-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Minden diktatúrával szembeszállt <i>(Peyer Károly)</i>"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Önkényes vagy önkéntes?"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Feloszlatták a munkásőrséget!"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Meg tud-e újulni a Hazafias Népfront?"
+          }
+        ]
       },
       {
         "date": "1989-02-06",
         "image": "/images/1989/1989-02-06.jpg",
-        "image_k": "/images/1989/1989-02-06_k.jpg"
+        "image_k": "/images/1989/1989-02-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Nemzeti gyászünnepünk"
+          }
+        ]
       },
       {
         "date": "1989-02-07",
         "image": "/images/1989/1989-02-07.jpg",
-        "image_k": "/images/1989/1989-02-07_k.jpg"
+        "image_k": "/images/1989/1989-02-07_k.jpg",
+        "articles": [
+          {
+            "author": "Rácz Ivánné",
+            "title": "Mi ügyben gondolkodunk, nem személyekben"
+          },
+          {
+            "author": "Rácz Ivánné",
+            "title": "Levél az államtitkárnak"
+          }
+        ]
       },
       {
         "date": "1989-02-08",
         "image": "/images/1989/1989-02-08.jpg",
-        "image_k": "/images/1989/1989-02-08_k.jpg"
+        "image_k": "/images/1989/1989-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "1. rész"
+          }
+        ]
       },
       {
         "date": "1989-02-09",
@@ -131,12 +263,28 @@
       {
         "date": "1989-02-10",
         "image": "/images/1989/1989-02-10.jpg",
-        "image_k": "/images/1989/1989-02-10_k.jpg"
+        "image_k": "/images/1989/1989-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "A menyecskék és a malacok"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Téli betegségek"
+          }
+        ]
       },
       {
         "date": "1989-02-11",
         "image": "/images/1989/1989-02-11.jpg",
-        "image_k": "/images/1989/1989-02-11_k.jpg"
+        "image_k": "/images/1989/1989-02-11_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Politikai manipuláció <i>(humor)</i>"
+          }
+        ]
       },
       {
         "date": "1989-02-12",
@@ -150,37 +298,79 @@
       {
         "date": "1990-01-01",
         "image": "/images/1990/1990-01-01.jpg",
-        "image_k": "/images/1990/1990-01-01_k.jpg"
+        "image_k": "/images/1990/1990-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Mindnyájunknak el kell menni!"
+          }
+        ]
       },
       {
         "date": "1990-01-02",
         "image": "/images/1990/1990-01-02.jpg",
-        "image_k": "/images/1990/1990-01-02_k.jpg"
+        "image_k": "/images/1990/1990-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Rejtvény"
+          }
+        ]
       },
       {
         "date": "1990-01-03",
         "image": "/images/1990/1990-01-03.jpg",
-        "image_k": "/images/1990/1990-01-03_k.jpg"
+        "image_k": "/images/1990/1990-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Nomen est omen!"
+          }
+        ]
       },
       {
         "date": "1990-01-04",
         "image": "/images/1990/1990-01-04.jpg",
-        "image_k": "/images/1990/1990-01-04_k.jpg"
+        "image_k": "/images/1990/1990-01-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Nyílt levél a falugyűlés egyik felszólalójához"
+          }
+        ]
       },
       {
         "date": "1990-01-05",
         "image": "/images/1990/1990-01-05.jpg",
-        "image_k": "/images/1990/1990-01-05_k.jpg"
+        "image_k": "/images/1990/1990-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Rácz Ivánné",
+            "title": "Gurul(ós) a málna exportra"
+          }
+        ]
       },
       {
         "date": "1990-01-06",
         "image": "/images/1990/1990-01-06.jpg",
-        "image_k": "/images/1990/1990-01-06_k.jpg"
+        "image_k": "/images/1990/1990-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Településeink"
+          }
+        ]
       },
       {
         "date": "1990-01-07",
         "image": "/images/1990/1990-01-07.jpg",
-        "image_k": "/images/1990/1990-01-07_k.jpg"
+        "image_k": "/images/1990/1990-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Most virrad magyarnak, románnak egyszerre és egyként?"
+          }
+        ]
       },
       {
         "date": "1990-01-08",
@@ -190,22 +380,50 @@
       {
         "date": "1990-01-09",
         "image": "/images/1990/1990-01-09.jpg",
-        "image_k": "/images/1990/1990-01-09_k.jpg"
+        "image_k": "/images/1990/1990-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Egy \"hiteles\" ember"
+          }
+        ]
       },
       {
         "date": "1990-01-10",
         "image": "/images/1990/1990-01-10.jpg",
-        "image_k": "/images/1990/1990-01-10_k.jpg"
+        "image_k": "/images/1990/1990-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Mi az igazság a veresi iskola konyháján?"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A mi (egyik) helyi, pici \"nemzeti színházunk\""
+          }
+        ]
       },
       {
         "date": "1990-01-11",
         "image": "/images/1990/1990-01-11.jpg",
-        "image_k": "/images/1990/1990-01-11_k.jpg"
+        "image_k": "/images/1990/1990-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ufók a falugyűlésen"
+          }
+        ]
       },
       {
         "date": "1990-01-12",
         "image": "/images/1990/1990-01-12.jpg",
-        "image_k": "/images/1990/1990-01-12_k.jpg"
+        "image_k": "/images/1990/1990-01-12_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Olvassa a Kereplőt is!"
+          }
+        ]
       }
     ],
     "02": [
@@ -217,7 +435,13 @@
       {
         "date": "1990-02-02",
         "image": "/images/1990/1990-02-02.jpg",
-        "image_k": "/images/1990/1990-02-02_k.jpg"
+        "image_k": "/images/1990/1990-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Csembalóval a nyugdíjasokért"
+          }
+        ]
       },
       {
         "date": "1990-02-03",
@@ -227,24 +451,48 @@
       {
         "date": "1990-02-04",
         "image": "/images/1990/1990-02-04.jpg",
-        "image_k": "/images/1990/1990-02-04_k.jpg"
+        "image_k": "/images/1990/1990-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Boldog asszony gyümölcsöt ojt"
+          }
+        ]
       }
     ],
     "03": [
       {
         "date": "1990-03-01",
         "image": "/images/1990/1990-03-01.jpg",
-        "image_k": "/images/1990/1990-03-01_k.jpg"
+        "image_k": "/images/1990/1990-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Rendszerváltást Veresegyházon is!"
+          }
+        ]
       },
       {
         "date": "1990-03-02",
         "image": "/images/1990/1990-03-02.jpg",
-        "image_k": "/images/1990/1990-03-02_k.jpg"
+        "image_k": "/images/1990/1990-03-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "2. rész"
+          }
+        ]
       },
       {
         "date": "1990-03-03",
         "image": "/images/1990/1990-03-03.jpg",
-        "image_k": "/images/1990/1990-03-03_k.jpg"
+        "image_k": "/images/1990/1990-03-03_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Nyílt levél a veresegyházi iskola igazgatójához"
+          }
+        ]
       },
       {
         "date": "1990-03-04",
@@ -259,17 +507,47 @@
       {
         "date": "1990-03-06",
         "image": "/images/1990/1990-03-06.jpg",
-        "image_k": "/images/1990/1990-03-06_k.jpg"
+        "image_k": "/images/1990/1990-03-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Levél Csehszlovákiából"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Atyha, a székelyföldi testvérfalu"
+          }
+        ]
       },
       {
         "date": "1990-03-07",
         "image": "/images/1990/1990-03-07.jpg",
-        "image_k": "/images/1990/1990-03-07_k.jpg"
+        "image_k": "/images/1990/1990-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ne kérdezd, ki voltam"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1990-03-08",
         "image": "/images/1990/1990-03-08.jpg",
-        "image_k": "/images/1990/1990-03-08_k.jpg"
+        "image_k": "/images/1990/1990-03-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Holland kórus Pest megyében"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Gondolatok egy ver(eked)és ürügyén"
+          }
+        ]
       },
       {
         "date": "1990-03-09",
@@ -284,7 +562,21 @@
       {
         "date": "1990-03-11",
         "image": "/images/1990/1990-03-11.jpg",
-        "image_k": "/images/1990/1990-03-11_k.jpg"
+        "image_k": "/images/1990/1990-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Nomina odiosa"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Parlamenti tüskék"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Veresi a spanyolviasz feltalálója"
+          }
+        ]
       },
       {
         "date": "1990-03-12",
@@ -296,7 +588,8 @@
       {
         "date": "1990-04-01",
         "image": "/images/1990/1990-04-01.jpg",
-        "image_k": "/images/1990/1990-04-01_k.jpg"
+        "image_k": "/images/1990/1990-04-01_k.jpg",
+        "articles": []
       },
       {
         "date": "1990-04-02",
@@ -306,7 +599,13 @@
       {
         "date": "1990-04-03",
         "image": "/images/1990/1990-04-03.jpg",
-        "image_k": "/images/1990/1990-04-03_k.jpg"
+        "image_k": "/images/1990/1990-04-03_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Leváltjuk a tanácsrendszert!"
+          }
+        ]
       },
       {
         "date": "1990-04-04",
@@ -316,17 +615,39 @@
       {
         "date": "1990-04-05",
         "image": "/images/1990/1990-04-05.jpg",
-        "image_k": "/images/1990/1990-04-05_k.jpg"
+        "image_k": "/images/1990/1990-04-05_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1990-04-06",
         "image": "/images/1990/1990-04-06.jpg",
-        "image_k": "/images/1990/1990-04-06_k.jpg"
+        "image_k": "/images/1990/1990-04-06_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Választási bemutatkozó"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1990-04-07",
         "image": "/images/1990/1990-04-07.jpg",
-        "image_k": "/images/1990/1990-04-07_k.jpg"
+        "image_k": "/images/1990/1990-04-07_k.jpg",
+        "articles": [
+          {
+            "author": "Rácz Ivánné",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1990-04-08",
@@ -341,12 +662,32 @@
       {
         "date": "1990-04-10",
         "image": "/images/1990/1990-04-10.jpg",
-        "image_k": "/images/1990/1990-04-10_k.jpg"
+        "image_k": "/images/1990/1990-04-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ha a momdat elején..."
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Emberhez méltóan"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Drága falunk!"
+          }
+        ]
       },
       {
         "date": "1990-04-11",
         "image": "/images/1990/1990-04-11.jpg",
-        "image_k": "/images/1990/1990-04-11_k.jpg"
+        "image_k": "/images/1990/1990-04-11_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Mire nem való a községháza?"
+          }
+        ]
       },
       {
         "date": "1990-04-12",
@@ -358,7 +699,8 @@
       {
         "date": "1990-05-01",
         "image": "/images/1990/1990-05-01.jpg",
-        "image_k": "/images/1990/1990-05-01_k.jpg"
+        "image_k": "/images/1990/1990-05-01_k.jpg",
+        "articles": []
       },
       {
         "date": "1990-05-02",
@@ -373,12 +715,24 @@
       {
         "date": "1990-05-04",
         "image": "/images/1990/1990-05-04.jpg",
-        "image_k": "/images/1990/1990-05-04_k.jpg"
+        "image_k": "/images/1990/1990-05-04_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Sem hiteles emberek, sem hiteles társaság"
+          }
+        ]
       },
       {
         "date": "1990-05-05",
         "image": "/images/1990/1990-05-05.jpg",
-        "image_k": "/images/1990/1990-05-05_k.jpg"
+        "image_k": "/images/1990/1990-05-05_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Az 1956-os népfelkelés eseményei Veresen"
+          }
+        ]
       },
       {
         "date": "1990-05-06",
@@ -388,7 +742,13 @@
       {
         "date": "1990-05-07",
         "image": "/images/1990/1990-05-07.jpg",
-        "image_k": "/images/1990/1990-05-07_k.jpg"
+        "image_k": "/images/1990/1990-05-07_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ki vezet be az ígéret földjére?"
+          }
+        ]
       },
       {
         "date": "1990-05-08",
@@ -398,17 +758,43 @@
       {
         "date": "1990-05-09",
         "image": "/images/1990/1990-05-09.jpg",
-        "image_k": "/images/1990/1990-05-09_k.jpg"
+        "image_k": "/images/1990/1990-05-09_k.jpg",
+        "articles": [
+          {
+            "author": "Rácz Ivánné",
+            "title": "Kilakoltatás rendőri karhatalommal"
+          }
+        ]
       },
       {
         "date": "1990-05-10",
         "image": "/images/1990/1990-05-10.jpg",
-        "image_k": "/images/1990/1990-05-10_k.jpg"
+        "image_k": "/images/1990/1990-05-10_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Mit akar a helyi MDF?"
+          },
+          {
+            "author": "Hevesi János",
+            "title": "A pótolhatatlanság receptje"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Hová lett a veresi múzeum, Pásztor elvtárs?"
+          }
+        ]
       },
       {
         "date": "1990-05-11",
         "image": "/images/1990/1990-05-11.jpg",
-        "image_k": "/images/1990/1990-05-11_k.jpg"
+        "image_k": "/images/1990/1990-05-11_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Tisztavatás 1990"
+          }
+        ]
       },
       {
         "date": "1990-05-12",
@@ -418,7 +804,17 @@
       {
         "date": "1990-05-13",
         "image": "/images/1990/1990-05-13.jpg",
-        "image_k": "/images/1990/1990-05-13_k.jpg"
+        "image_k": "/images/1990/1990-05-13_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Pásztor Béla lepaktált az SZDSZ-szel"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Most fürdő vagy nem fürdő?"
+          }
+        ]
       },
       {
         "date": "1990-05-14",
@@ -428,7 +824,21 @@
       {
         "date": "1990-05-15",
         "image": "/images/1990/1990-05-15.jpg",
-        "image_k": "/images/1990/1990-05-15_k.jpg"
+        "image_k": "/images/1990/1990-05-15_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Visszatértek az ufók!"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A DemokTravel buszjáratai"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Telefax-ni"
+          }
+        ]
       },
       {
         "date": "1990-05-16",
@@ -440,12 +850,24 @@
       {
         "date": "1990-06-01",
         "image": "/images/1990/1990-06-01.jpg",
-        "image_k": "/images/1990/1990-06-01_k.jpg"
+        "image_k": "/images/1990/1990-06-01_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Karácsony elé"
+          }
+        ]
       },
       {
         "date": "1990-06-02",
         "image": "/images/1990/1990-06-02.jpg",
-        "image_k": "/images/1990/1990-06-02_k.jpg"
+        "image_k": "/images/1990/1990-06-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Veresegyház önkormányzata megkezdte munkáját"
+          }
+        ]
       },
       {
         "date": "1990-06-03",
@@ -460,7 +882,17 @@
       {
         "date": "1990-06-05",
         "image": "/images/1990/1990-06-05.jpg",
-        "image_k": "/images/1990/1990-06-05_k.jpg"
+        "image_k": "/images/1990/1990-06-05_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Farkas József bemutatkozása"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Veresegyház nagyközség címere és zászlaja"
+          }
+        ]
       },
       {
         "date": "1990-06-06",
@@ -475,17 +907,35 @@
       {
         "date": "1990-06-08",
         "image": "/images/1990/1990-06-08.jpg",
-        "image_k": "/images/1990/1990-06-08_k.jpg"
+        "image_k": "/images/1990/1990-06-08_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Kései sírbeszéd Zólyomi Géza hantja felett"
+          }
+        ]
       },
       {
         "date": "1990-06-09",
         "image": "/images/1990/1990-06-09.jpg",
-        "image_k": "/images/1990/1990-06-09_k.jpg"
+        "image_k": "/images/1990/1990-06-09_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Kölcsey"
+          }
+        ]
       },
       {
         "date": "1990-06-10",
         "image": "/images/1990/1990-06-10.jpg",
-        "image_k": "/images/1990/1990-06-10_k.jpg"
+        "image_k": "/images/1990/1990-06-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ritka (szép) jubileum"
+          }
+        ]
       },
       {
         "date": "1990-06-11",
@@ -504,7 +954,21 @@
       {
         "date": "1991-01-01",
         "image": "/images/1991/1991-01-01.jpg",
-        "image_k": "/images/1991/1991-01-01_k.jpg"
+        "image_k": "/images/1991/1991-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Nagyböjt idején"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "A szabadság kapujában"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "A veresegyházi jegyzőügy"
+          }
+        ]
       },
       {
         "date": "1991-01-02",
@@ -514,47 +978,125 @@
       {
         "date": "1991-01-03",
         "image": "/images/1991/1991-01-03.jpg",
-        "image_k": "/images/1991/1991-01-03_k.jpg"
+        "image_k": "/images/1991/1991-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "TÜK!"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Történet a szerénységről"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Sokba kerül a demokrácia"
+          }
+        ]
       },
       {
         "date": "1991-01-04",
         "image": "/images/1991/1991-01-04.jpg",
-        "image_k": "/images/1991/1991-01-04_k.jpg"
+        "image_k": "/images/1991/1991-01-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A Wittmann-ház"
+          }
+        ]
       },
       {
         "date": "1991-01-05",
         "image": "/images/1991/1991-01-05.jpg",
-        "image_k": "/images/1991/1991-01-05_k.jpg"
+        "image_k": "/images/1991/1991-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Mi dolgunk lehet még?"
+          }
+        ]
       },
       {
         "date": "1991-01-06",
         "image": "/images/1991/1991-01-06.jpg",
-        "image_k": "/images/1991/1991-01-06_k.jpg"
+        "image_k": "/images/1991/1991-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Koncert ése alapítvány a veresegyházi részorultakért"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Bemutatjuk az Ifjúsági Demokrata Fórumot"
+          }
+        ]
       },
       {
         "date": "1991-01-07",
         "image": "/images/1991/1991-01-07.jpg",
-        "image_k": "/images/1991/1991-01-07_k.jpg"
+        "image_k": "/images/1991/1991-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kölcsey és Nyögte Mátyás bús hadát..."
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Zöldövezet <i>(vers)</i>"
+          }
+        ]
       },
       {
         "date": "1991-01-08",
         "image": "/images/1991/1991-01-08.jpg",
-        "image_k": "/images/1991/1991-01-08_k.jpg"
+        "image_k": "/images/1991/1991-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Richter István (1926-1990)"
+          }
+        ]
       },
       {
         "date": "1991-01-09",
         "image": "/images/1991/1991-01-09.jpg",
-        "image_k": "/images/1991/1991-01-09_k.jpg"
+        "image_k": "/images/1991/1991-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Nemzeti  színű zászlónk"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Fehér ló monda"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Éljen a szabad, független és demokratikus Litvánia!"
+          }
+        ]
       },
       {
         "date": "1991-01-10",
         "image": "/images/1991/1991-01-10.jpg",
-        "image_k": "/images/1991/1991-01-10_k.jpg"
+        "image_k": "/images/1991/1991-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A lakosság döntse el!"
+          }
+        ]
       },
       {
         "date": "1991-01-11",
         "image": "/images/1991/1991-01-11.jpg",
-        "image_k": "/images/1991/1991-01-11_k.jpg"
+        "image_k": "/images/1991/1991-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Az ufók búcsúja"
+          }
+        ]
       },
       {
         "date": "1991-01-12",
@@ -581,7 +1123,13 @@
       {
         "date": "1991-02-04",
         "image": "/images/1991/1991-02-04.jpg",
-        "image_k": "/images/1991/1991-02-04_k.jpg"
+        "image_k": "/images/1991/1991-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "A Feket Párduc vallomása"
+          }
+        ]
       },
       {
         "date": "1991-02-05",
@@ -601,7 +1149,13 @@
       {
         "date": "1991-02-08",
         "image": "/images/1991/1991-02-08.jpg",
-        "image_k": "/images/1991/1991-02-08_k.jpg"
+        "image_k": "/images/1991/1991-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Veresegyház 1944-45 fordulóján"
+          }
+        ]
       },
       {
         "date": "1991-02-09",
@@ -611,7 +1165,13 @@
       {
         "date": "1991-02-10",
         "image": "/images/1991/1991-02-10.jpg",
-        "image_k": "/images/1991/1991-02-10_k.jpg"
+        "image_k": "/images/1991/1991-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Hozzászólás önkormányzati testületi üléshez"
+          }
+        ]
       },
       {
         "date": "1991-02-11",
@@ -628,12 +1188,24 @@
       {
         "date": "1991-03-01",
         "image": "/images/1991/1991-03-01.jpg",
-        "image_k": "/images/1991/1991-03-01_k.jpg"
+        "image_k": "/images/1991/1991-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Megszabadultunk végre a szovjet megszállástól!"
+          }
+        ]
       },
       {
         "date": "1991-03-02",
         "image": "/images/1991/1991-03-02.jpg",
-        "image_k": "/images/1991/1991-03-02_k.jpg"
+        "image_k": "/images/1991/1991-03-02_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Beszámolt a képviselő <i>(Bogárdi Zoltán)</i>"
+          }
+        ]
       },
       {
         "date": "1991-03-03",
@@ -648,22 +1220,58 @@
       {
         "date": "1991-03-05",
         "image": "/images/1991/1991-03-05.jpg",
-        "image_k": "/images/1991/1991-03-05_k.jpg"
+        "image_k": "/images/1991/1991-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "In memoriam Bata Sándor"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Az önkormányzat nem szervezi"
+          }
+        ]
       },
       {
         "date": "1991-03-06",
         "image": "/images/1991/1991-03-06.jpg",
-        "image_k": "/images/1991/1991-03-06_k.jpg"
+        "image_k": "/images/1991/1991-03-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Héber felirat az \"úttörő\" táboron"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Kis hír nagy prémiumról"
+          }
+        ]
       },
       {
         "date": "1991-03-07",
         "image": "/images/1991/1991-03-07.jpg",
-        "image_k": "/images/1991/1991-03-07_k.jpg"
+        "image_k": "/images/1991/1991-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "1. rész"
+          },
+          {
+            "author": "Hevesi János",
+            "title": "Ismételt igazgatóválasztás az iskolában"
+          }
+        ]
       },
       {
         "date": "1991-03-08",
         "image": "/images/1991/1991-03-08.jpg",
-        "image_k": "/images/1991/1991-03-08_k.jpg"
+        "image_k": "/images/1991/1991-03-08_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Vegyük vissza földjeinket!"
+          }
+        ]
       },
       {
         "date": "1991-03-09",
@@ -673,94 +1281,218 @@
       {
         "date": "1991-03-10",
         "image": "/images/1991/1991-03-10.jpg",
-        "image_k": "/images/1991/1991-03-10_k.jpg"
+        "image_k": "/images/1991/1991-03-10_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "A veresegyházi költségvetés margójára"
+          }
+        ]
       },
       {
         "date": "1991-03-11",
         "image": "/images/1991/1991-03-11.jpg",
-        "image_k": "/images/1991/1991-03-11_k.jpg"
+        "image_k": "/images/1991/1991-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Szép kilátás - szép kilátások"
+          }
+        ]
       },
       {
         "date": "1991-03-12",
         "image": "/images/1991/1991-03-12.jpg",
-        "image_k": "/images/1991/1991-03-12_k.jpg"
+        "image_k": "/images/1991/1991-03-12_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "Adjunk, adakozzunk!"
+          }
+        ]
       }
     ],
     "04": [
       {
         "date": "1991-04-01",
         "image": "/images/1991/1991-04-01.jpg",
-        "image_k": "/images/1991/1991-04-01_k.jpg"
+        "image_k": "/images/1991/1991-04-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Dilemmában vagyok a föld miatt"
+          }
+        ]
       },
       {
         "date": "1991-04-02",
         "image": "/images/1991/1991-04-02.jpg",
-        "image_k": "/images/1991/1991-04-02_k.jpg"
+        "image_k": "/images/1991/1991-04-02_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "István király"
+          }
+        ]
       },
       {
         "date": "1991-04-03",
         "image": "/images/1991/1991-04-03.jpg",
-        "image_k": "/images/1991/1991-04-03_k.jpg"
+        "image_k": "/images/1991/1991-04-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Megkérdőjelezett szabadságünnep"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Veresegyház II. világháborús embervesztesége"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Lengyelke"
+          }
+        ]
       },
       {
         "date": "1991-04-04",
         "image": "/images/1991/1991-04-04.jpg",
-        "image_k": "/images/1991/1991-04-04_k.jpg"
+        "image_k": "/images/1991/1991-04-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Veresegyházi református ifjak Hollandiában"
+          }
+        ]
       },
       {
         "date": "1991-04-05",
         "image": "/images/1991/1991-04-05.jpg",
-        "image_k": "/images/1991/1991-04-05_k.jpg"
+        "image_k": "/images/1991/1991-04-05_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "\"Kéznyújtást a bajban\""
+          },
+          {
+            "author": "Rácz Ivánné",
+            "title": "Örömhír kisnyugdíjasoknak"
+          }
+        ]
       },
       {
         "date": "1991-04-06",
         "image": "/images/1991/1991-04-06.jpg",
-        "image_k": "/images/1991/1991-04-06_k.jpg"
+        "image_k": "/images/1991/1991-04-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Kárpótlás=föld + igazságszolgáltatás"
+          }
+        ]
       },
       {
         "date": "1991-04-07",
         "image": "/images/1991/1991-04-07.jpg",
-        "image_k": "/images/1991/1991-04-07_k.jpg"
+        "image_k": "/images/1991/1991-04-07_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Azok figyelmébe, akik telefonra fizettek be Veresen"
+          }
+        ]
       },
       {
         "date": "1991-04-08",
         "image": "/images/1991/1991-04-08.jpg",
-        "image_k": "/images/1991/1991-04-08_k.jpg"
+        "image_k": "/images/1991/1991-04-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "TÜK-örkép"
+          }
+        ]
       },
       {
         "date": "1991-04-09",
         "image": "/images/1991/1991-04-09.jpg",
-        "image_k": "/images/1991/1991-04-09_k.jpg"
+        "image_k": "/images/1991/1991-04-09_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "2. rész"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "A polgármester nem hajlandó írásban tájékoztatni"
+          }
+        ]
       },
       {
         "date": "1991-04-10",
         "image": "/images/1991/1991-04-10.jpg",
-        "image_k": "/images/1991/1991-04-10_k.jpg"
+        "image_k": "/images/1991/1991-04-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Levél Ufóniából"
+          }
+        ]
       },
       {
         "date": "1991-04-11",
         "image": "/images/1991/1991-04-11.jpg",
-        "image_k": "/images/1991/1991-04-11_k.jpg"
+        "image_k": "/images/1991/1991-04-11_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Egy főszerkesztő leváltása ürügyén"
+          }
+        ]
       },
       {
         "date": "1991-04-12",
         "image": "/images/1991/1991-04-12.jpg",
-        "image_k": "/images/1991/1991-04-12_k.jpg"
+        "image_k": "/images/1991/1991-04-12_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Hazafias kirándulás Kárpátalján"
+          }
+        ]
       },
       {
         "date": "1991-04-13",
         "image": "/images/1991/1991-04-13.jpg",
-        "image_k": "/images/1991/1991-04-13_k.jpg"
+        "image_k": "/images/1991/1991-04-13_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Mit ér a világútlevél a SZU-ban?"
+          }
+        ]
       },
       {
         "date": "1991-04-14",
         "image": "/images/1991/1991-04-14.jpg",
-        "image_k": "/images/1991/1991-04-14_k.jpg"
+        "image_k": "/images/1991/1991-04-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Minden héten disznóölés"
+          }
+        ]
       },
       {
         "date": "1991-04-15",
         "image": "/images/1991/1991-04-15.jpg",
-        "image_k": "/images/1991/1991-04-15_k.jpg"
+        "image_k": "/images/1991/1991-04-15_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Takácsék újabb aranyai"
+          }
+        ]
       },
       {
         "date": "1991-04-16",
@@ -782,12 +1514,32 @@
       {
         "date": "1991-06-02",
         "image": "/images/1991/1991-06-02.jpg",
-        "image_k": "/images/1991/1991-06-02_k.jpg"
+        "image_k": "/images/1991/1991-06-02_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Árpád-házi Szent Erzsébet"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Csendes nap Veresegyházon"
+          },
+          {
+            "author": "Koczó Pál",
+            "title": "Mikor lesz igazi karácsonyunk?"
+          }
+        ]
       },
       {
         "date": "1991-06-03",
         "image": "/images/1991/1991-06-03.jpg",
-        "image_k": "/images/1991/1991-06-03_k.jpg"
+        "image_k": "/images/1991/1991-06-03_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "A veresegyházi reformátusok Hollandiában"
+          }
+        ]
       },
       {
         "date": "1991-06-04",
@@ -797,12 +1549,24 @@
       {
         "date": "1991-06-05",
         "image": "/images/1991/1991-06-05.jpg",
-        "image_k": "/images/1991/1991-06-05_k.jpg"
+        "image_k": "/images/1991/1991-06-05_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Veresegyház az ország legeladósodottabb községe"
+          }
+        ]
       },
       {
         "date": "1991-06-06",
         "image": "/images/1991/1991-06-06.jpg",
-        "image_k": "/images/1991/1991-06-06_k.jpg"
+        "image_k": "/images/1991/1991-06-06_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Nemzeti hadseregről"
+          }
+        ]
       },
       {
         "date": "1991-06-07",
@@ -812,27 +1576,61 @@
       {
         "date": "1991-06-08",
         "image": "/images/1991/1991-06-08.jpg",
-        "image_k": "/images/1991/1991-06-08_k.jpg"
+        "image_k": "/images/1991/1991-06-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "56-os emlékérem egykori orvosunknak"
+          }
+        ]
       },
       {
         "date": "1991-06-09",
         "image": "/images/1991/1991-06-09.jpg",
-        "image_k": "/images/1991/1991-06-09_k.jpg"
+        "image_k": "/images/1991/1991-06-09_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Szennylap?"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Hogy is van ez?"
+          }
+        ]
       },
       {
         "date": "1991-06-10",
         "image": "/images/1991/1991-06-10.jpg",
-        "image_k": "/images/1991/1991-06-10_k.jpg"
+        "image_k": "/images/1991/1991-06-10_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Istennel a népért"
+          }
+        ]
       },
       {
         "date": "1991-06-11",
         "image": "/images/1991/1991-06-11.jpg",
-        "image_k": "/images/1991/1991-06-11_k.jpg"
+        "image_k": "/images/1991/1991-06-11_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Az idegen"
+          }
+        ]
       },
       {
         "date": "1991-06-12",
         "image": "/images/1991/1991-06-12.jpg",
-        "image_k": "/images/1991/1991-06-12_k.jpg"
+        "image_k": "/images/1991/1991-06-12_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "A gödöllői művésztelep és a Remsey fivérek"
+          }
+        ]
       },
       {
         "date": "1991-06-13",
@@ -842,12 +1640,32 @@
       {
         "date": "1991-06-14",
         "image": "/images/1991/1991-06-14.jpg",
-        "image_k": "/images/1991/1991-06-14_k.jpg"
+        "image_k": "/images/1991/1991-06-14_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "Lenin illegalitásban Veresen!?"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "\"Az MDF vágóhídra küldi fiainkat\""
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Nagy Rezső, községünk egykori lakója"
+          }
+        ]
       },
       {
         "date": "1991-06-15",
         "image": "/images/1991/1991-06-15.jpg",
-        "image_k": "/images/1991/1991-06-15_k.jpg"
+        "image_k": "/images/1991/1991-06-15_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Megválasztották az új iskolaigazgatót"
+          }
+        ]
       },
       {
         "date": "1991-06-16",
@@ -861,17 +1679,47 @@
       {
         "date": "1992-01-01",
         "image": "/images/1992/1992-01-01.jpg",
-        "image_k": "/images/1992/1992-01-01_k.jpg"
+        "image_k": "/images/1992/1992-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Nemzeti ünnepünk a hívő ember szemével"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A vélemény szabad"
+          }
+        ]
       },
       {
         "date": "1992-01-02",
         "image": "/images/1992/1992-01-02.jpg",
-        "image_k": "/images/1992/1992-01-02_k.jpg"
+        "image_k": "/images/1992/1992-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Csak ha pontosak"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Üzemben a kábeltévé"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Elköszön a szerkesztő"
+          }
+        ]
       },
       {
         "date": "1992-01-03",
         "image": "/images/1992/1992-01-03.jpg",
-        "image_k": "/images/1992/1992-01-03_k.jpg"
+        "image_k": "/images/1992/1992-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Nem eladó? Eladó?"
+          }
+        ]
       },
       {
         "date": "1992-01-04",
@@ -881,12 +1729,32 @@
       {
         "date": "1992-01-05",
         "image": "/images/1992/1992-01-05.jpg",
-        "image_k": "/images/1992/1992-01-05_k.jpg"
+        "image_k": "/images/1992/1992-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Büdösség"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Menekültek örömére"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Magyar óceánrepülés"
+          }
+        ]
       },
       {
         "date": "1992-01-06",
         "image": "/images/1992/1992-01-06.jpg",
-        "image_k": "/images/1992/1992-01-06_k.jpg"
+        "image_k": "/images/1992/1992-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "A Szent Erzsébet Alapítvány támogatói"
+          }
+        ]
       },
       {
         "date": "1992-01-07",
@@ -896,32 +1764,76 @@
       {
         "date": "1992-01-08",
         "image": "/images/1992/1992-01-08.jpg",
-        "image_k": "/images/1992/1992-01-08_k.jpg"
+        "image_k": "/images/1992/1992-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Zenés farsang"
+          }
+        ]
       },
       {
         "date": "1992-01-09",
         "image": "/images/1992/1992-01-09.jpg",
-        "image_k": "/images/1992/1992-01-09_k.jpg"
+        "image_k": "/images/1992/1992-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Dr. Antal Sándor emlékére"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "A gödöllői bombázás"
+          }
+        ]
       },
       {
         "date": "1992-01-10",
         "image": "/images/1992/1992-01-10.jpg",
-        "image_k": "/images/1992/1992-01-10_k.jpg"
+        "image_k": "/images/1992/1992-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Javaslat telefonügyben"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Elszabotált falugyűlés"
+          }
+        ]
       },
       {
         "date": "1992-01-11",
         "image": "/images/1992/1992-01-11.jpg",
-        "image_k": "/images/1992/1992-01-11_k.jpg"
+        "image_k": "/images/1992/1992-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Tájékoztató a szövetkezeti törvényről"
+          }
+        ]
       },
       {
         "date": "1992-01-12",
         "image": "/images/1992/1992-01-12.jpg",
-        "image_k": "/images/1992/1992-01-12_k.jpg"
+        "image_k": "/images/1992/1992-01-12_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Felhívás szövetkezeti tagok és örököseik részére"
+          }
+        ]
       },
       {
         "date": "1992-01-13",
         "image": "/images/1992/1992-01-13.jpg",
-        "image_k": "/images/1992/1992-01-13_k.jpg"
+        "image_k": "/images/1992/1992-01-13_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "Társadaloombiztosítás - szabad orvosválasztás"
+          }
+        ]
       },
       {
         "date": "1992-01-14",
@@ -931,7 +1843,13 @@
       {
         "date": "1992-01-15",
         "image": "/images/1992/1992-01-15.jpg",
-        "image_k": "/images/1992/1992-01-15_k.jpg"
+        "image_k": "/images/1992/1992-01-15_k.jpg",
+        "articles": [
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Kedves Lányok, Fiúk!"
+          }
+        ]
       },
       {
         "date": "1992-01-16",
@@ -943,32 +1861,76 @@
       {
         "date": "1992-02-01",
         "image": "/images/1992/1992-02-01.jpg",
-        "image_k": "/images/1992/1992-02-01_k.jpg"
+        "image_k": "/images/1992/1992-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Az általános iskola új igazgatója"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Gondolatok a falugyűlésről"
+          }
+        ]
       },
       {
         "date": "1992-02-02",
         "image": "/images/1992/1992-02-02.jpg",
-        "image_k": "/images/1992/1992-02-02_k.jpg"
+        "image_k": "/images/1992/1992-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Vízi sport Veresen"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Takács lányok a budapesti városházán"
+          }
+        ]
       },
       {
         "date": "1992-02-03",
         "image": "/images/1992/1992-02-03.jpg",
-        "image_k": "/images/1992/1992-02-03_k.jpg"
+        "image_k": "/images/1992/1992-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Malomnosztalgia"
+          }
+        ]
       },
       {
         "date": "1992-02-04",
         "image": "/images/1992/1992-02-04.jpg",
-        "image_k": "/images/1992/1992-02-04_k.jpg"
+        "image_k": "/images/1992/1992-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Vidám majális"
+          }
+        ]
       },
       {
         "date": "1992-02-05",
         "image": "/images/1992/1992-02-05.jpg",
-        "image_k": "/images/1992/1992-02-05_k.jpg"
+        "image_k": "/images/1992/1992-02-05_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Veresen fáj még a demokrácia!"
+          }
+        ]
       },
       {
         "date": "1992-02-06",
         "image": "/images/1992/1992-02-06.jpg",
-        "image_k": "/images/1992/1992-02-06_k.jpg"
+        "image_k": "/images/1992/1992-02-06_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "Orvosválasztás"
+          }
+        ]
       },
       {
         "date": "1992-02-07",
@@ -978,42 +1940,126 @@
       {
         "date": "1992-02-08",
         "image": "/images/1992/1992-02-08.jpg",
-        "image_k": "/images/1992/1992-02-08_k.jpg"
+        "image_k": "/images/1992/1992-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Önkormányzat-működ(és)"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Dráguló ivóvizünk!"
+          }
+        ]
       },
       {
         "date": "1992-02-09",
         "image": "/images/1992/1992-02-09.jpg",
-        "image_k": "/images/1992/1992-02-09_k.jpg"
+        "image_k": "/images/1992/1992-02-09_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "3. rész"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Helyreigazítás"
+          }
+        ]
       },
       {
         "date": "1992-02-10",
         "image": "/images/1992/1992-02-10.jpg",
-        "image_k": "/images/1992/1992-02-10_k.jpg"
+        "image_k": "/images/1992/1992-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Jövel, Szentlélek Úr Isten!"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Mindennapi kenyerünket..."
+          }
+        ]
       },
       {
         "date": "1992-02-11",
         "image": "/images/1992/1992-02-11.jpg",
-        "image_k": "/images/1992/1992-02-11_k.jpg"
+        "image_k": "/images/1992/1992-02-11_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Vállal magasb mindeneknél"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Történelmi felvonulás, tanulságokkal"
+          }
+        ]
       },
       {
         "date": "1992-02-12",
         "image": "/images/1992/1992-02-12.jpg",
-        "image_k": "/images/1992/1992-02-12_k.jpg"
+        "image_k": "/images/1992/1992-02-12_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Egy régebbi alapítványról"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "A vonós kamarazenekar vendégszereplése"
+          }
+        ]
       },
       {
         "date": "1992-02-13",
         "image": "/images/1992/1992-02-13.jpg",
-        "image_k": "/images/1992/1992-02-13_k.jpg"
+        "image_k": "/images/1992/1992-02-13_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Az elmosott behívóparancs"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kisállat-kiállítás"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ezer tulipán"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Állomásavatás"
+          }
+        ]
       },
       {
         "date": "1992-02-14",
         "image": "/images/1992/1992-02-14.jpg",
-        "image_k": "/images/1992/1992-02-14_k.jpg"
+        "image_k": "/images/1992/1992-02-14_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Továbbra is a Lenin(i) úton"
+          }
+        ]
       },
       {
         "date": "1992-02-15",
         "image": "/images/1992/1992-02-15.jpg",
-        "image_k": "/images/1992/1992-02-15_k.jpg"
+        "image_k": "/images/1992/1992-02-15_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Különös jelenség Veresegyházon"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Lefegyverezés"
+          }
+        ]
       },
       {
         "date": "1992-02-16",
@@ -1040,42 +2086,102 @@
       {
         "date": "1992-03-04",
         "image": "/images/1992/1992-03-04.jpg",
-        "image_k": "/images/1992/1992-03-04_k.jpg"
+        "image_k": "/images/1992/1992-03-04_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Augusztus 15., nagyboldogasszony"
+          }
+        ]
       },
       {
         "date": "1992-03-05",
         "image": "/images/1992/1992-03-05.jpg",
-        "image_k": "/images/1992/1992-03-05_k.jpg"
+        "image_k": "/images/1992/1992-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Utazunk"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Anna nem örök"
+          }
+        ]
       },
       {
         "date": "1992-03-06",
         "image": "/images/1992/1992-03-06.jpg",
-        "image_k": "/images/1992/1992-03-06_k.jpg"
+        "image_k": "/images/1992/1992-03-06_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Csatorna"
+          }
+        ]
       },
       {
         "date": "1992-03-07",
         "image": "/images/1992/1992-03-07.jpg",
-        "image_k": "/images/1992/1992-03-07_k.jpg"
+        "image_k": "/images/1992/1992-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Vezetőségválasztás meglepetéssel"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Önkormányzati hírek"
+          }
+        ]
       },
       {
         "date": "1992-03-08",
         "image": "/images/1992/1992-03-08.jpg",
-        "image_k": "/images/1992/1992-03-08_k.jpg"
+        "image_k": "/images/1992/1992-03-08_k.jpg",
+        "articles": [
+          {
+            "author": "Rácz Ivánné",
+            "title": "Azok a kedves, szép idők"
+          }
+        ]
       },
       {
         "date": "1992-03-09",
         "image": "/images/1992/1992-03-09.jpg",
-        "image_k": "/images/1992/1992-03-09_k.jpg"
+        "image_k": "/images/1992/1992-03-09_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Atyha-fiak"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Egy kis irodalomtörténet"
+          }
+        ]
       },
       {
         "date": "1992-03-10",
         "image": "/images/1992/1992-03-10.jpg",
-        "image_k": "/images/1992/1992-03-10_k.jpg"
+        "image_k": "/images/1992/1992-03-10_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Fatimai Boldogasszony"
+          }
+        ]
       },
       {
         "date": "1992-03-11",
         "image": "/images/1992/1992-03-11.jpg",
-        "image_k": "/images/1992/1992-03-11_k.jpg"
+        "image_k": "/images/1992/1992-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Gondviselő, jó atyám vagy"
+          }
+        ]
       },
       {
         "date": "1992-03-12",
@@ -1085,17 +2191,39 @@
       {
         "date": "1992-03-13",
         "image": "/images/1992/1992-03-13.jpg",
-        "image_k": "/images/1992/1992-03-13_k.jpg"
+        "image_k": "/images/1992/1992-03-13_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Zenei tábor"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Egy néni elköltözött"
+          }
+        ]
       },
       {
         "date": "1992-03-14",
         "image": "/images/1992/1992-03-14.jpg",
-        "image_k": "/images/1992/1992-03-14_k.jpg"
+        "image_k": "/images/1992/1992-03-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Magyarok Brazíliában"
+          }
+        ]
       },
       {
         "date": "1992-03-15",
         "image": "/images/1992/1992-03-15.jpg",
-        "image_k": "/images/1992/1992-03-15_k.jpg"
+        "image_k": "/images/1992/1992-03-15_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Csakis az igazat"
+          }
+        ]
       },
       {
         "date": "1992-03-16",
@@ -1107,42 +2235,94 @@
       {
         "date": "1992-04-01",
         "image": "/images/1992/1992-04-01.jpg",
-        "image_k": "/images/1992/1992-04-01_k.jpg"
+        "image_k": "/images/1992/1992-04-01_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Hogyan kell a hazát szeretni?"
+          }
+        ]
       },
       {
         "date": "1992-04-02",
         "image": "/images/1992/1992-04-02.jpg",
-        "image_k": "/images/1992/1992-04-02_k.jpg"
+        "image_k": "/images/1992/1992-04-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Környezetvédelmi ankét"
+          }
+        ]
       },
       {
         "date": "1992-04-03",
         "image": "/images/1992/1992-04-03.jpg",
-        "image_k": "/images/1992/1992-04-03_k.jpg"
+        "image_k": "/images/1992/1992-04-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Szeptemberi rímgyakorlat <i>(vers)</i>"
+          }
+        ]
       },
       {
         "date": "1992-04-04",
         "image": "/images/1992/1992-04-04.jpg",
-        "image_k": "/images/1992/1992-04-04_k.jpg"
+        "image_k": "/images/1992/1992-04-04_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Halottaink novemberi üzenete"
+          }
+        ]
       },
       {
         "date": "1992-04-05",
         "image": "/images/1992/1992-04-05.jpg",
-        "image_k": "/images/1992/1992-04-05_k.jpg"
+        "image_k": "/images/1992/1992-04-05_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Az aranyeső nem Veresegyházra esik"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Vendégünk volt Pongrátz Gergely"
+          }
+        ]
       },
       {
         "date": "1992-04-06",
         "image": "/images/1992/1992-04-06.jpg",
-        "image_k": "/images/1992/1992-04-06_k.jpg"
+        "image_k": "/images/1992/1992-04-06_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Találkozás Obersovszky Gyulával"
+          }
+        ]
       },
       {
         "date": "1992-04-07",
         "image": "/images/1992/1992-04-07.jpg",
-        "image_k": "/images/1992/1992-04-07_k.jpg"
+        "image_k": "/images/1992/1992-04-07_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Emlékezés"
+          }
+        ]
       },
       {
         "date": "1992-04-08",
         "image": "/images/1992/1992-04-08.jpg",
-        "image_k": "/images/1992/1992-04-08_k.jpg"
+        "image_k": "/images/1992/1992-04-08_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ítélet"
+          }
+        ]
       },
       {
         "date": "1992-04-09",
@@ -1157,7 +2337,13 @@
       {
         "date": "1992-04-11",
         "image": "/images/1992/1992-04-11.jpg",
-        "image_k": "/images/1992/1992-04-11_k.jpg"
+        "image_k": "/images/1992/1992-04-11_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Kirándulás Vizsolyon"
+          }
+        ]
       },
       {
         "date": "1992-04-12",
@@ -1167,17 +2353,51 @@
       {
         "date": "1992-04-13",
         "image": "/images/1992/1992-04-13.jpg",
-        "image_k": "/images/1992/1992-04-13_k.jpg"
+        "image_k": "/images/1992/1992-04-13_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ricse a strandon"
+          }
+        ]
       },
       {
         "date": "1992-04-14",
         "image": "/images/1992/1992-04-14.jpg",
-        "image_k": "/images/1992/1992-04-14_k.jpg"
+        "image_k": "/images/1992/1992-04-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kedves István! <i>(Válaszlevél Czene Istvánnak)</i>"
+          },
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "Központi orvosi ügyelet"
+          }
+        ]
       },
       {
         "date": "1992-04-15",
         "image": "/images/1992/1992-04-15.jpg",
-        "image_k": "/images/1992/1992-04-15_k.jpg"
+        "image_k": "/images/1992/1992-04-15_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Helyesbítés"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Telefonközpont-átadás"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Pazar(ló) ünnepség"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Tük - 2"
+          }
+        ]
       },
       {
         "date": "1992-04-16",
@@ -1189,42 +2409,114 @@
       {
         "date": "1992-05-01",
         "image": "/images/1992/1992-05-01.jpg",
-        "image_k": "/images/1992/1992-05-01_k.jpg"
+        "image_k": "/images/1992/1992-05-01_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Adventi gyertyák, 1992"
+          }
+        ]
       },
       {
         "date": "1992-05-02",
         "image": "/images/1992/1992-05-02.jpg",
-        "image_k": "/images/1992/1992-05-02_k.jpg"
+        "image_k": "/images/1992/1992-05-02_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Víz- és házsszentelés"
+          }
+        ]
       },
       {
         "date": "1992-05-03",
         "image": "/images/1992/1992-05-03.jpg",
-        "image_k": "/images/1992/1992-05-03_k.jpg"
+        "image_k": "/images/1992/1992-05-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Békesség front után"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Brazil karácsony"
+          }
+        ]
       },
       {
         "date": "1992-05-04",
         "image": "/images/1992/1992-05-04.jpg",
-        "image_k": "/images/1992/1992-05-04_k.jpg"
+        "image_k": "/images/1992/1992-05-04_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "Karácsony hétköznapjai"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Pásztorok, pásztorok"
+          }
+        ]
       },
       {
         "date": "1992-05-05",
         "image": "/images/1992/1992-05-05.jpg",
-        "image_k": "/images/1992/1992-05-05_k.jpg"
+        "image_k": "/images/1992/1992-05-05_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Hej, azok a híres veresegyházi búcsúk!"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Drága búcsú"
+          }
+        ]
       },
       {
         "date": "1992-05-06",
         "image": "/images/1992/1992-05-06.jpg",
-        "image_k": "/images/1992/1992-05-06_k.jpg"
+        "image_k": "/images/1992/1992-05-06_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Egy zászló hazatért"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Gondolatok egy emlékműavatás kapcsán"
+          }
+        ]
       },
       {
         "date": "1992-05-07",
         "image": "/images/1992/1992-05-07.jpg",
-        "image_k": "/images/1992/1992-05-07_k.jpg"
+        "image_k": "/images/1992/1992-05-07_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Egy ünnepségről advent idején"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Temetői harangavatás"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "Veresegyházért Kulturális Alapítvány"
+          }
+        ]
       },
       {
         "date": "1992-05-08",
         "image": "/images/1992/1992-05-08.jpg",
-        "image_k": "/images/1992/1992-05-08_k.jpg"
+        "image_k": "/images/1992/1992-05-08_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "A szociális otthonról"
+          }
+        ]
       },
       {
         "date": "1992-05-09",
@@ -1239,7 +2531,13 @@
       {
         "date": "1992-05-11",
         "image": "/images/1992/1992-05-11.jpg",
-        "image_k": "/images/1992/1992-05-11_k.jpg"
+        "image_k": "/images/1992/1992-05-11_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Öreg temető <i>(vers)</i>"
+          }
+        ]
       },
       {
         "date": "1992-05-12",
@@ -1249,12 +2547,32 @@
       {
         "date": "1992-05-13",
         "image": "/images/1992/1992-05-13.jpg",
-        "image_k": "/images/1992/1992-05-13_k.jpg"
+        "image_k": "/images/1992/1992-05-13_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Húsz éve a pályán <i>(Ella István-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1992-05-14",
         "image": "/images/1992/1992-05-14.jpg",
-        "image_k": "/images/1992/1992-05-14_k.jpg"
+        "image_k": "/images/1992/1992-05-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Mit akar a Pest Megyei Hírlap?"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Szemelvények a Benedek családból"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Könyvismertetés"
+          }
+        ]
       },
       {
         "date": "1992-05-15",
@@ -1264,7 +2582,17 @@
       {
         "date": "1992-05-16",
         "image": "/images/1992/1992-05-16.jpg",
-        "image_k": "/images/1992/1992-05-16_k.jpg"
+        "image_k": "/images/1992/1992-05-16_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A nagy (hitel)fogás"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Jegyzőválság Veresegyházon"
+          }
+        ]
       },
       {
         "date": "1992-05-17",
@@ -1274,12 +2602,28 @@
       {
         "date": "1992-05-18",
         "image": "/images/1992/1992-05-18.jpg",
-        "image_k": "/images/1992/1992-05-18_k.jpg"
+        "image_k": "/images/1992/1992-05-18_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Bosszú"
+          }
+        ]
       },
       {
         "date": "1992-05-19",
         "image": "/images/1992/1992-05-19.jpg",
-        "image_k": "/images/1992/1992-05-19_k.jpg"
+        "image_k": "/images/1992/1992-05-19_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Szilveszteri álhírek"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Siralmas éneka \"Vidám cikk\" meg nem írásáról, a XX. századból"
+          }
+        ]
       },
       {
         "date": "1992-05-20",
@@ -1293,52 +2637,140 @@
       {
         "date": "1993-01-01",
         "image": "/images/1993/1993-01-01.jpg",
-        "image_k": "/images/1993/1993-01-01_k.jpg"
+        "image_k": "/images/1993/1993-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Költségvetés, 1993"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "A lélek halhatatlan, feltámadunk"
+          }
+        ]
       },
       {
         "date": "1993-01-02",
         "image": "/images/1993/1993-01-02.jpg",
-        "image_k": "/images/1993/1993-01-02_k.jpg"
+        "image_k": "/images/1993/1993-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A veresegyházi Tüzép születése és halála"
+          }
+        ]
       },
       {
         "date": "1993-01-03",
         "image": "/images/1993/1993-01-03.jpg",
-        "image_k": "/images/1993/1993-01-03_k.jpg"
+        "image_k": "/images/1993/1993-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Időszerű gondolatok szűkebb pátriánk vasúti közlekedéséről"
+          }
+        ]
       },
       {
         "date": "1993-01-04",
         "image": "/images/1993/1993-01-04.jpg",
-        "image_k": "/images/1993/1993-01-04_k.jpg"
+        "image_k": "/images/1993/1993-01-04_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Emlékezés Rakács Lászlóra"
+          },
+          {
+            "author": "Farkas József",
+            "title": "Pihenj, te néma hadsereg!"
+          }
+        ]
       },
       {
         "date": "1993-01-05",
         "image": "/images/1993/1993-01-05.jpg",
-        "image_k": "/images/1993/1993-01-05_k.jpg"
+        "image_k": "/images/1993/1993-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A kábeltévé jelene (jövője?) Veresegyházon"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Erzsébet Kupa Veresen"
+          }
+        ]
       },
       {
         "date": "1993-01-06",
         "image": "/images/1993/1993-01-06.jpg",
-        "image_k": "/images/1993/1993-01-06_k.jpg"
+        "image_k": "/images/1993/1993-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Levél gyerekkori barátnőmnek Amerikába"
+          },
+          {
+            "author": "Dr. Tar Balázs",
+            "title": "Húsvétkor ismét segélyosztás"
+          }
+        ]
       },
       {
         "date": "1993-01-07",
         "image": "/images/1993/1993-01-07.jpg",
-        "image_k": "/images/1993/1993-01-07_k.jpg"
+        "image_k": "/images/1993/1993-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Cantemus-farsang"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Március 15. előtt"
+          }
+        ]
       },
       {
         "date": "1993-01-08",
         "image": "/images/1993/1993-01-08.jpg",
-        "image_k": "/images/1993/1993-01-08_k.jpg"
+        "image_k": "/images/1993/1993-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Szent Sándor, József, Benedek"
+          }
+        ]
       },
       {
         "date": "1993-01-09",
         "image": "/images/1993/1993-01-09.jpg",
-        "image_k": "/images/1993/1993-01-09_k.jpg"
+        "image_k": "/images/1993/1993-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ötven fehér szegfű"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Nagyböjti gondolatok"
+          }
+        ]
       },
       {
         "date": "1993-01-10",
         "image": "/images/1993/1993-01-10.jpg",
-        "image_k": "/images/1993/1993-01-10_k.jpg"
+        "image_k": "/images/1993/1993-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Küldöttként az MDF VI. Országos Gyűléséről"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Föld! Föld a közelben!"
+          }
+        ]
       },
       {
         "date": "1993-01-11",
@@ -1353,12 +2785,32 @@
       {
         "date": "1993-01-13",
         "image": "/images/1993/1993-01-13.jpg",
-        "image_k": "/images/1993/1993-01-13_k.jpg"
+        "image_k": "/images/1993/1993-01-13_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Patakkaland"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Népszínművek"
+          }
+        ]
       },
       {
         "date": "1993-01-14",
         "image": "/images/1993/1993-01-14.jpg",
-        "image_k": "/images/1993/1993-01-14_k.jpg"
+        "image_k": "/images/1993/1993-01-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "KGST-piac - MDF-piac - Veresi piac"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Megpályáztuk"
+          }
+        ]
       },
       {
         "date": "1993-01-15",
@@ -1375,42 +2827,101 @@
       {
         "date": "1993-02-01",
         "image": "/images/1993/1993-02-01.jpg",
-        "image_k": "/images/1993/1993-02-01_k.jpg"
+        "image_k": "/images/1993/1993-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "A tiszta víz gátja"
+          }
+        ]
       },
       {
         "date": "1993-02-02",
         "image": "/images/1993/1993-02-02.jpg",
-        "image_k": "/images/1993/1993-02-02_k.jpg"
+        "image_k": "/images/1993/1993-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Csőd az ifjúsági parkban"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Hogy látja a bérlő? <i>(termálfürdő)</i>"
+          }
+        ]
       },
       {
         "date": "1993-02-03",
         "image": "/images/1993/1993-02-03.jpg",
-        "image_k": "/images/1993/1993-02-03_k.jpg"
+        "image_k": "/images/1993/1993-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Érvénytelen szerződések"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Gyenge majális"
+          }
+        ]
       },
       {
         "date": "1993-02-04",
         "image": "/images/1993/1993-02-04.jpg",
-        "image_k": "/images/1993/1993-02-04_k.jpg"
+        "image_k": "/images/1993/1993-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Kőrösi Csoma Sándor emlékére"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Hősök napja"
+          }
+        ]
       },
       {
         "date": "1993-02-05",
         "image": "/images/1993/1993-02-05.jpg",
-        "image_k": "/images/1993/1993-02-05_k.jpg"
+        "image_k": "/images/1993/1993-02-05_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "IV. Jamboree"
+          }
+        ]
       },
       {
         "date": "1993-02-06",
         "image": "/images/1993/1993-02-06.jpg",
-        "image_k": "/images/1993/1993-02-06_k.jpg"
+        "image_k": "/images/1993/1993-02-06_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Szűz Mária és Szent Antal nyomában"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Jézus szíve tisztelet"
+          }
+        ]
       },
       {
         "date": "1993-02-07",
         "image": "/images/1993/1993-02-07.jpg",
-        "image_k": "/images/1993/1993-02-07_k.jpg"
+        "image_k": "/images/1993/1993-02-07_k.jpg",
+        "articles": []
       },
       {
         "date": "1993-02-08",
         "image": "/images/1993/1993-02-08.jpg",
-        "image_k": "/images/1993/1993-02-08_k.jpg"
+        "image_k": "/images/1993/1993-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Mesteri bér"
+          }
+        ]
       },
       {
         "date": "1993-02-09",
@@ -1435,17 +2946,47 @@
       {
         "date": "1993-02-13",
         "image": "/images/1993/1993-02-13.jpg",
-        "image_k": "/images/1993/1993-02-13_k.jpg"
+        "image_k": "/images/1993/1993-02-13_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Váci Mihály Szavalóverseny"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Dicséret az országos versenyen"
+          }
+        ]
       },
       {
         "date": "1993-02-14",
         "image": "/images/1993/1993-02-14.jpg",
-        "image_k": "/images/1993/1993-02-14_k.jpg"
+        "image_k": "/images/1993/1993-02-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Küldöttgyűlés"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Álhírmondó?"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Fejlődünk..., de hova?"
+          }
+        ]
       },
       {
         "date": "1993-02-15",
         "image": "/images/1993/1993-02-15.jpg",
-        "image_k": "/images/1993/1993-02-15_k.jpg"
+        "image_k": "/images/1993/1993-02-15_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Lebontott bakterház"
+          }
+        ]
       },
       {
         "date": "1993-02-16",
@@ -1457,12 +2998,28 @@
       {
         "date": "1993-03-01",
         "image": "/images/1993/1993-03-01.jpg",
-        "image_k": "/images/1993/1993-03-01_k.jpg"
+        "image_k": "/images/1993/1993-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Földvétel-spekuláció"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Fegyveres emberrablás a veresi strandon!"
+          }
+        ]
       },
       {
         "date": "1993-03-02",
         "image": "/images/1993/1993-03-02.jpg",
-        "image_k": "/images/1993/1993-03-02_k.jpg"
+        "image_k": "/images/1993/1993-03-02_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Moldvai tájakon"
+          }
+        ]
       },
       {
         "date": "1993-03-03",
@@ -1472,12 +3029,28 @@
       {
         "date": "1993-03-04",
         "image": "/images/1993/1993-03-04.jpg",
-        "image_k": "/images/1993/1993-03-04_k.jpg"
+        "image_k": "/images/1993/1993-03-04_k.jpg",
+        "articles": [
+          {
+            "author": "Hevesi János",
+            "title": "Beszélgetés az általános iskola igazgatójával"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Beszélgetés az általános iskola igazgatójával"
+          }
+        ]
       },
       {
         "date": "1993-03-05",
         "image": "/images/1993/1993-03-05.jpg",
-        "image_k": "/images/1993/1993-03-05_k.jpg"
+        "image_k": "/images/1993/1993-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Darányi József Alapítvány"
+          }
+        ]
       },
       {
         "date": "1993-03-06",
@@ -1487,17 +3060,35 @@
       {
         "date": "1993-03-07",
         "image": "/images/1993/1993-03-07.jpg",
-        "image_k": "/images/1993/1993-03-07_k.jpg"
+        "image_k": "/images/1993/1993-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Önkormányzati kommentár"
+          }
+        ]
       },
       {
         "date": "1993-03-08",
         "image": "/images/1993/1993-03-08.jpg",
-        "image_k": "/images/1993/1993-03-08_k.jpg"
+        "image_k": "/images/1993/1993-03-08_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Értesítés..."
+          }
+        ]
       },
       {
         "date": "1993-03-09",
         "image": "/images/1993/1993-03-09.jpg",
-        "image_k": "/images/1993/1993-03-09_k.jpg"
+        "image_k": "/images/1993/1993-03-09_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Tanulmányúton a védett úszólápok között"
+          }
+        ]
       },
       {
         "date": "1993-03-10",
@@ -1507,27 +3098,73 @@
       {
         "date": "1993-03-11",
         "image": "/images/1993/1993-03-11.jpg",
-        "image_k": "/images/1993/1993-03-11_k.jpg"
+        "image_k": "/images/1993/1993-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Kenyerünk"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "I. rész (Bevezető)"
+          }
+        ]
       },
       {
         "date": "1993-03-12",
         "image": "/images/1993/1993-03-12.jpg",
-        "image_k": "/images/1993/1993-03-12_k.jpg"
+        "image_k": "/images/1993/1993-03-12_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "\"Nyuszis\" utazások"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Jamboree-emléktábor Gödöllőn"
+          }
+        ]
       },
       {
         "date": "1993-03-13",
         "image": "/images/1993/1993-03-13.jpg",
-        "image_k": "/images/1993/1993-03-13_k.jpg"
+        "image_k": "/images/1993/1993-03-13_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Boldogasszony Anyánk"
+          }
+        ]
       },
       {
         "date": "1993-03-14",
         "image": "/images/1993/1993-03-14.jpg",
-        "image_k": "/images/1993/1993-03-14_k.jpg"
+        "image_k": "/images/1993/1993-03-14_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tornagyőztes"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Élményeim a Fitness-centerben"
+          }
+        ]
       },
       {
         "date": "1993-03-15",
         "image": "/images/1993/1993-03-15.jpg",
-        "image_k": "/images/1993/1993-03-15_k.jpg"
+        "image_k": "/images/1993/1993-03-15_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Csépléskor"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Megtakarítottam tíz üveg pezsgőt!"
+          }
+        ]
       },
       {
         "date": "1993-03-16",
@@ -1539,12 +3176,28 @@
       {
         "date": "1993-04-01",
         "image": "/images/1993/1993-04-01.jpg",
-        "image_k": "/images/1993/1993-04-01_k.jpg"
+        "image_k": "/images/1993/1993-04-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Beszélgetés Bogárdi Zoltán országgyűlési képviselővel"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ki mit tud?-döntős az Al Capone da Fine együttes"
+          }
+        ]
       },
       {
         "date": "1993-04-02",
         "image": "/images/1993/1993-04-02.jpg",
-        "image_k": "/images/1993/1993-04-02_k.jpg"
+        "image_k": "/images/1993/1993-04-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A milliárdot érő ember"
+          }
+        ]
       },
       {
         "date": "1993-04-03",
@@ -1554,7 +3207,21 @@
       {
         "date": "1993-04-04",
         "image": "/images/1993/1993-04-04.jpg",
-        "image_k": "/images/1993/1993-04-04_k.jpg"
+        "image_k": "/images/1993/1993-04-04_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Szent Erzsébet-búcsúnkra készülve"
+          },
+          {
+            "author": "Koczó Pál",
+            "title": "Reformáció"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Az Istenhez mindenhonnan el lehet jutni"
+          }
+        ]
       },
       {
         "date": "1993-04-05",
@@ -1579,12 +3246,24 @@
       {
         "date": "1993-04-09",
         "image": "/images/1993/1993-04-09.jpg",
-        "image_k": "/images/1993/1993-04-09_k.jpg"
+        "image_k": "/images/1993/1993-04-09_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "Kerékpárral a Holdra"
+          }
+        ]
       },
       {
         "date": "1993-04-10",
         "image": "/images/1993/1993-04-10.jpg",
-        "image_k": "/images/1993/1993-04-10_k.jpg"
+        "image_k": "/images/1993/1993-04-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "II. rész. Az első tervek"
+          }
+        ]
       },
       {
         "date": "1993-04-11",
@@ -1594,27 +3273,65 @@
       {
         "date": "1993-04-12",
         "image": "/images/1993/1993-04-12.jpg",
-        "image_k": "/images/1993/1993-04-12_k.jpg"
+        "image_k": "/images/1993/1993-04-12_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Német kórus Veresegyházon"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Önállósult a veresegyházi zeneiskola"
+          }
+        ]
       },
       {
         "date": "1993-04-13",
         "image": "/images/1993/1993-04-13.jpg",
-        "image_k": "/images/1993/1993-04-13_k.jpg"
+        "image_k": "/images/1993/1993-04-13_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "1956 üzenete <i>(Jakab János-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1993-04-14",
         "image": "/images/1993/1993-04-14.jpg",
-        "image_k": "/images/1993/1993-04-14_k.jpg"
+        "image_k": "/images/1993/1993-04-14_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Szüret"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "In memoriam Mészáros István"
+          }
+        ]
       },
       {
         "date": "1993-04-15",
         "image": "/images/1993/1993-04-15.jpg",
-        "image_k": "/images/1993/1993-04-15_k.jpg"
+        "image_k": "/images/1993/1993-04-15_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "Tovább a Lenin(i) úton"
+          }
+        ]
       },
       {
         "date": "1993-04-16",
         "image": "/images/1993/1993-04-16.jpg",
-        "image_k": "/images/1993/1993-04-16_k.jpg"
+        "image_k": "/images/1993/1993-04-16_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kábel-tv taggyűlés"
+          }
+        ]
       }
     ],
     "05": [
@@ -1626,32 +3343,84 @@
       {
         "date": "1993-05-02",
         "image": "/images/1993/1993-05-02.jpg",
-        "image_k": "/images/1993/1993-05-02_k.jpg"
+        "image_k": "/images/1993/1993-05-02_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Karácsonyi emlék"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Karácsony jegyében"
+          }
+        ]
       },
       {
         "date": "1993-05-03",
         "image": "/images/1993/1993-05-03.jpg",
-        "image_k": "/images/1993/1993-05-03_k.jpg"
+        "image_k": "/images/1993/1993-05-03_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Az idők teljességében"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Pestre költöztek"
+          }
+        ]
       },
       {
         "date": "1993-05-04",
         "image": "/images/1993/1993-05-04.jpg",
-        "image_k": "/images/1993/1993-05-04_k.jpg"
+        "image_k": "/images/1993/1993-05-04_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A jutalom"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Orvosválasztás <i>(dr. Baranyai Tamás)</i>"
+          }
+        ]
       },
       {
         "date": "1993-05-05",
         "image": "/images/1993/1993-05-05.jpg",
-        "image_k": "/images/1993/1993-05-05_k.jpg"
+        "image_k": "/images/1993/1993-05-05_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Szabó Árpi világbajnok!"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ünneplés sok sportal <i>(október 23.)</i>"
+          }
+        ]
       },
       {
         "date": "1993-05-06",
         "image": "/images/1993/1993-05-06.jpg",
-        "image_k": "/images/1993/1993-05-06_k.jpg"
+        "image_k": "/images/1993/1993-05-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A második hangverseny - Zenebarátok Köre"
+          }
+        ]
       },
       {
         "date": "1993-05-07",
         "image": "/images/1993/1993-05-07.jpg",
-        "image_k": "/images/1993/1993-05-07_k.jpg"
+        "image_k": "/images/1993/1993-05-07_k.jpg",
+        "articles": [
+          {
+            "author": "Horváth Lajos",
+            "title": "A Veresegyházért Kulturális Alapítvány 1993. évi díjazottjai"
+          }
+        ]
       },
       {
         "date": "1993-05-08",
@@ -1661,12 +3430,24 @@
       {
         "date": "1993-05-09",
         "image": "/images/1993/1993-05-09.jpg",
-        "image_k": "/images/1993/1993-05-09_k.jpg"
+        "image_k": "/images/1993/1993-05-09_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "1. rész. Leventeoktatás Veresegyházon"
+          }
+        ]
       },
       {
         "date": "1993-05-10",
         "image": "/images/1993/1993-05-10.jpg",
-        "image_k": "/images/1993/1993-05-10_k.jpg"
+        "image_k": "/images/1993/1993-05-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "III. rész. Az építkezés"
+          }
+        ]
       },
       {
         "date": "1993-05-11",
@@ -1676,17 +3457,47 @@
       {
         "date": "1993-05-12",
         "image": "/images/1993/1993-05-12.jpg",
-        "image_k": "/images/1993/1993-05-12_k.jpg"
+        "image_k": "/images/1993/1993-05-12_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Tódítás"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Képzelt riport egy nyilatkozat kapcsán"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Interjú Nagy Gábor őrbottyáni polgármesterrel"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A lányrablás - álrablás"
+          }
+        ]
       },
       {
         "date": "1993-05-13",
         "image": "/images/1993/1993-05-13.jpg",
-        "image_k": "/images/1993/1993-05-13_k.jpg"
+        "image_k": "/images/1993/1993-05-13_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "1. rész"
+          }
+        ]
       },
       {
         "date": "1993-05-14",
         "image": "/images/1993/1993-05-14.jpg",
-        "image_k": "/images/1993/1993-05-14_k.jpg"
+        "image_k": "/images/1993/1993-05-14_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Lisznyay emlékhangverseny"
+          }
+        ]
       },
       {
         "date": "1993-05-15",
@@ -1705,17 +3516,34 @@
       {
         "date": "1994-01-01",
         "image": "/images/1994/1994-01-01.jpg",
-        "image_k": "/images/1994/1994-01-01_k.jpg"
+        "image_k": "/images/1994/1994-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Beszélgetés Kósa Csabával, a MÚK elnökével"
+          },
+          {
+            "author": "Morvai László",
+            "title": "Az MDF VII. Országos Gyűléséről"
+          }
+        ]
       },
       {
         "date": "1994-01-02",
         "image": "/images/1994/1994-01-02.jpg",
-        "image_k": "/images/1994/1994-01-02_k.jpg"
+        "image_k": "/images/1994/1994-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Interjú dr. Baranyai Tamással"
+          }
+        ]
       },
       {
         "date": "1994-01-03",
         "image": "/images/1994/1994-01-03.jpg",
-        "image_k": "/images/1994/1994-01-03_k.jpg"
+        "image_k": "/images/1994/1994-01-03_k.jpg",
+        "articles": []
       },
       {
         "date": "1994-01-04",
@@ -1725,12 +3553,28 @@
       {
         "date": "1994-01-05",
         "image": "/images/1994/1994-01-05.jpg",
-        "image_k": "/images/1994/1994-01-05_k.jpg"
+        "image_k": "/images/1994/1994-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "2. rész"
+          }
+        ]
       },
       {
         "date": "1994-01-06",
         "image": "/images/1994/1994-01-06.jpg",
-        "image_k": "/images/1994/1994-01-06_k.jpg"
+        "image_k": "/images/1994/1994-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Katolikus leltár"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Református leltár"
+          }
+        ]
       },
       {
         "date": "1994-01-07",
@@ -1740,42 +3584,118 @@
       {
         "date": "1994-01-08",
         "image": "/images/1994/1994-01-08.jpg",
-        "image_k": "/images/1994/1994-01-08_k.jpg"
+        "image_k": "/images/1994/1994-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Önkormányzati kommentár"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Szennyvízcsatorna és szennyvíztisztító építése"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Rekord adósságtörlesztés"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Rekord költségvetés"
+          }
+        ]
       },
       {
         "date": "1994-01-09",
         "image": "/images/1994/1994-01-09.jpg",
-        "image_k": "/images/1994/1994-01-09_k.jpg"
+        "image_k": "/images/1994/1994-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "In memoriam Horváth István"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Fabriczius Józsefről - más szemszögből"
+          }
+        ]
       },
       {
         "date": "1994-01-10",
         "image": "/images/1994/1994-01-10.jpg",
-        "image_k": "/images/1994/1994-01-10_k.jpg"
+        "image_k": "/images/1994/1994-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Régi veresegyházi farsangi mulatságok"
+          }
+        ]
       },
       {
         "date": "1994-01-11",
         "image": "/images/1994/1994-01-11.jpg",
-        "image_k": "/images/1994/1994-01-11_k.jpg"
+        "image_k": "/images/1994/1994-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Karnevál Rióban"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "A böjt illemtana"
+          }
+        ]
       },
       {
         "date": "1994-01-12",
         "image": "/images/1994/1994-01-12.jpg",
-        "image_k": "/images/1994/1994-01-12_k.jpg"
+        "image_k": "/images/1994/1994-01-12_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "2. rész."
+          }
+        ]
       },
       {
         "date": "1994-01-13",
         "image": "/images/1994/1994-01-13.jpg",
-        "image_k": "/images/1994/1994-01-13_k.jpg"
+        "image_k": "/images/1994/1994-01-13_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Lesz-e villamos vasúrunk?"
+          }
+        ]
       },
       {
         "date": "1994-01-14",
         "image": "/images/1994/1994-01-14.jpg",
-        "image_k": "/images/1994/1994-01-14_k.jpg"
+        "image_k": "/images/1994/1994-01-14_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Haladás"
+          }
+        ]
       },
       {
         "date": "1994-01-15",
         "image": "/images/1994/1994-01-15.jpg",
-        "image_k": "/images/1994/1994-01-15_k.jpg"
+        "image_k": "/images/1994/1994-01-15_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Döbbenet"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Hangverseny a Zeneakadémián"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Gyöngyszem"
+          }
+        ]
       },
       {
         "date": "1994-01-16",
@@ -1787,7 +3707,21 @@
       {
         "date": "1994-02-01",
         "image": "/images/1994/1994-02-01.jpg",
-        "image_k": "/images/1994/1994-02-01_k.jpg"
+        "image_k": "/images/1994/1994-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Jelöltünk ismét"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Salamon László a 3. körzet MDF-jelöltje"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Salamon László a 3. körzet MDF-jelöltje"
+          }
+        ]
       },
       {
         "date": "1994-02-02",
@@ -1797,12 +3731,32 @@
       {
         "date": "1994-02-03",
         "image": "/images/1994/1994-02-03.jpg",
-        "image_k": "/images/1994/1994-02-03_k.jpg"
+        "image_k": "/images/1994/1994-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Szennyvízcsatorna"
+          }
+        ]
       },
       {
         "date": "1994-02-04",
         "image": "/images/1994/1994-02-04.jpg",
-        "image_k": "/images/1994/1994-02-04_k.jpg"
+        "image_k": "/images/1994/1994-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "3. rész"
+          },
+          {
+            "author": "Farkas József",
+            "title": "A mai kor golgotája"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Méltó emlékezés"
+          }
+        ]
       },
       {
         "date": "1994-02-05",
@@ -1817,22 +3771,50 @@
       {
         "date": "1994-02-07",
         "image": "/images/1994/1994-02-07.jpg",
-        "image_k": "/images/1994/1994-02-07_k.jpg"
+        "image_k": "/images/1994/1994-02-07_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Előttünk egy nemzetnek sorsa áll!"
+          }
+        ]
       },
       {
         "date": "1994-02-08",
         "image": "/images/1994/1994-02-08.jpg",
-        "image_k": "/images/1994/1994-02-08_k.jpg"
+        "image_k": "/images/1994/1994-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "Nem eladó a menyasszony!"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Nász"
+          }
+        ]
       },
       {
         "date": "1994-02-09",
         "image": "/images/1994/1994-02-09.jpg",
-        "image_k": "/images/1994/1994-02-09_k.jpg"
+        "image_k": "/images/1994/1994-02-09_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Molnártréfa"
+          }
+        ]
       },
       {
         "date": "1994-02-10",
         "image": "/images/1994/1994-02-10.jpg",
-        "image_k": "/images/1994/1994-02-10_k.jpg"
+        "image_k": "/images/1994/1994-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "IV. rész. A virágkor"
+          }
+        ]
       },
       {
         "date": "1994-02-11-k",
@@ -1845,17 +3827,39 @@
       {
         "date": "1994-02-12",
         "image": "/images/1994/1994-02-12.jpg",
-        "image_k": "/images/1994/1994-02-12_k.jpg"
+        "image_k": "/images/1994/1994-02-12_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Gyermekliget Veresegyházon"
+          }
+        ]
       },
       {
         "date": "1994-02-13",
         "image": "/images/1994/1994-02-13.jpg",
-        "image_k": "/images/1994/1994-02-13_k.jpg"
+        "image_k": "/images/1994/1994-02-13_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Beszélgetés Kiss Ferenc asztalos kisiparossal"
+          }
+        ]
       },
       {
         "date": "1994-02-14",
         "image": "/images/1994/1994-02-14.jpg",
-        "image_k": "/images/1994/1994-02-14_k.jpg"
+        "image_k": "/images/1994/1994-02-14_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A gyűlések szervezéséről"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Politikai gyűlések"
+          }
+        ]
       },
       {
         "date": "1994-02-15",
@@ -1872,7 +3876,17 @@
       {
         "date": "1994-03-01",
         "image": "/images/1994/1994-03-01.jpg",
-        "image_k": "/images/1994/1994-03-01_k.jpg"
+        "image_k": "/images/1994/1994-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Most az a fontos, mit nem akarunk"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Beszélgetés Szabó Iván pénzügyminiszterrel"
+          }
+        ]
       },
       {
         "date": "1994-03-02",
@@ -1892,7 +3906,17 @@
       {
         "date": "1994-03-05",
         "image": "/images/1994/1994-03-05.jpg",
-        "image_k": "/images/1994/1994-03-05_k.jpg"
+        "image_k": "/images/1994/1994-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Szabad-e sírni a Kárpátok alatt?"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Helyi lapok találkozója"
+          }
+        ]
       },
       {
         "date": "1994-03-06",
@@ -1904,22 +3928,46 @@
       {
         "date": "1994-04-01",
         "image": "/images/1994/1994-04-01.jpg",
-        "image_k": "/images/1994/1994-04-01_k.jpg"
+        "image_k": "/images/1994/1994-04-01_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "Beszámoló az MDF VIII. Országos Gyűléséről"
+          }
+        ]
       },
       {
         "date": "1994-04-02",
         "image": "/images/1994/1994-04-02.jpg",
-        "image_k": "/images/1994/1994-04-02_k.jpg"
+        "image_k": "/images/1994/1994-04-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A választó is tévedhet"
+          }
+        ]
       },
       {
         "date": "1994-04-03",
         "image": "/images/1994/1994-04-03.jpg",
-        "image_k": "/images/1994/1994-04-03_k.jpg"
+        "image_k": "/images/1994/1994-04-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Súgok a rendőrségnek"
+          }
+        ]
       },
       {
         "date": "1994-04-04",
         "image": "/images/1994/1994-04-04.jpg",
-        "image_k": "/images/1994/1994-04-04_k.jpg"
+        "image_k": "/images/1994/1994-04-04_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "V. rész. Az újjáépítés"
+          }
+        ]
       },
       {
         "date": "1994-04-05",
@@ -1929,42 +3977,118 @@
       {
         "date": "1994-04-06",
         "image": "/images/1994/1994-04-06.jpg",
-        "image_k": "/images/1994/1994-04-06_k.jpg"
+        "image_k": "/images/1994/1994-04-06_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "A gyermekligetről"
+          }
+        ]
       },
       {
         "date": "1994-04-07",
         "image": "/images/1994/1994-04-07.jpg",
-        "image_k": "/images/1994/1994-04-07_k.jpg"
+        "image_k": "/images/1994/1994-04-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Vasárnap délután"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A meztelen igazság"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Gyerekszáj"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "A meztelen igazság"
+          }
+        ]
       },
       {
         "date": "1994-04-08",
         "image": "/images/1994/1994-04-08.jpg",
-        "image_k": "/images/1994/1994-04-08_k.jpg"
+        "image_k": "/images/1994/1994-04-08_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Hitelfelvétel a csatornázáshoz"
+          }
+        ]
       },
       {
         "date": "1994-04-09",
         "image": "/images/1994/1994-04-09.jpg",
-        "image_k": "/images/1994/1994-04-09_k.jpg"
+        "image_k": "/images/1994/1994-04-09_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A képviselő-testület Párizsban"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A crossozás árnyoldalai"
+          }
+        ]
       },
       {
         "date": "1994-04-10",
         "image": "/images/1994/1994-04-10.jpg",
-        "image_k": "/images/1994/1994-04-10_k.jpg"
+        "image_k": "/images/1994/1994-04-10_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Mária országa"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Szállj közénk 1956 szelleme!"
+          }
+        ]
       },
       {
         "date": "1994-04-11",
         "image": "/images/1994/1994-04-11.jpg",
-        "image_k": "/images/1994/1994-04-11_k.jpg"
+        "image_k": "/images/1994/1994-04-11_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Veresegyház és Szada története <i>(könyvismertető)</i>"
+          }
+        ]
       },
       {
         "date": "1994-04-12",
         "image": "/images/1994/1994-04-12.jpg",
-        "image_k": "/images/1994/1994-04-12_k.jpg"
+        "image_k": "/images/1994/1994-04-12_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Beszélgetés Gödöllő polgármesterével"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Morálisan politizálni <i>(Salamon László-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1994-04-13",
         "image": "/images/1994/1994-04-13.jpg",
-        "image_k": "/images/1994/1994-04-13_k.jpg"
+        "image_k": "/images/1994/1994-04-13_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Hírek a termőföldről"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Javuló egészségügyünk?"
+          }
+        ]
       },
       {
         "date": "1994-04-14",
@@ -1974,7 +4098,17 @@
       {
         "date": "1994-04-15",
         "image": "/images/1994/1994-04-15.jpg",
-        "image_k": "/images/1994/1994-04-15_k.jpg"
+        "image_k": "/images/1994/1994-04-15_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Hellasz"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Iskolások vadállatok közt"
+          }
+        ]
       },
       {
         "date": "1994-04-16",
@@ -2001,52 +4135,136 @@
       {
         "date": "1994-05-04",
         "image": "/images/1994/1994-05-04.jpg",
-        "image_k": "/images/1994/1994-05-04_k.jpg"
+        "image_k": "/images/1994/1994-05-04_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1994-05-05",
         "image": "/images/1994/1994-05-05.jpg",
-        "image_k": "/images/1994/1994-05-05_k.jpg"
+        "image_k": "/images/1994/1994-05-05_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Választási bemutatkozó"
+          }
+        ]
       },
       {
         "date": "1994-05-06",
         "image": "/images/1994/1994-05-06.jpg",
-        "image_k": "/images/1994/1994-05-06_k.jpg"
+        "image_k": "/images/1994/1994-05-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tudnivalók az önkormányzati választásokról"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "\"Hát én ímmár kit válasszak?\""
+          }
+        ]
       },
       {
         "date": "1994-05-07",
         "image": "/images/1994/1994-05-07.jpg",
-        "image_k": "/images/1994/1994-05-07_k.jpg"
+        "image_k": "/images/1994/1994-05-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kábeli zűrzavar"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Gondolatok egy aláírásgyűjtés kapcsán"
+          }
+        ]
       },
       {
         "date": "1994-05-08",
         "image": "/images/1994/1994-05-08.jpg",
-        "image_k": "/images/1994/1994-05-08_k.jpg"
+        "image_k": "/images/1994/1994-05-08_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Halottak napi gondolatok"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Helytelen"
+          }
+        ]
       },
       {
         "date": "1994-05-09",
         "image": "/images/1994/1994-05-09.jpg",
-        "image_k": "/images/1994/1994-05-09_k.jpg"
+        "image_k": "/images/1994/1994-05-09_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Elnöki (el)töprengő"
+          },
+          {
+            "author": "Morvai László",
+            "title": "Az MDF országos gyűlése"
+          }
+        ]
       },
       {
         "date": "1994-05-10",
         "image": "/images/1994/1994-05-10.jpg",
-        "image_k": "/images/1994/1994-05-10_k.jpg"
+        "image_k": "/images/1994/1994-05-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "VI. rész. A vonal históriája napjainkig"
+          }
+        ]
       },
       {
         "date": "1994-05-11",
         "image": "/images/1994/1994-05-11.jpg",
-        "image_k": "/images/1994/1994-05-11_k.jpg"
+        "image_k": "/images/1994/1994-05-11_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Gyenge őszi vásár"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "1. eész"
+          }
+        ]
       },
       {
         "date": "1994-05-12",
         "image": "/images/1994/1994-05-12.jpg",
-        "image_k": "/images/1994/1994-05-12_k.jpg"
+        "image_k": "/images/1994/1994-05-12_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Vác polgármesterjelöltje Manninger Gábor"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Pusztai Erzsébet Gödöllőn"
+          }
+        ]
       },
       {
         "date": "1994-05-13",
         "image": "/images/1994/1994-05-13.jpg",
-        "image_k": "/images/1994/1994-05-13_k.jpg"
+        "image_k": "/images/1994/1994-05-13_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Kossuth Lajos halálának 100. évfordulójára"
+          }
+        ]
       },
       {
         "date": "1994-05-14",
@@ -2056,7 +4274,17 @@
       {
         "date": "1994-05-15",
         "image": "/images/1994/1994-05-15.jpg",
-        "image_k": "/images/1994/1994-05-15_k.jpg"
+        "image_k": "/images/1994/1994-05-15_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "In memoriam dr. Simon Józsefné, Zsinka Izabella"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Szt. Miklós püspök"
+          }
+        ]
       },
       {
         "date": "1994-05-16",
@@ -2068,42 +4296,109 @@
       {
         "date": "1994-06-01",
         "image": "/images/1994/1994-06-01.jpg",
-        "image_k": "/images/1994/1994-06-01_k.jpg"
+        "image_k": "/images/1994/1994-06-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Téli etűd"
+          }
+        ]
       },
       {
         "date": "1994-06-02",
         "image": "/images/1994/1994-06-02.jpg",
-        "image_k": "/images/1994/1994-06-02_k.jpg"
+        "image_k": "/images/1994/1994-06-02_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "A kétezredik karácsony"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Karácsony másnapján"
+          }
+        ]
       },
       {
         "date": "1994-06-03",
         "image": "/images/1994/1994-06-03.jpg",
-        "image_k": "/images/1994/1994-06-03_k.jpg"
+        "image_k": "/images/1994/1994-06-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Betlehemesek"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "\"Vértelen\" ünnepléseink"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "Koncertek advent idején"
+          }
+        ]
       },
       {
         "date": "1994-06-04",
         "image": "/images/1994/1994-06-04.jpg",
-        "image_k": "/images/1994/1994-06-04_k.jpg"
+        "image_k": "/images/1994/1994-06-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "2. rész"
+          }
+        ]
       },
       {
         "date": "1994-06-05",
         "image": "/images/1994/1994-06-05.jpg",
-        "image_k": "/images/1994/1994-06-05_k.jpg"
+        "image_k": "/images/1994/1994-06-05_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "4. rész"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Emlékezés Baranyai Jánosra"
+          }
+        ]
       },
       {
         "date": "1994-06-06",
         "image": "/images/1994/1994-06-06.jpg",
-        "image_k": "/images/1994/1994-06-06_k.jpg"
+        "image_k": "/images/1994/1994-06-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Találkozás Szuhay Balázzsal"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Megélni, nem meggazdagodni <i>(Huszai Lajos-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1994-06-07",
         "image": "/images/1994/1994-06-07.jpg",
-        "image_k": "/images/1994/1994-06-07_k.jpg"
+        "image_k": "/images/1994/1994-06-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Sírva vigad a magyar (hirdető)"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Ötletsarok"
+          }
+        ]
       },
       {
         "date": "1994-06-08",
         "image": "/images/1994/1994-06-08.jpg",
-        "image_k": "/images/1994/1994-06-08_k.jpg"
+        "image_k": "/images/1994/1994-06-08_k.jpg",
+        "articles": []
       }
     ]
   },
@@ -2112,17 +4407,39 @@
       {
         "date": "1995-01-01",
         "image": "/images/1995/1995-01-01.jpg",
-        "image_k": "/images/1995/1995-01-01_k.jpg"
+        "image_k": "/images/1995/1995-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "1995 a rendbetétel éve"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "1995 a rendbetétel éve"
+          }
+        ]
       },
       {
         "date": "1995-01-02",
         "image": "/images/1995/1995-01-02.jpg",
-        "image_k": "/images/1995/1995-01-02_k.jpg"
+        "image_k": "/images/1995/1995-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Szervezeti hírek"
+          }
+        ]
       },
       {
         "date": "1995-01-03",
         "image": "/images/1995/1995-01-03.jpg",
-        "image_k": "/images/1995/1995-01-03_k.jpg"
+        "image_k": "/images/1995/1995-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Eljött a felismerés ideje <i>(MDF Pest megye)</i>"
+          }
+        ]
       },
       {
         "date": "1995-01-04",
@@ -2132,42 +4449,106 @@
       {
         "date": "1995-01-05",
         "image": "/images/1995/1995-01-05.jpg",
-        "image_k": "/images/1995/1995-01-05_k.jpg"
+        "image_k": "/images/1995/1995-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Petneházy Imre",
+            "title": "Gondolatok településünk jövőjéről"
+          }
+        ]
       },
       {
         "date": "1995-01-06",
         "image": "/images/1995/1995-01-06.jpg",
-        "image_k": "/images/1995/1995-01-06_k.jpg"
+        "image_k": "/images/1995/1995-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A magyar kultúra napja"
+          }
+        ]
       },
       {
         "date": "1995-01-07",
         "image": "/images/1995/1995-01-07.jpg",
-        "image_k": "/images/1995/1995-01-07_k.jpg"
+        "image_k": "/images/1995/1995-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Kultúrbizottságosdi"
+          }
+        ]
       },
       {
         "date": "1995-01-08",
         "image": "/images/1995/1995-01-08.jpg",
-        "image_k": "/images/1995/1995-01-08_k.jpg"
+        "image_k": "/images/1995/1995-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "5. rész"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A képviselő-testület bizottságairól"
+          }
+        ]
       },
       {
         "date": "1995-01-09",
         "image": "/images/1995/1995-01-09.jpg",
-        "image_k": "/images/1995/1995-01-09_k.jpg"
+        "image_k": "/images/1995/1995-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tallózás önkormányzati ügyekben"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Villámkérdés"
+          }
+        ]
       },
       {
         "date": "1995-01-10",
         "image": "/images/1995/1995-01-10.jpg",
-        "image_k": "/images/1995/1995-01-10_k.jpg"
+        "image_k": "/images/1995/1995-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Miértek"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Rubin! <i>(Uhr Győző)</i>"
+          }
+        ]
       },
       {
         "date": "1995-01-11",
         "image": "/images/1995/1995-01-11.jpg",
-        "image_k": "/images/1995/1995-01-11_k.jpg"
+        "image_k": "/images/1995/1995-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Tündérrózsa"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Az én becses hölgyem"
+          }
+        ]
       },
       {
         "date": "1995-01-12",
         "image": "/images/1995/1995-01-12.jpg",
-        "image_k": "/images/1995/1995-01-12_k.jpg"
+        "image_k": "/images/1995/1995-01-12_k.jpg",
+        "articles": [
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Glevitzky Irén, a századelő ünnepelt énekesnője"
+          }
+        ]
       },
       {
         "date": "1995-01-13",
@@ -2177,12 +4558,24 @@
       {
         "date": "1995-01-14",
         "image": "/images/1995/1995-01-14.jpg",
-        "image_k": "/images/1995/1995-01-14_k.jpg"
+        "image_k": "/images/1995/1995-01-14_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "1. rész"
+          }
+        ]
       },
       {
         "date": "1995-01-15",
         "image": "/images/1995/1995-01-15.jpg",
-        "image_k": "/images/1995/1995-01-15_k.jpg"
+        "image_k": "/images/1995/1995-01-15_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Keresztút, Jézus szenvedésének 14 állomása"
+          }
+        ]
       },
       {
         "date": "1995-01-16",
@@ -2194,17 +4587,39 @@
       {
         "date": "1995-02-01",
         "image": "/images/1995/1995-02-01.jpg",
-        "image_k": "/images/1995/1995-02-01_k.jpg"
+        "image_k": "/images/1995/1995-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Költségvetés - hiányokkal"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A Horn-kormány egy éve <i>(Bogárdi Zoltán-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1995-02-02",
         "image": "/images/1995/1995-02-02.jpg",
-        "image_k": "/images/1995/1995-02-02_k.jpg"
+        "image_k": "/images/1995/1995-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Költségvetés-kritika"
+          }
+        ]
       },
       {
         "date": "1995-02-03",
         "image": "/images/1995/1995-02-03.jpg",
-        "image_k": "/images/1995/1995-02-03_k.jpg"
+        "image_k": "/images/1995/1995-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Meghiúsult az ügyrendi bizottság megalakulása"
+          }
+        ]
       },
       {
         "date": "1995-02-04",
@@ -2214,7 +4629,17 @@
       {
         "date": "1995-02-05",
         "image": "/images/1995/1995-02-05.jpg",
-        "image_k": "/images/1995/1995-02-05_k.jpg"
+        "image_k": "/images/1995/1995-02-05_k.jpg",
+        "articles": [
+          {
+            "author": "Morvai László",
+            "title": "Ülésezett a kulturális bizottság"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "IV. Európai Ifjúsági Zenei Fesztivál"
+          }
+        ]
       },
       {
         "date": "1995-02-06",
@@ -2224,27 +4649,77 @@
       {
         "date": "1995-02-07",
         "image": "/images/1995/1995-02-07.jpg",
-        "image_k": "/images/1995/1995-02-07_k.jpg"
+        "image_k": "/images/1995/1995-02-07_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Van már jegyző... jaj!"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Képviselő Kupa, családi futás"
+          }
+        ]
       },
       {
         "date": "1995-02-08",
         "image": "/images/1995/1995-02-08.jpg",
-        "image_k": "/images/1995/1995-02-08_k.jpg"
+        "image_k": "/images/1995/1995-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Újra szentelt Isten háza"
+          },
+          {
+            "author": "Koczó Pál",
+            "title": "Dona nobis pacem!"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Dicsérjük magyarok, Szent László királyt!"
+          }
+        ]
       },
       {
         "date": "1995-02-09",
         "image": "/images/1995/1995-02-09.jpg",
-        "image_k": "/images/1995/1995-02-09_k.jpg"
+        "image_k": "/images/1995/1995-02-09_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Zarándokúton mediterrán tájakon"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Utazók Klubja '95"
+          }
+        ]
       },
       {
         "date": "1995-02-10",
         "image": "/images/1995/1995-02-10.jpg",
-        "image_k": "/images/1995/1995-02-10_k.jpg"
+        "image_k": "/images/1995/1995-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "6. szám"
+          }
+        ]
       },
       {
         "date": "1995-02-11",
         "image": "/images/1995/1995-02-11.jpg",
-        "image_k": "/images/1995/1995-02-11_k.jpg"
+        "image_k": "/images/1995/1995-02-11_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Keserű szájízzel"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Sebességkorlátozás"
+          }
+        ]
       },
       {
         "date": "1995-02-12",
@@ -2256,57 +4731,147 @@
       {
         "date": "1995-03-01",
         "image": "/images/1995/1995-03-01.jpg",
-        "image_k": "/images/1995/1995-03-01_k.jpg"
+        "image_k": "/images/1995/1995-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Értelmes fegyelmet, rendet <i>(Nagy István-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1995-03-02",
         "image": "/images/1995/1995-03-02.jpg",
-        "image_k": "/images/1995/1995-03-02_k.jpg"
+        "image_k": "/images/1995/1995-03-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Oktató célú diagnosztikai köpont Veresegyházon? <i>(Rosivall-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1995-03-03",
         "image": "/images/1995/1995-03-03.jpg",
-        "image_k": "/images/1995/1995-03-03_k.jpg"
+        "image_k": "/images/1995/1995-03-03_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Két kérdés Gyarmati Dezsőhöz"
+          }
+        ]
       },
       {
         "date": "1995-03-04",
         "image": "/images/1995/1995-03-04.jpg",
-        "image_k": "/images/1995/1995-03-04_k.jpg"
+        "image_k": "/images/1995/1995-03-04_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "A veresegyházi új orgona születése"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A szabadság napjáról"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Röviden"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "A veresegyházi új orgona születése"
+          }
+        ]
       },
       {
         "date": "1995-03-05",
         "image": "/images/1995/1995-03-05.jpg",
-        "image_k": "/images/1995/1995-03-05_k.jpg"
+        "image_k": "/images/1995/1995-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Még egyszer a IX. Országos Gyűlésről"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Osztozkodás"
+          }
+        ]
       },
       {
         "date": "1995-03-06",
         "image": "/images/1995/1995-03-06.jpg",
-        "image_k": "/images/1995/1995-03-06_k.jpg"
+        "image_k": "/images/1995/1995-03-06_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Jegyzőkönyvek - és a valóság"
+          }
+        ]
       },
       {
         "date": "1995-03-07",
         "image": "/images/1995/1995-03-07.jpg",
-        "image_k": "/images/1995/1995-03-07_k.jpg"
+        "image_k": "/images/1995/1995-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A jegyzőválasztás ürügyén"
+          }
+        ]
       },
       {
         "date": "1995-03-08",
         "image": "/images/1995/1995-03-08.jpg",
-        "image_k": "/images/1995/1995-03-08_k.jpg"
+        "image_k": "/images/1995/1995-03-08_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Ez is évforduló"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Mancó néni százéves!"
+          }
+        ]
       },
       {
         "date": "1995-03-09",
         "image": "/images/1995/1995-03-09.jpg",
-        "image_k": "/images/1995/1995-03-09_k.jpg"
+        "image_k": "/images/1995/1995-03-09_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "7. rész"
+          }
+        ]
       },
       {
         "date": "1995-03-10",
         "image": "/images/1995/1995-03-10.jpg",
-        "image_k": "/images/1995/1995-03-10_k.jpg"
+        "image_k": "/images/1995/1995-03-10_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "2. rész"
+          }
+        ]
       },
       {
         "date": "1995-03-11",
         "image": "/images/1995/1995-03-11.jpg",
-        "image_k": "/images/1995/1995-03-11_k.jpg"
+        "image_k": "/images/1995/1995-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Mi lesz a részarány-tulajdonú földekkel?"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Vége a földárverésnek"
+          }
+        ]
       },
       {
         "date": "1995-03-12",
@@ -2318,7 +4883,21 @@
       {
         "date": "1995-04-01",
         "image": "/images/1995/1995-04-01.jpg",
-        "image_k": "/images/1995/1995-04-01_k.jpg"
+        "image_k": "/images/1995/1995-04-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Jobb ma egy veréb...?"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Az 1956-os forradalom és a katolikus egyház <i>(könyvismertetés)</i>"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Beszélgetés Zsigmond László építésszel"
+          }
+        ]
       },
       {
         "date": "1995-04-02",
@@ -2328,7 +4907,13 @@
       {
         "date": "1995-04-03",
         "image": "/images/1995/1995-04-03.jpg",
-        "image_k": "/images/1995/1995-04-03_k.jpg"
+        "image_k": "/images/1995/1995-04-03_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A képviselők szereplése a testületi üléseken"
+          }
+        ]
       },
       {
         "date": "1995-04-04",
@@ -2338,32 +4923,80 @@
       {
         "date": "1995-04-05",
         "image": "/images/1995/1995-04-05.jpg",
-        "image_k": "/images/1995/1995-04-05_k.jpg"
+        "image_k": "/images/1995/1995-04-05_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Elnökök gyűlése"
+          }
+        ]
       },
       {
         "date": "1995-04-06",
         "image": "/images/1995/1995-04-06.jpg",
-        "image_k": "/images/1995/1995-04-06_k.jpg"
+        "image_k": "/images/1995/1995-04-06_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Az idősek megbecsülése"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A bőség zavara"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Naptárreform vagy újhullámos újságírás"
+          }
+        ]
       },
       {
         "date": "1995-04-07",
         "image": "/images/1995/1995-04-07.jpg",
-        "image_k": "/images/1995/1995-04-07_k.jpg"
+        "image_k": "/images/1995/1995-04-07_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Október volt"
+          }
+        ]
       },
       {
         "date": "1995-04-08",
         "image": "/images/1995/1995-04-08.jpg",
-        "image_k": "/images/1995/1995-04-08_k.jpg"
+        "image_k": "/images/1995/1995-04-08_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Francia és magyarországi Szent Márton püspök"
+          }
+        ]
       },
       {
         "date": "1995-04-09",
         "image": "/images/1995/1995-04-09.jpg",
-        "image_k": "/images/1995/1995-04-09_k.jpg"
+        "image_k": "/images/1995/1995-04-09_k.jpg",
+        "articles": [
+          {
+            "author": "Koczó Pál",
+            "title": "A reformáció Isten műve"
+          }
+        ]
       },
       {
         "date": "1995-04-10",
         "image": "/images/1995/1995-04-10.jpg",
-        "image_k": "/images/1995/1995-04-10_k.jpg"
+        "image_k": "/images/1995/1995-04-10_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "8. rész"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "3. rész"
+          }
+        ]
       },
       {
         "date": "1995-04-11",
@@ -2380,57 +5013,139 @@
       {
         "date": "1995-05-01",
         "image": "/images/1995/1995-05-01.jpg",
-        "image_k": "/images/1995/1995-05-01_k.jpg"
+        "image_k": "/images/1995/1995-05-01_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Egy év mérlege <i>(Ella Isván-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1995-05-02",
         "image": "/images/1995/1995-05-02.jpg",
-        "image_k": "/images/1995/1995-05-02_k.jpg"
+        "image_k": "/images/1995/1995-05-02_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "A megújuló Szent Erzsébet Alapítvány"
+          }
+        ]
       },
       {
         "date": "1995-05-03",
         "image": "/images/1995/1995-05-03.jpg",
-        "image_k": "/images/1995/1995-05-03_k.jpg"
+        "image_k": "/images/1995/1995-05-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Futásomat elvégeztem..."
+          }
+        ]
       },
       {
         "date": "1995-05-04",
         "image": "/images/1995/1995-05-04.jpg",
-        "image_k": "/images/1995/1995-05-04_k.jpg"
+        "image_k": "/images/1995/1995-05-04_k.jpg",
+        "articles": [
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "Jeszenszky Géza Veresegyházon"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Ki a polgár, mit nevezünk polgárosodásnak?"
+          }
+        ]
       },
       {
         "date": "1995-05-05",
         "image": "/images/1995/1995-05-05.jpg",
-        "image_k": "/images/1995/1995-05-05_k.jpg"
+        "image_k": "/images/1995/1995-05-05_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "9. rész"
+          }
+        ]
       },
       {
         "date": "1995-05-06",
         "image": "/images/1995/1995-05-06.jpg",
-        "image_k": "/images/1995/1995-05-06_k.jpg"
+        "image_k": "/images/1995/1995-05-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tallózás az önkormányzat döntései közt"
+          },
+          {
+            "author": "Ifj. Illésfalvi Péter",
+            "title": "4. rész"
+          }
+        ]
       },
       {
         "date": "1995-05-07",
         "image": "/images/1995/1995-05-07.jpg",
-        "image_k": "/images/1995/1995-05-07_k.jpg"
+        "image_k": "/images/1995/1995-05-07_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Erőltetett növekedés helyett kiegyensúlyozott fejlesztést!"
+          }
+        ]
       },
       {
         "date": "1995-05-08",
         "image": "/images/1995/1995-05-08.jpg",
-        "image_k": "/images/1995/1995-05-08_k.jpg"
+        "image_k": "/images/1995/1995-05-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kortárs képkiállítás"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "In memoriam Treplán Dezső"
+          }
+        ]
       },
       {
         "date": "1995-05-09",
         "image": "/images/1995/1995-05-09.jpg",
-        "image_k": "/images/1995/1995-05-09_k.jpg"
+        "image_k": "/images/1995/1995-05-09_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Téli szünetben"
+          },
+          {
+            "author": "Farkas József",
+            "title": "Jöjj el édes Üdvözítőnk!"
+          }
+        ]
       },
       {
         "date": "1995-05-10",
         "image": "/images/1995/1995-05-10.jpg",
-        "image_k": "/images/1995/1995-05-10_k.jpg"
+        "image_k": "/images/1995/1995-05-10_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "Szent János apostol"
+          }
+        ]
       },
       {
         "date": "1995-05-11",
         "image": "/images/1995/1995-05-11.jpg",
-        "image_k": "/images/1995/1995-05-11_k.jpg"
+        "image_k": "/images/1995/1995-05-11_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Lidérces álmom"
+          }
+        ]
       },
       {
         "date": "1995-05-12",
@@ -2444,7 +5159,21 @@
       {
         "date": "1996-01-01",
         "image": "/images/1996/1996-01-01.jpg",
-        "image_k": "/images/1996/1996-01-01_k.jpg"
+        "image_k": "/images/1996/1996-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Ezeregyszáz év"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Súlyos adó - polgármesteri szavazattal"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Az egyetlen főszereplő"
+          }
+        ]
       },
       {
         "date": "1996-01-02",
@@ -2454,12 +5183,36 @@
       {
         "date": "1996-01-03",
         "image": "/images/1996/1996-01-03.jpg",
-        "image_k": "/images/1996/1996-01-03_k.jpg"
+        "image_k": "/images/1996/1996-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Emelkedett az idegenforgalmi adó"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Mennyi lesz a szennyvízdíj?"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Csatornadíj-számolgató"
+          }
+        ]
       },
       {
         "date": "1996-01-04",
         "image": "/images/1996/1996-01-04.jpg",
-        "image_k": "/images/1996/1996-01-04_k.jpg"
+        "image_k": "/images/1996/1996-01-04_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A Hírmondóban olvastam"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A hiteles tájékoztatás érdekében"
+          }
+        ]
       },
       {
         "date": "1996-01-05",
@@ -2469,32 +5222,108 @@
       {
         "date": "1996-01-06",
         "image": "/images/1996/1996-01-06.jpg",
-        "image_k": "/images/1996/1996-01-06_k.jpg"
+        "image_k": "/images/1996/1996-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "10. rész"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Füzesi János emlékére"
+          }
+        ]
       },
       {
         "date": "1996-01-07",
         "image": "/images/1996/1996-01-07.jpg",
-        "image_k": "/images/1996/1996-01-07_k.jpg"
+        "image_k": "/images/1996/1996-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "MDF-es visszatekintő"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Polgárosodás helyett - elituralom?"
+          }
+        ]
       },
       {
         "date": "1996-01-08",
         "image": "/images/1996/1996-01-08.jpg",
-        "image_k": "/images/1996/1996-01-08_k.jpg"
+        "image_k": "/images/1996/1996-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Az új orgona megáldása"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Lelkipásztor-búcsúztatás"
+          }
+        ]
       },
       {
         "date": "1996-01-09",
         "image": "/images/1996/1996-01-09.jpg",
-        "image_k": "/images/1996/1996-01-09_k.jpg"
+        "image_k": "/images/1996/1996-01-09_k.jpg",
+        "articles": [
+          {
+            "author": "Farkas József",
+            "title": "Katolikus mérleg"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "A szenvedő Krisztus az ószövetségi szentírásban"
+          }
+        ]
       },
       {
         "date": "1996-01-10",
         "image": "/images/1996/1996-01-10.jpg",
-        "image_k": "/images/1996/1996-01-10_k.jpg"
+        "image_k": "/images/1996/1996-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "BUÉK?"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Az infláció és ellenszere"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Magyarország 2000"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Utat!"
+          }
+        ]
       },
       {
         "date": "1996-01-11",
         "image": "/images/1996/1996-01-11.jpg",
-        "image_k": "/images/1996/1996-01-11_k.jpg"
+        "image_k": "/images/1996/1996-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Havas história"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Mórocz néni tényleg a legöregebb!"
+          },
+          {
+            "author": "Morvai László",
+            "title": "Végre suli-buli!"
+          },
+          {
+            "author": "Ráczné Csík Mária",
+            "title": "Ötéves a Keresztény Női Kör"
+          }
+        ]
       },
       {
         "date": "1996-01-12",
@@ -2506,12 +5335,24 @@
       {
         "date": "1996-02-01",
         "image": "/images/1996/1996-02-01.jpg",
-        "image_k": "/images/1996/1996-02-01_k.jpg"
+        "image_k": "/images/1996/1996-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Újrafelfújt, Pásztor módra"
+          }
+        ]
       },
       {
         "date": "1996-02-02",
         "image": "/images/1996/1996-02-02.jpg",
-        "image_k": "/images/1996/1996-02-02_k.jpg"
+        "image_k": "/images/1996/1996-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Szakemberekkel tele a padlás?"
+          }
+        ]
       },
       {
         "date": "1996-02-03",
@@ -2521,7 +5362,25 @@
       {
         "date": "1996-02-04",
         "image": "/images/1996/1996-02-04.jpg",
-        "image_k": "/images/1996/1996-02-04_k.jpg"
+        "image_k": "/images/1996/1996-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Utazók klubja"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Az ellátás ingyenes <i>(Anka Péter-interjú)</i>"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "A tiszta víz reményében <i>(Ács András-interjú)</i>"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Halpusztulás után<i>(Torosi János-interjú)</i>"
+          }
+        ]
       },
       {
         "date": "1996-02-05",
@@ -2531,32 +5390,92 @@
       {
         "date": "1996-02-06",
         "image": "/images/1996/1996-02-06.jpg",
-        "image_k": "/images/1996/1996-02-06_k.jpg"
+        "image_k": "/images/1996/1996-02-06_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Olvastam..."
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Dr. Boross Péter Veresegyházon"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Mi történt az MDF-ben?"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Lenin él, Lenin él, - Lenin élni fog?"
+          }
+        ]
       },
       {
         "date": "1996-02-07",
         "image": "/images/1996/1996-02-07.jpg",
-        "image_k": "/images/1996/1996-02-07_k.jpg"
+        "image_k": "/images/1996/1996-02-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Takarékosok küldöttgyűlése"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Pénzügyi hírek"
+          }
+        ]
       },
       {
         "date": "1996-02-08",
         "image": "/images/1996/1996-02-08.jpg",
-        "image_k": "/images/1996/1996-02-08_k.jpg"
+        "image_k": "/images/1996/1996-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Tavirózsa Egyesület"
+          }
+        ]
       },
       {
         "date": "1996-02-09",
         "image": "/images/1996/1996-02-09.jpg",
-        "image_k": "/images/1996/1996-02-09_k.jpg"
+        "image_k": "/images/1996/1996-02-09_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A telekvásárlási kedvezményekről"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Környezetbarát alapozás"
+          }
+        ]
       },
       {
         "date": "1996-02-10",
         "image": "/images/1996/1996-02-10.jpg",
-        "image_k": "/images/1996/1996-02-10_k.jpg"
+        "image_k": "/images/1996/1996-02-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Szaszák Imre Veresegyház új református lelkésze"
+          }
+        ]
       },
       {
         "date": "1996-02-11",
         "image": "/images/1996/1996-02-11.jpg",
-        "image_k": "/images/1996/1996-02-11_k.jpg"
+        "image_k": "/images/1996/1996-02-11_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "11. rész"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Elhunyt tagtársunk <i>(Iszály János)</i>"
+          }
+        ]
       },
       {
         "date": "1996-02-12",
@@ -2568,7 +5487,17 @@
       {
         "date": "1996-03-01",
         "image": "/images/1996/1996-03-01.jpg",
-        "image_k": "/images/1996/1996-03-01_k.jpg"
+        "image_k": "/images/1996/1996-03-01_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Öt hónap, érdemi ülés nélkül"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Felelősség az időért"
+          }
+        ]
       },
       {
         "date": "1996-03-02",
@@ -2578,27 +5507,93 @@
       {
         "date": "1996-03-03",
         "image": "/images/1996/1996-03-03.jpg",
-        "image_k": "/images/1996/1996-03-03_k.jpg"
+        "image_k": "/images/1996/1996-03-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Csóti György Veresegyházon"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Fásítás a tó körül"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A gyermekliget eddigi mérlege"
+          }
+        ]
       },
       {
         "date": "1996-03-04",
         "image": "/images/1996/1996-03-04.jpg",
-        "image_k": "/images/1996/1996-03-04_k.jpg"
+        "image_k": "/images/1996/1996-03-04_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tocsik-díjas önkormányzati ügyek"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Az 1995. évi költségvetési beszámoló"
+          }
+        ]
       },
       {
         "date": "1996-03-05",
         "image": "/images/1996/1996-03-05.jpg",
-        "image_k": "/images/1996/1996-03-05_k.jpg"
+        "image_k": "/images/1996/1996-03-05_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "1997-ben meggondoltabban"
+          }
+        ]
       },
       {
         "date": "1996-03-06",
         "image": "/images/1996/1996-03-06.jpg",
-        "image_k": "/images/1996/1996-03-06_k.jpg"
+        "image_k": "/images/1996/1996-03-06_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Egy régi karácsony"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Vallom(ikul)ás"
+          },
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Szilveszteri receptek"
+          }
+        ]
       },
       {
         "date": "1996-03-07",
         "image": "/images/1996/1996-03-07.jpg",
-        "image_k": "/images/1996/1996-03-07_k.jpg"
+        "image_k": "/images/1996/1996-03-07_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Turul és kereszt <i>(könyvismertetés)</i>"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Dr. Bölcskei Gusztáv az új tiszántúli püspők"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Hol lakik az Isten?"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "Alapítvány dr. Baranyai Miklós ápolására"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Murphy politikai törvénykönyve"
+          }
+        ]
       },
       {
         "date": "1996-03-08",
@@ -2608,17 +5603,47 @@
       {
         "date": "1996-03-09",
         "image": "/images/1996/1996-03-09.jpg",
-        "image_k": "/images/1996/1996-03-09_k.jpg"
+        "image_k": "/images/1996/1996-03-09_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Megemlékezés október 23-ra"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Mi is volt a Kormány-program?"
+          }
+        ]
       },
       {
         "date": "1996-03-10",
         "image": "/images/1996/1996-03-10.jpg",
-        "image_k": "/images/1996/1996-03-10_k.jpg"
+        "image_k": "/images/1996/1996-03-10_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Jubiláló nyugdíjasklub"
+          },
+          {
+            "author": "Illésfalvi Péter",
+            "title": "Mi a helyzet?"
+          }
+        ]
       },
       {
         "date": "1996-03-11",
         "image": "/images/1996/1996-03-11.jpg",
-        "image_k": "/images/1996/1996-03-11_k.jpg"
+        "image_k": "/images/1996/1996-03-11_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "12. rész"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Dr. Uhr Győző kitüntetése"
+          }
+        ]
       },
       {
         "date": "1996-03-12",
@@ -2632,37 +5657,111 @@
       {
         "date": "1997-01-01",
         "image": "/images/1997/1997-01-01.jpg",
-        "image_k": "/images/1997/1997-01-01_k.jpg"
+        "image_k": "/images/1997/1997-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Mózestól Tocsikig"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Így döntünk mi"
+          }
+        ]
       },
       {
         "date": "1997-01-02",
         "image": "/images/1997/1997-01-02.jpg",
-        "image_k": "/images/1997/1997-01-02_k.jpg"
+        "image_k": "/images/1997/1997-01-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Önkormányzati \"teszek-veszek\""
+          }
+        ]
       },
       {
         "date": "1997-01-03",
         "image": "/images/1997/1997-01-03.jpg",
-        "image_k": "/images/1997/1997-01-03_k.jpg"
+        "image_k": "/images/1997/1997-01-03_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Tallózás a képviselő-testület határozataiban"
+          }
+        ]
       },
       {
         "date": "1997-01-04",
         "image": "/images/1997/1997-01-04.jpg",
-        "image_k": "/images/1997/1997-01-04_k.jpg"
+        "image_k": "/images/1997/1997-01-04_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "In memoriam Simándi József"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Eltemettük a százegy éves Mancó nénit"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "103 évesen halt meg"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Világjáró veresiek"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Érdes anyanyelvünk"
+          }
+        ]
       },
       {
         "date": "1997-01-05",
         "image": "/images/1997/1997-01-05.jpg",
-        "image_k": "/images/1997/1997-01-05_k.jpg"
+        "image_k": "/images/1997/1997-01-05_k.jpg",
+        "articles": [
+          {
+            "author": "Pásztor Pál",
+            "title": "A feltámadott hagyatéka"
+          }
+        ]
       },
       {
         "date": "1997-01-06",
         "image": "/images/1997/1997-01-06.jpg",
-        "image_k": "/images/1997/1997-01-06_k.jpg"
+        "image_k": "/images/1997/1997-01-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Költségvetés, 1997"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Ilyen is csak Veresen van"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Beszédes számok"
+          }
+        ]
       },
       {
         "date": "1997-01-07",
         "image": "/images/1997/1997-01-07.jpg",
-        "image_k": "/images/1997/1997-01-07_k.jpg"
+        "image_k": "/images/1997/1997-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "Hírek a gyermekligetről"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "A magunk módján"
+          }
+        ]
       },
       {
         "date": "1997-01-08",
@@ -2677,12 +5776,28 @@
       {
         "date": "1997-01-10",
         "image": "/images/1997/1997-01-10.jpg",
-        "image_k": "/images/1997/1997-01-10_k.jpg"
+        "image_k": "/images/1997/1997-01-10_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Márciusok"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "Ünnepeltünk"
+          }
+        ]
       },
       {
         "date": "1997-01-11",
         "image": "/images/1997/1997-01-11.jpg",
-        "image_k": "/images/1997/1997-01-11_k.jpg"
+        "image_k": "/images/1997/1997-01-11_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "Aki megjárta a Don-kanyart"
+          }
+        ]
       },
       {
         "date": "1997-01-12",
@@ -2694,32 +5809,84 @@
       {
         "date": "1997-02-01",
         "image": "/images/1997/1997-02-01.jpg",
-        "image_k": "/images/1997/1997-02-01_k.jpg"
+        "image_k": "/images/1997/1997-02-01_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Veres a \"legek\" között"
+          },
+          {
+            "author": "Pásztor Pál",
+            "title": "Karácsony"
+          }
+        ]
       },
       {
         "date": "1997-02-02",
         "image": "/images/1997/1997-02-02.jpg",
-        "image_k": "/images/1997/1997-02-02_k.jpg"
+        "image_k": "/images/1997/1997-02-02_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Mese a pásztorról és a medvékről"
+          }
+        ]
       },
       {
         "date": "1997-02-03",
         "image": "/images/1997/1997-02-03.jpg",
-        "image_k": "/images/1997/1997-02-03_k.jpg"
+        "image_k": "/images/1997/1997-02-03_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Halottaink emlékére"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Minek nevezzelek?"
+          }
+        ]
       },
       {
         "date": "1997-02-04",
         "image": "/images/1997/1997-02-04.jpg",
-        "image_k": "/images/1997/1997-02-04_k.jpg"
+        "image_k": "/images/1997/1997-02-04_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Törvénytelenség vagy közokirat-hamisítás?"
+          }
+        ]
       },
       {
         "date": "1997-02-05",
         "image": "/images/1997/1997-02-05.jpg",
-        "image_k": "/images/1997/1997-02-05_k.jpg"
+        "image_k": "/images/1997/1997-02-05_k.jpg",
+        "articles": [
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Jubileum  zenetagozatnál"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "A zeneiskola karácsonyi koncertjei"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "Ella Péter lemezei"
+          }
+        ]
       },
       {
         "date": "1997-02-06",
         "image": "/images/1997/1997-02-06.jpg",
-        "image_k": "/images/1997/1997-02-06_k.jpg"
+        "image_k": "/images/1997/1997-02-06_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "A Fagrota kálváriája"
+          }
+        ]
       },
       {
         "date": "1997-02-07",
@@ -2729,12 +5896,32 @@
       {
         "date": "1997-02-08",
         "image": "/images/1997/1997-02-08.jpg",
-        "image_k": "/images/1997/1997-02-08_k.jpg"
+        "image_k": "/images/1997/1997-02-08_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Ismét vasút"
+          },
+          {
+            "author": "Gerhát Imre",
+            "title": "A kommunális adóról"
+          }
+        ]
       },
       {
         "date": "1997-02-09",
         "image": "/images/1997/1997-02-09.jpg",
-        "image_k": "/images/1997/1997-02-09_k.jpg"
+        "image_k": "/images/1997/1997-02-09_k.jpg",
+        "articles": [
+          {
+            "author": "Krenedits Sándor",
+            "title": "A belügyminiszter a bűn mellé állt"
+          },
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Új iskola épül jövőre?"
+          }
+        ]
       },
       {
         "date": "1997-02-10",
@@ -2748,7 +5935,13 @@
       {
         "date": "1998-01-01",
         "image": "/images/1998/1998-01-01.jpg",
-        "image_k": "/images/1998/1998-01-01_k.jpg"
+        "image_k": "/images/1998/1998-01-01_k.jpg",
+        "articles": [
+          {
+            "author": "Dr. Németh Pál",
+            "title": "Feliratok ürügyén a vasútról"
+          }
+        ]
       },
       {
         "date": "1998-01-02",
@@ -2778,12 +5971,24 @@
       {
         "date": "1998-01-07",
         "image": "/images/1998/1998-01-07.jpg",
-        "image_k": "/images/1998/1998-01-07_k.jpg"
+        "image_k": "/images/1998/1998-01-07_k.jpg",
+        "articles": [
+          {
+            "author": "Dibusz Miklós",
+            "title": "Útjainkon"
+          }
+        ]
       },
       {
         "date": "1998-01-08",
         "image": "/images/1998/1998-01-08.jpg",
-        "image_k": "/images/1998/1998-01-08_k.jpg"
+        "image_k": "/images/1998/1998-01-08_k.jpg",
+        "articles": [
+          {
+            "author": "Gerhát Imre",
+            "title": "Újra a Fagrota fatelepről"
+          }
+        ]
       }
     ]
   }
