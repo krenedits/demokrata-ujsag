@@ -14,7 +14,7 @@ const menuStyle: CSSProperties = {
     zIndex: 1000,
     background: '#242424',
     borderRadius: '4px',
-    maxHeight: '500px',
+    maxHeight: '200px',
 };
 
 export default function Autocomplete({
