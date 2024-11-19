@@ -14,9 +14,6 @@ const usePageScroll = (
     handlePrevious: (e: PageEvent) => void,
     handleNext: (e: PageEvent) => void
 ) => {
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
-
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'ArrowLeft') {
@@ -28,30 +25,12 @@ const usePageScroll = (
             }
         };
 
-        const handleTouchStart = (e: TouchEvent) => {
-            setTouchStart(e.touches[0].clientX);
-        };
-
-        const handleTouchEnd = (e: TouchEvent) => {
-            setTouchEnd(e.changedTouches[0].clientX);
-            const deltaX = touchEnd - touchStart;
-            if (deltaX > 0) {
-                handlePrevious(e);
-            } else if (deltaX < 0) {
-                handleNext(e);
-            }
-        };
-
         window.addEventListener('keydown', handleKeyDown);
-        window.addEventListener('touchstart', handleTouchStart);
-        window.addEventListener('touchend', handleTouchEnd);
 
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
-            window.removeEventListener('touchstart', handleTouchStart);
-            window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [handlePrevious, handleNext, setSelectedImage, touchStart, touchEnd]);
+    }, [handlePrevious, handleNext, setSelectedImage]);
 };
 
 export default function FullSizeImage({
@@ -59,6 +38,8 @@ export default function FullSizeImage({
     setSelectedImage,
     selectedYear,
 }: FullSizeImageProps) {
+    const [zoom, setZoom] = useState(false);
+    const [transformOrigin, setTransformOrigin] = useState('0 0');
     const currentYear = fileList[selectedYear];
     const selectedRelease = selectedImage
         ?.split('/')[3]
@@ -126,7 +107,26 @@ export default function FullSizeImage({
                 {'<'}
             </button>
             <div onClick={(e) => e.stopPropagation()} className='modal-content'>
-                <img src={'./' + selectedImage} alt='Full-size view' />
+                <img
+                    src={'./' + selectedImage}
+                    alt='Full-size view'
+                    onClick={(e) => {
+                        // get inner x and y
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        if (!zoom) {
+                            setTransformOrigin(`${x}px ${y}px`);
+                        }
+                        setZoom(!zoom);
+                    }}
+                    className={zoom ? 'zoomed' : ''}
+                    style={{
+                        objectFit: zoom ? 'contain' : 'cover',
+                        transformOrigin,
+                        transform: zoom ? 'scale(2)' : 'scale(1)',
+                    }}
+                />
             </div>
             <button
                 className='next'
