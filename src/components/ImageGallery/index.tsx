@@ -85,7 +85,7 @@ function ImageGallery() {
                                 getImages(images, author, title).length > 0
                         )
                         .map(([release, images]) => (
-                            <>
+                            <article key={release}>
                                 <h3 className='year-section-release-title'>
                                     {+release}. kiadás
                                 </h3>
@@ -95,8 +95,8 @@ function ImageGallery() {
                                             <ImageCard
                                                 key={image.date}
                                                 date={image.date}
-                                                preview={'.' + image.image_k}
-                                                full={'.' + image.image}
+                                                preview={image.image_k}
+                                                full={image.image}
                                                 setSelectedImage={
                                                     setSelectedImage
                                                 }
@@ -104,7 +104,7 @@ function ImageGallery() {
                                         )
                                     )}
                                 </div>
-                            </>
+                            </article>
                         ))}
                 </div>
             ))}

@@ -10,10 +10,12 @@ export const ImageCard: React.FC<ImageCardProps> = ({
 }) => (
     <div className='image-card' onClick={() => setSelectedImage(full)}>
         <img
-            src={preview || full}
+            src={'.' + (preview ?? full)}
             alt={date}
             className='image-preview'
             loading='lazy'
+            width='148'
+            height='203'
         />
         <p className='image-date'>{+date.split('-')[2]}. oldal</p>
     </div>

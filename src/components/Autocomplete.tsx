@@ -10,7 +10,7 @@ interface AutocompleteProps {
 
 const menuStyle: CSSProperties = {
     overflow: 'auto',
-    position: 'fixed',
+    position: 'absolute',
     zIndex: 1000,
     background: '#242424',
     borderRadius: '4px',

@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
-import ImageZoom from 'react-image-zooom';
+import React, { useCallback, useEffect, useState } from 'react';
 import fileList from '../../fileList.json';
 
 interface FullSizeImageProps {
@@ -7,6 +6,53 @@ interface FullSizeImageProps {
     setSelectedImage: (image: string | null) => void;
     selectedYear: keyof typeof fileList;
 }
+
+type PageEvent = React.MouseEvent | KeyboardEvent | TouchEvent;
+
+const usePageScroll = (
+    setSelectedImage: (image: string | null) => void,
+    handlePrevious: (e: PageEvent) => void,
+    handleNext: (e: PageEvent) => void
+) => {
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'ArrowLeft') {
+                handlePrevious(e);
+            } else if (e.key === 'ArrowRight') {
+                handleNext(e);
+            } else if (e.key === 'Escape') {
+                setSelectedImage(null);
+            }
+        };
+
+        const handleTouchStart = (e: TouchEvent) => {
+            setTouchStart(e.touches[0].clientX);
+        };
+
+        const handleTouchEnd = (e: TouchEvent) => {
+            setTouchEnd(e.changedTouches[0].clientX);
+            const deltaX = touchEnd - touchStart;
+            if (deltaX > 0) {
+                handlePrevious(e);
+            } else if (deltaX < 0) {
+                handleNext(e);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [handlePrevious, handleNext, setSelectedImage, touchStart, touchEnd]);
+};
 
 export default function FullSizeImage({
     selectedImage,
@@ -28,7 +74,7 @@ export default function FullSizeImage({
             currentRelease.length - 1;
 
     const handlePrevious = useCallback(
-        (e: React.MouseEvent | KeyboardEvent) => {
+        (e: PageEvent) => {
             e.stopPropagation();
             if (selectedImage) {
                 const index = currentRelease.findIndex(
@@ -43,7 +89,7 @@ export default function FullSizeImage({
     );
 
     const handleNext = useCallback(
-        (e: React.MouseEvent | KeyboardEvent) => {
+        (e: PageEvent) => {
             e.stopPropagation();
             if (selectedImage) {
                 const index = currentRelease.findIndex(
@@ -57,30 +103,18 @@ export default function FullSizeImage({
         [currentRelease, selectedImage, setSelectedImage]
     );
 
-    useEffect(() => {
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                handlePrevious(e);
-            } else if (e.key === 'ArrowRight') {
-                handleNext(e);
-            } else if (e.key === 'Escape') {
-                setSelectedImage(null);
-            }
-        });
-    }, [
-        selectedYear,
-        selectedImage,
-        handlePrevious,
-        handleNext,
-        setSelectedImage,
-    ]);
+    usePageScroll(setSelectedImage, handlePrevious, handleNext);
 
     if (!selectedImage) {
         return null;
     }
 
     return (
-        <div className='modal' onClick={() => setSelectedImage(null)}>
+        <div
+            className='modal'
+            onClick={() => setSelectedImage(null)}
+            tabIndex={-1}
+        >
             <span className='close' onClick={() => setSelectedImage(null)}>
                 &times;
             </span>
@@ -92,11 +126,7 @@ export default function FullSizeImage({
                 {'<'}
             </button>
             <div onClick={(e) => e.stopPropagation()} className='modal-content'>
-                <ImageZoom
-                    src={selectedImage}
-                    alt='Full-size view'
-                    zoom='200'
-                />
+                <img src={'./' + selectedImage} alt='Full-size view' />
             </div>
             <button
                 className='next'
