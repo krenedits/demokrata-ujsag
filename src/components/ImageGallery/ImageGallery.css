@@ -88,6 +88,7 @@
   max-height: 80%;
   border-radius: 8px;
   overflow: auto;
+  position: relative;
 }
 
 .modal-content img {
@@ -100,6 +101,15 @@
 
 .modal-content img.zoomed {
   cursor: zoom-out;
+}
+
+.modal-content figcaption {
+  text-align: center;
+  position: fixed;
+  bottom: calc(100dvh - min(90%, 800px) - 30px);
+  left: 0;
+  right: 0;
+  font-size: 14px;
 }
 
 .close {
