@@ -78,3 +78,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto var(--focus-outline);
 }
+
+input {
+  color: rgba(255, 255, 255, 0.87);
+}
