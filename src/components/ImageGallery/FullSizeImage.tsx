@@ -54,6 +54,11 @@ export default function FullSizeImage({
         currentRelease.findIndex((image) => image.image === selectedImage) ===
             currentRelease.length - 1;
 
+    const selectedPage = selectedImage
+        ?.split('/')[3]
+        .split('-')[2]
+        .split('.')[0] as keyof typeof currentYear;
+
     const handlePrevious = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
@@ -111,14 +116,20 @@ export default function FullSizeImage({
                 className='modal-content'
                 ref={ref}
             >
-                <img
-                    src={'./' + selectedImage}
-                    alt='Full-size view'
-                    onClick={() => {
-                        setZoom(!zoom);
-                    }}
-                    className={zoom ? 'zoomed' : ''}
-                />
+                <figure style={{ display: 'flex', flexDirection: 'column' }}>
+                    <img
+                        src={'./' + selectedImage}
+                        alt='Full-size view'
+                        onClick={() => {
+                            setZoom(!zoom);
+                        }}
+                        className={zoom ? 'zoomed' : ''}
+                    />
+                    <figcaption>
+                        {selectedYear}. - {+selectedRelease}. kiadás -{' '}
+                        {+selectedPage}. oldal
+                    </figcaption>
+                </figure>
             </div>
             <button
                 className='next'
