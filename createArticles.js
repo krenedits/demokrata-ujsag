@@ -19,9 +19,16 @@ createReadStream('Demokrata.csv', { encoding: 'binary' })
             Oldal: pageNumber,
             Szöveg: text,
             Szerzõ: author,
+            Almenü: subMenu,
         } = data;
         const release = rawRelease.padStart(2, '0');
-        const page = fileList[year][release][pageNumber - 1];
+        let page;
+        try {
+            page = fileList[year][release][pageNumber - 1];
+        } catch (error) {
+            console.error('Hiányzó kiadás:', year, release, pageNumber);
+            return;
+        }
         // author to capitalized every word
         author = replaceToHungarianAccents(author)
             .split(' ')
@@ -30,12 +37,16 @@ createReadStream('Demokrata.csv', { encoding: 'binary' })
                     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
             )
             .join(' ');
-        if (!page.articles) {
+        if (!page?.articles) {
             page.articles = [];
         }
 
-        const title = replaceToHungarianAccents(text).split(':')[1].trim();
-        page.articles.push({ author, title });
+        const title =
+            replaceToHungarianAccents(text).split(':')[1]?.trim() ?? subMenu;
+        page.articles.push({
+            author,
+            title: [subMenu, title].filter(Boolean).join(' - '),
+        });
     })
     .on('end', function () {
         writeFileSync('./src/fileList.json', JSON.stringify(fileList, null, 2));

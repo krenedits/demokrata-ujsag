@@ -39,7 +39,7 @@ export default function FullSizeImage({
     selectedYear,
 }: FullSizeImageProps) {
     const [zoom, setZoom] = useState(false);
-    const [transformOrigin, setTransformOrigin] = useState('0 0');
+    const ref = React.createRef<HTMLDivElement>();
     const currentYear = fileList[selectedYear];
     const selectedRelease = selectedImage
         ?.split('/')[3]
@@ -106,26 +106,18 @@ export default function FullSizeImage({
             >
                 {'<'}
             </button>
-            <div onClick={(e) => e.stopPropagation()} className='modal-content'>
+            <div
+                onClick={(e) => e.stopPropagation()}
+                className='modal-content'
+                ref={ref}
+            >
                 <img
                     src={'./' + selectedImage}
                     alt='Full-size view'
-                    onClick={(e) => {
-                        // get inner x and y
-                        const rect = e.currentTarget.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-                        if (!zoom) {
-                            setTransformOrigin(`${x}px ${y}px`);
-                        }
+                    onClick={() => {
                         setZoom(!zoom);
                     }}
                     className={zoom ? 'zoomed' : ''}
-                    style={{
-                        objectFit: zoom ? 'contain' : 'cover',
-                        transformOrigin,
-                        transform: zoom ? 'scale(2)' : 'scale(1)',
-                    }}
                 />
             </div>
             <button

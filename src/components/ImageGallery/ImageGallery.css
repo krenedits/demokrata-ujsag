@@ -88,6 +88,7 @@
     max-height: 80%;
     border-radius: 8px;
     overflow: auto;
+    position: relative;
 }
 
 .modal-content img {
@@ -95,11 +96,14 @@
     max-height: 100%;
     cursor: zoom-in;
     object-fit: cover;
-    transition: transform 0.3s;
+    object-position: center;
+    transition: max-width 0.3s, max-height 0.3s;
 }
 
 .modal-content img.zoomed {
     cursor: zoom-out;
+    max-width: 200%;
+    max-height: 200%;
 }
 
 .close {
@@ -126,6 +130,7 @@
     padding: 10px;
     line-height: 1;
     border: none;
+    z-index: 1;
 }
 
 .previous {

@@ -15,6 +15,14 @@ const menuStyle: CSSProperties = {
     background: '#242424',
     borderRadius: '4px',
     maxHeight: '200px',
+    top: 50,
+    left: 0,
+    maxWidth: '350px',
+};
+
+const htmlToString = (html: string): string => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.documentElement.textContent ?? '';
 };
 
 export default function Autocomplete({
@@ -45,7 +53,7 @@ export default function Autocomplete({
                         dangerouslySetInnerHTML={{ __html: item }}
                     />
                 )}
-                value={input}
+                value={htmlToString(input)}
                 onChange={(e) => {
                     if (!e.target.value) {
                         setter('');
@@ -54,9 +62,12 @@ export default function Autocomplete({
                 }}
                 onSelect={(val) => setter(val)}
                 shouldItemRender={(item, value) =>
-                    item.toLowerCase().includes(value.toLowerCase())
+                    htmlToString(item)
+                        .toLowerCase()
+                        .includes(htmlToString(value).toLowerCase())
                 }
                 menuStyle={menuStyle}
+                wrapperStyle={{ position: 'relative' }}
             />
         </div>
     );
