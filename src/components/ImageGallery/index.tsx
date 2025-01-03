@@ -87,7 +87,7 @@ function ImageGallery() {
                         .map(([release, images]) => (
                             <article key={release}>
                                 <h3 className='year-section-release-title'>
-                                    {+release}. kiadás
+                                    {+release}. szám
                                 </h3>
                                 <div className='year-images'>
                                     {getImages(images, author, title).map(

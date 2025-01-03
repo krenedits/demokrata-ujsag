@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import fileList from '../../fileList.json';
 
 interface FullSizeImageProps {
@@ -38,7 +38,6 @@ export default function FullSizeImage({
     setSelectedImage,
     selectedYear,
 }: FullSizeImageProps) {
-    const [zoom, setZoom] = useState(false);
     const ref = React.createRef<HTMLDivElement>();
     const currentYear = fileList[selectedYear];
     const selectedRelease = selectedImage
@@ -117,16 +116,15 @@ export default function FullSizeImage({
                 ref={ref}
             >
                 <figure style={{ display: 'flex', flexDirection: 'column' }}>
-                    <img
-                        src={'./' + selectedImage}
-                        alt='Full-size view'
-                        onClick={() => {
-                            setZoom(!zoom);
-                        }}
-                        className={zoom ? 'zoomed' : ''}
-                    />
+                    <a
+                        href={'./' + selectedImage}
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <img src={'./' + selectedImage} alt='Full-size view' />
+                    </a>
                     <figcaption>
-                        {selectedYear}. - {+selectedRelease}. kiadás -{' '}
+                        {selectedYear}. - {+selectedRelease}. szám -{' '}
                         {+selectedPage}. oldal
                     </figcaption>
                 </figure>

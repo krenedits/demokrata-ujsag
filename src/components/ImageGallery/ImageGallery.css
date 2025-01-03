@@ -96,14 +96,6 @@
     height: 100%;
     cursor: zoom-in;
     object-fit: cover;
-    object-position: center;
-    transition: max-width 0.3s, max-height 0.3s;
-}
-
-.modal-content img.zoomed {
-    cursor: zoom-out;
-    width: 200%;
-    height: 200%;
 }
 
 .modal-content figcaption {

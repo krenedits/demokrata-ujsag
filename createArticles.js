@@ -26,7 +26,7 @@ createReadStream('Demokrata.csv', { encoding: 'binary' })
         try {
             page = fileList[year][release][pageNumber - 1];
         } catch (error) {
-            console.error('Hiányzó kiadás:', year, release, pageNumber);
+            console.error('Hiányzó szám:', year, release, pageNumber);
             return;
         }
         // author to capitalized every word
