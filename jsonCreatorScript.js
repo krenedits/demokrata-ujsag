@@ -12,6 +12,13 @@ const outputFile = path.join(__dirname, 'public/fileList.json');
 
 const result = {};
 
+// delete the fileList.json if it exists
+try {
+    writeFileSync(outputFile, '');
+} catch (error) {
+    console.error('Error deleting file:', error);
+}
+
 // Read each year folder in images directory
 readdirSync(imagesDir, { withFileTypes: true }).forEach((yearDir) => {
     if (yearDir.isDirectory()) {
@@ -54,6 +61,13 @@ readdirSync(imagesDir, { withFileTypes: true }).forEach((yearDir) => {
                     (entry) => entry.date === dateOnly
                 );
                 entry.image_k = `/images/${year}/${date}_k.jpg`;
+            } else if (suffix && !file.includes('k')) {
+                result[year][release].push({
+                    date: dateOnly,
+                    image: `/images/${year}/${
+                        dateOnly + '_' + suffix.trim().replace('.jpg', '')
+                    }.jpg`,
+                });
             }
         });
     }

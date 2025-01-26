@@ -1,7 +1,7 @@
 import { CSSProperties, useEffect, useState } from 'react';
-import AutocompleteBasic from 'react-autocomplete';
+import AutocompleteBasic, { Props } from 'react-autocomplete';
 
-interface AutocompleteProps {
+interface AutocompleteProps extends Omit<Props, 'renderItem' | 'getItemValue'> {
     value: string;
     setter: (value: string) => void;
     items: string[];
@@ -17,7 +17,6 @@ const menuStyle: CSSProperties = {
     maxHeight: '200px',
     top: 50,
     left: 0,
-    maxWidth: '350px',
 };
 
 const htmlToString = (html: string): string => {
@@ -30,6 +29,7 @@ export default function Autocomplete({
     setter,
     items,
     label,
+    ...props
 }: AutocompleteProps) {
     const [input, setInput] = useState<string>('');
 
@@ -41,18 +41,7 @@ export default function Autocomplete({
         <div className='autocomplete'>
             <label className='filters-title'>{label}:</label>
             <AutocompleteBasic
-                getItemValue={(item) => item}
                 items={items}
-                renderItem={(item, isHighlighted) => (
-                    <div
-                        key={item}
-                        className={
-                            'filter-item' +
-                            (isHighlighted ? ' highlighted' : '')
-                        }
-                        dangerouslySetInnerHTML={{ __html: item }}
-                    />
-                )}
                 value={htmlToString(input)}
                 onChange={(e) => {
                     if (!e.target.value) {
@@ -68,6 +57,18 @@ export default function Autocomplete({
                 }
                 menuStyle={menuStyle}
                 wrapperStyle={{ position: 'relative' }}
+                {...props}
+                renderItem={(item, isHighlighted) => (
+                    <div
+                        key={item}
+                        className={
+                            'filter-item' +
+                            (isHighlighted ? ' highlighted' : '')
+                        }
+                        dangerouslySetInnerHTML={{ __html: item }}
+                    />
+                )}
+                getItemValue={(item) => item}
             />
         </div>
     );

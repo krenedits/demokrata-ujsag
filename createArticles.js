@@ -29,6 +29,9 @@ createReadStream('Demokrata.csv', { encoding: 'binary' })
             console.error('Hiányzó szám:', year, release, pageNumber);
             return;
         }
+        if (text.includes('Fazekas Mátyás')) {
+            console.log(fileList[year][release][pageNumber - 1]);
+        }
         // author to capitalized every word
         author = replaceToHungarianAccents(author)
             .split(' ')
@@ -41,8 +44,7 @@ createReadStream('Demokrata.csv', { encoding: 'binary' })
             page.articles = [];
         }
 
-        const title =
-            replaceToHungarianAccents(text).split(':')[1]?.trim() ?? subMenu;
+        const title = replaceToHungarianAccents(text).trim() ?? '';
         page.articles.push({
             author,
             title: [subMenu, title].filter(Boolean).join(' - '),

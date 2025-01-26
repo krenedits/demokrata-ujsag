@@ -40,6 +40,11 @@ const getImages = (
         })
         .filter((image) => {
             if (title) {
+                if (
+                    image.articles?.some((article) => article.title === title)
+                ) {
+                    console.log(title, image.articles);
+                }
                 return image.articles?.some(
                     (article) => article.title === title
                 );
@@ -93,7 +98,7 @@ function ImageGallery() {
                                     {getImages(images, author, title).map(
                                         (image) => (
                                             <ImageCard
-                                                key={image.date}
+                                                key={image.image}
                                                 date={image.date}
                                                 preview={image.image_k}
                                                 full={image.image}

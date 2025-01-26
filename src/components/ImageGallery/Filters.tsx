@@ -35,6 +35,11 @@ export default function Filters({
                 setter={setTitle}
                 items={titles}
                 label='Cikk'
+                inputProps={{
+                    style: {
+                        width: 'min(350px, 80dvw)',
+                    },
+                }}
             />
         </div>
     );
