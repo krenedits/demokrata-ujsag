@@ -53,10 +53,13 @@ export default function FullSizeImage({
         currentRelease.findIndex((image) => image.image === selectedImage) ===
             currentRelease.length - 1;
 
-    const selectedPage = selectedImage
+    const selected = selectedImage
         ?.split('/')[3]
         .split('-')[2]
-        .split('.')[0] as keyof typeof currentYear;
+        .split('.')[0]
+        .split('_') as [keyof typeof currentYear, string | undefined];
+
+    const [selectedPage, selectedVersion] = selected || [];
 
     const handlePrevious = useCallback(
         (e: PageEvent) => {
@@ -126,6 +129,7 @@ export default function FullSizeImage({
                     <figcaption>
                         {selectedYear}. - {+selectedRelease}. szám -{' '}
                         {+selectedPage}. oldal
+                        {selectedVersion ? ' (' + (+selectedVersion + 1) + '. verzió)' : ''}
                     </figcaption>
                 </figure>
             </div>

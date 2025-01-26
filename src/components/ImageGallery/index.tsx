@@ -40,11 +40,6 @@ const getImages = (
         })
         .filter((image) => {
             if (title) {
-                if (
-                    image.articles?.some((article) => article.title === title)
-                ) {
-                    console.log(title, image.articles);
-                }
                 return image.articles?.some(
                     (article) => article.title === title
                 );
