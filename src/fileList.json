@@ -313,13 +313,7 @@
       {
         "date": "1990-01-02",
         "image": "/images/1990/1990-01-02.jpg",
-        "image_k": "/images/1990/1990-01-02_k.jpg",
-        "articles": [
-          {
-            "author": "Krenedits Sándor",
-            "title": "1990. 1. szám:    Rejtvény"
-          }
-        ]
+        "image_k": "/images/1990/1990-01-02_k.jpg"
       },
       {
         "date": "1990-01-03",
@@ -415,6 +409,10 @@
           {
             "author": "Fazekas Mátyás",
             "title": "Ufók Veresen - 1990. 1. szám:  Ufók a falugyűlésen"
+          },
+          {
+            "author": "Krenedits Sándor",
+            "title": "1990. 1. szám:    Rejtvény"
           }
         ]
       },
@@ -531,10 +529,6 @@
           {
             "author": "Fazekas Mátyás",
             "title": "1990. 3. szám:   Ne kérdezd, ki voltam"
-          },
-          {
-            "author": "Petneházy Imre",
-            "title": "1990. 3. szám: Választási bemutatkozó"
           }
         ]
       },
@@ -663,6 +657,10 @@
           {
             "author": "Rácz Ivánné",
             "title": "1990. 4. szám:   Választási bemutatkozó"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "1990. 3. szám: Választási bemutatkozó"
           }
         ]
       },
@@ -688,10 +686,6 @@
           {
             "author": "Horváth Lajos",
             "title": "1990. 4. szám:   Emberhez méltóan"
-          },
-          {
-            "author": "Petneházy Imre",
-            "title": "1990. 4. szám: Drága falunk!"
           }
         ]
       },
@@ -804,6 +798,10 @@
           {
             "author": "Horváth Lajos",
             "title": "1990. 5. szám:   Hová lett a veresi múzeum, Pásztor elvtárs?"
+          },
+          {
+            "author": "Petneházy Imre",
+            "title": "1990. 4. szám: Drága falunk!"
           }
         ]
       },
@@ -985,10 +983,6 @@
           {
             "author": "Horváth Lajos",
             "title": "1991. 1. szám:   A szabadság kapujában"
-          },
-          {
-            "author": "Horváth Lajos",
-            "title": "1991. 1. szám:   A veresegyházi jegyzőügy"
           }
         ]
       },
@@ -1035,6 +1029,10 @@
           {
             "author": "Hevesi János",
             "title": "1991. 1. szám:   Mi dolgunk lehet még?"
+          },
+          {
+            "author": "Horváth Lajos",
+            "title": "1991. 1. szám:   A veresegyházi jegyzőügy"
           }
         ]
       },
@@ -2918,6 +2916,10 @@
           {
             "author": "Dibusz Miklós",
             "title": "1993. 2. szám:   IV. Jamboree"
+          },
+          {
+            "author": "Fazekas Mátyás",
+            "title": "Kábeltévé - 1993. 3. szám:   Megtakarítottam tíz üveg pezsgőt!"
           }
         ]
       },
@@ -3198,10 +3200,6 @@
           {
             "author": "Dibusz Miklós",
             "title": "1993. 3. szám:   Csépléskor"
-          },
-          {
-            "author": "Fazekas Mátyás",
-            "title": "Kábeltévé - 1993. 3. szám:   Megtakarítottam tíz üveg pezsgőt!"
           }
         ]
       },
@@ -3447,6 +3445,10 @@
           {
             "author": "Fazekas Mátyás",
             "title": "1993. 5. szám:   A második hangverseny - Zenebarátok Köre"
+          },
+          {
+            "author": "Dr. Kovács Ilona",
+            "title": "1993. 5. szám:   Lisznyay emlékhangverseny"
           }
         ]
       },
@@ -3507,10 +3509,6 @@
             "title": "1993. 5. szám:    Képzelt riport egy nyilatkozat kapcsán"
           },
           {
-            "author": "Illésfalvi Péter",
-            "title": "1993. 5. szám:    Interjú Nagy Gábor őrbottyáni polgármesterrel"
-          },
-          {
             "author": "Krenedits Sándor",
             "title": "Lányrablás a strandon - 1993. 5. szám:   A lányrablás - álrablás"
           }
@@ -3533,8 +3531,8 @@
         "image_k": "/images/1993/1993-05-14_k.jpg",
         "articles": [
           {
-            "author": "Dr. Kovács Ilona",
-            "title": "1993. 5. szám:   Lisznyay emlékhangverseny"
+            "author": "Illésfalvi Péter",
+            "title": "1993. 5. szám:    Interjú Nagy Gábor őrbottyáni polgármesterrel"
           }
         ]
       },
@@ -3785,10 +3783,6 @@
         "image_k": "/images/1994/1994-02-04_k.jpg",
         "articles": [
           {
-            "author": "Czene István",
-            "title": "A 27. Székely Gyalogezred története - 1994. 2. szám:   3. rész"
-          },
-          {
             "author": "Farkas József",
             "title": "1994. 2. szám:   A mai kor golgotája"
           },
@@ -3806,18 +3800,18 @@
       {
         "date": "1994-02-06",
         "image": "/images/1994/1994-02-06.jpg",
-        "image_k": "/images/1994/1994-02-06_k.jpg"
-      },
-      {
-        "date": "1994-02-07",
-        "image": "/images/1994/1994-02-07.jpg",
-        "image_k": "/images/1994/1994-02-07_k.jpg",
+        "image_k": "/images/1994/1994-02-06_k.jpg",
         "articles": [
           {
             "author": "Gerhát Imre",
             "title": "1994. 2. szám:    Előttünk egy nemzetnek sorsa áll!"
           }
         ]
+      },
+      {
+        "date": "1994-02-07",
+        "image": "/images/1994/1994-02-07.jpg",
+        "image_k": "/images/1994/1994-02-07_k.jpg"
       },
       {
         "date": "1994-02-08",
@@ -3857,17 +3851,20 @@
         ]
       },
       {
-        "date": "1994-02-11-k",
-        "image": "/images/1994/1994-02-11-k.jpg"
-      },
-      {
         "date": "1994-02-11",
-        "image": "/images/1994/1994-02-11.jpg"
+        "image": "/images/1994/1994-02-11.jpg",
+        "image_k": "/images/1994/1994-02-11_k.jpg"
       },
       {
         "date": "1994-02-12",
         "image": "/images/1994/1994-02-12.jpg",
-        "image_k": "/images/1994/1994-02-12_k.jpg"
+        "image_k": "/images/1994/1994-02-12_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "A 27. Székely Gyalogezred története - 1994. 2. szám:   3. rész"
+          }
+        ]
       },
       {
         "date": "1994-02-13",
@@ -4315,17 +4312,19 @@
           {
             "author": "Gerhát Imre",
             "title": "1994. 5. szám:    Kossuth Lajos halálának 100. évfordulójára"
-          },
-          {
-            "author": "Illésfalvi Péterné",
-            "title": "Konyhamûvészet takarékosabban! - 1994. 5. szám"
           }
         ]
       },
       {
         "date": "1994-05-14",
         "image": "/images/1994/1994-05-14.jpg",
-        "image_k": "/images/1994/1994-05-14_k.jpg"
+        "image_k": "/images/1994/1994-05-14_k.jpg",
+        "articles": [
+          {
+            "author": "Illésfalvi Péterné",
+            "title": "Konyhamûvészet takarékosabban! - 1994. 5. szám"
+          }
+        ]
       },
       {
         "date": "1994-05-15",
@@ -4540,10 +4539,6 @@
         "image_k": "/images/1995/1995-01-08_k.jpg",
         "articles": [
           {
-            "author": "Czene István",
-            "title": "A 27. Székely Gyalogezred története - 1995. 1. szám:   5. rész"
-          },
-          {
             "author": "Dr. Németh Pál",
             "title": "1995. 1. szám:   A képviselő-testület bizottságairól"
           }
@@ -4608,7 +4603,13 @@
       {
         "date": "1995-01-13",
         "image": "/images/1995/1995-01-13.jpg",
-        "image_k": "/images/1995/1995-01-13_k.jpg"
+        "image_k": "/images/1995/1995-01-13_k.jpg",
+        "articles": [
+          {
+            "author": "Czene István",
+            "title": "A 27. Székely Gyalogezred története - 1995. 1. szám:   5. rész"
+          }
+        ]
       },
       {
         "date": "1995-01-14",
@@ -4757,7 +4758,7 @@
         "articles": [
           {
             "author": "Czene István",
-            "title": "A 27. Székely Gyalogezred története - 1995. 2. szám:   6. szám"
+            "title": "A 27. Székely Gyalogezred története - 1995. 2. szám:   6. rész"
           }
         ]
       },
