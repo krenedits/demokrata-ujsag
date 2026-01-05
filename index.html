@@ -15,6 +15,13 @@
         <script type="module" src="./src/main.tsx"></script>
         <script>
             const global = globalThis;
+            try {
+                if (typeof __WS_TOKEN__ === 'undefined') {
+                    window.__WS_TOKEN__ = '';
+                }
+            } catch (e) {
+                window.__WS_TOKEN__ = '';
+            }
         </script>
     </body>
 </html>

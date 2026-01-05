@@ -29,18 +29,23 @@ const getTitles = (author: string) => {
 };
 
 const parseImagePath = (imagePath: string) => {
-    // Expected format: "/images/YYYY/YYYY-RR-PP.jpg" or "/images/YYYY/YYYY-RR-PP_V.jpg"
-    // or "./images/..."
-    const parts = imagePath.replace('./', '').split('/');
-    const year = parts[2];
-    const filename = parts[3];
+    // Expected format: "/images/YYYY/YYYY-RR-PP.jpg" or "./images/YYYY/YYYY-RR-PP_V.jpg"
+    const parts = imagePath.split('/').filter(Boolean);
     
-    if (!filename) return { year, release: '', page: '', version: '' };
+    // The filename is always the last part
+    const filename = parts[parts.length - 1];
+    // The year is usually the part before filename if it follow the /images/YYYY/ structure
+    // But we can also get the year from the filename directly as it starts with YYYY-
+    
+    if (!filename || !filename.includes('.')) {
+        return { year: '', release: '', page: '', version: '' };
+    }
 
     const nameParts = filename.split('.')[0].split('-');
-    const release = nameParts[1];
+    const year = nameParts[0];
+    const release = nameParts[1] || '';
     
-    const pageAndVersion = nameParts[2].split('_');
+    const pageAndVersion = (nameParts[2] || '').split('_');
     const page = pageAndVersion[0];
     const version = pageAndVersion[1] || '';
 

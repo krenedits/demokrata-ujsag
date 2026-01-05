@@ -1,10 +1,10 @@
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+  max-width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .card {
-    padding: 2em;
+  padding: 2em;
 }

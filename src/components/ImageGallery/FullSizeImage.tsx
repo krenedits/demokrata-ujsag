@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import fileList from '../../fileList.json';
 import { parseImagePath, typedFileList } from './utils';
 import { ImageEntry } from '../../types';
 
 interface FullSizeImageProps {
     selectedImage: string | null;
     setSelectedImage: (image: string | null) => void;
-    selectedYear: keyof typeof fileList;
+    selectedYear: string;
 }
 
 type PageEvent = React.MouseEvent | KeyboardEvent | TouchEvent;
@@ -14,7 +13,9 @@ type PageEvent = React.MouseEvent | KeyboardEvent | TouchEvent;
 const usePageScroll = (
     setSelectedImage: (image: string | null) => void,
     handlePrevious: (e: PageEvent) => void,
-    handleNext: (e: PageEvent) => void
+    handleNext: (e: PageEvent) => void,
+    handleFirst: (e: PageEvent) => void,
+    handleLast: (e: PageEvent) => void
 ) => {
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -24,6 +25,10 @@ const usePageScroll = (
                 handleNext(e);
             } else if (e.key === 'Escape') {
                 setSelectedImage(null);
+            } else if (e.key === 'Home') {
+                handleFirst(e);
+            } else if (e.key === 'End') {
+                handleLast(e);
             }
         };
 
@@ -32,7 +37,7 @@ const usePageScroll = (
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [handlePrevious, handleNext, setSelectedImage]);
+    }, [handlePrevious, handleNext, handleFirst, handleLast, setSelectedImage]);
 };
 
 export default function FullSizeImage({
@@ -47,46 +52,53 @@ export default function FullSizeImage({
     
     const currentRelease = currentYear?.[selectedRelease] as ImageEntry[] | undefined;
     
-    const isPreviousDisabled =
-        !selectedYear || !currentRelease ||
-        currentRelease.findIndex((image) => image.image === selectedImage) === 0;
-        
-    const isNextDisabled =
-        !selectedYear || !currentRelease ||
-        currentRelease.findIndex((image) => image.image === selectedImage) ===
-            currentRelease.length - 1;
+    const currentIndex = currentRelease ? currentRelease.findIndex((image) => image.image === selectedImage) : -1;
+    const isPreviousDisabled = !selectedYear || !currentRelease || currentIndex <= 0;
+    const isNextDisabled = !selectedYear || !currentRelease || currentIndex === currentRelease.length - 1;
+
+    const handleFirst = useCallback((e: PageEvent) => {
+        e.stopPropagation();
+        if (currentRelease && currentRelease.length > 0) {
+            setSelectedImage(currentRelease[0].image);
+        }
+    }, [currentRelease, setSelectedImage]);
+
+    const handleLast = useCallback((e: PageEvent) => {
+        e.stopPropagation();
+        if (currentRelease && currentRelease.length > 0) {
+            setSelectedImage(currentRelease[currentRelease.length - 1].image);
+        }
+    }, [currentRelease, setSelectedImage]);
 
     const handlePrevious = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (selectedImage && currentRelease) {
-                const index = currentRelease.findIndex(
-                    (image) => image.image === selectedImage
-                );
-                if (index > 0) {
-                    setSelectedImage(currentRelease[index - 1].image);
-                }
+            if (currentIndex > 0 && currentRelease) {
+                setSelectedImage(currentRelease[currentIndex - 1].image);
             }
         },
-        [currentRelease, selectedImage, setSelectedImage]
+        [currentIndex, currentRelease, setSelectedImage]
     );
 
     const handleNext = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (selectedImage && currentRelease) {
-                const index = currentRelease.findIndex(
-                    (image) => image.image === selectedImage
-                );
-                if (index < currentRelease.length - 1) {
-                    setSelectedImage(currentRelease[index + 1].image);
-                }
+            if (currentRelease && currentIndex < currentRelease.length - 1) {
+                setSelectedImage(currentRelease[currentIndex + 1].image);
             }
         },
-        [currentRelease, selectedImage, setSelectedImage]
+        [currentIndex, currentRelease, setSelectedImage]
     );
 
-    usePageScroll(setSelectedImage, handlePrevious, handleNext);
+    usePageScroll(setSelectedImage, handlePrevious, handleNext, handleFirst, handleLast);
+
+    // Preload next image
+    useEffect(() => {
+        if (currentRelease && currentIndex < currentRelease.length - 1) {
+            const nextImage = new Image();
+            nextImage.src = './' + currentRelease[currentIndex + 1].image;
+        }
+    }, [currentIndex, currentRelease]);
 
     if (!selectedImage) {
         return null;
@@ -97,14 +109,18 @@ export default function FullSizeImage({
             className='modal'
             onClick={() => setSelectedImage(null)}
             tabIndex={-1}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Képnézegető"
         >
-            <span className='close' onClick={() => setSelectedImage(null)}>
+            <span className='close' onClick={() => setSelectedImage(null)} aria-label="Bezárás">
                 &times;
             </span>
             <button
                 className={'previous'}
                 onClick={handlePrevious}
                 disabled={isPreviousDisabled}
+                aria-label="Előző oldal"
             >
                 {'<'}
             </button>
@@ -118,13 +134,24 @@ export default function FullSizeImage({
                         href={'./' + selectedImage}
                         target='_blank'
                         rel='noreferrer'
+                        title="Kép megnyitása új lapon"
                     >
-                        <img src={'./' + selectedImage} alt='Full-size view' />
+                        <img src={'./' + selectedImage} alt={`${selectedYear}. - ${selectedRelease}. szám - ${selectedPage}. oldal`} />
                     </a>
                     <figcaption>
-                        {selectedYear}. - {+selectedRelease}. szám -{' '}
-                        {+selectedPage}. oldal
-                        {selectedVersion ? ' (' + (+selectedVersion + 1) + '. verzió)' : ''}
+                        <div className="caption-text">
+                            {selectedYear}. - {+selectedRelease}. szám -{' '}
+                            {+selectedPage}. oldal
+                            {selectedVersion ? ' (' + (+selectedVersion + 1) + '. verzió)' : ''}
+                        </div>
+                        <a 
+                            href={'./' + selectedImage} 
+                            download={`demokrata_${selectedYear}_${selectedRelease}_${selectedPage}.jpg`}
+                            className="download-link"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button className="download-button">Letöltés</button>
+                        </a>
                     </figcaption>
                 </figure>
             </div>
@@ -132,6 +159,7 @@ export default function FullSizeImage({
                 className='next'
                 onClick={handleNext}
                 disabled={isNextDisabled}
+                aria-label="Következő oldal"
             >
                 {'>'}
             </button>
