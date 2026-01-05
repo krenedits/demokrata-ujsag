@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import Autocomplete from '../Autocomplete';
 import { getAuthors, getTitles } from './utils';
 
@@ -15,8 +15,8 @@ export default function Filters({
     setTitle,
     title,
 }: FiltersProps) {
-    const authors = getAuthors();
-    const titles = getTitles(author);
+    const authors = useMemo(() => getAuthors(), []);
+    const titles = useMemo(() => getTitles(author), [author]);
 
     useEffect(() => {
         setTitle('');

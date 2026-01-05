@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { CSSProperties, useEffect, useState } from 'react';
 import AutocompleteBasic, { Props } from 'react-autocomplete';
 
@@ -40,6 +41,7 @@ export default function Autocomplete({
     return (
         <div className='autocomplete'>
             <label className='filters-title'>{label}:</label>
+            {/* @ts-expect-error: react-autocomplete types are incompatible with newer react types */}
             <AutocompleteBasic
                 items={items}
                 value={htmlToString(input)}
@@ -65,7 +67,9 @@ export default function Autocomplete({
                             'filter-item' +
                             (isHighlighted ? ' highlighted' : '')
                         }
-                        dangerouslySetInnerHTML={{ __html: item }}
+                        dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(item),
+                        }}
                     />
                 )}
                 getItemValue={(item) => item}

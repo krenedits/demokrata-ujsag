@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 import fileList from "../../fileList.json";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import FullSizeImage from "./FullSizeImage";
@@ -6,6 +7,7 @@ import { ImageCard } from "./ImageCard";
 import "./ImageGallery.css";
 import YearSelector from "./YearSelector";
 import Filters from "./Filters";
+import { ImageEntry } from "../../types";
 
 export interface ImageCardProps {
   date: string;
@@ -14,18 +16,8 @@ export interface ImageCardProps {
   setSelectedImage: (image: string | null) => void;
 }
 
-interface Article {
-  image: string;
-  image_k?: string;
-  date: string;
-  articles?: {
-    author: string;
-    title: string;
-  }[];
-}
-
 const getImages = (
-  images: Article[],
+  images: ImageEntry[],
   author: string | null,
   title: string | null
 ) => {
@@ -47,18 +39,60 @@ const getImages = (
 const DOUBLE_RELEASE = ["1991-04"];
 
 function ImageGallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { year: urlYear } = useParams<{ year: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [author, setAuthor] = useState<string | null>(null);
   const [title, setTitle] = useState<string | null>(null);
-  const selectedYear = selectedImage?.split("/")[2] as keyof typeof fileList;
+  
+  const selectedImage = useMemo(() => searchParams.get('image'), [searchParams]);
+
+  const selectedYear = useMemo(() => {
+    if (selectedImage) {
+        return selectedImage.split("/")[2] as keyof typeof fileList;
+    }
+    return urlYear as keyof typeof fileList;
+  }, [selectedImage, urlYear]);
 
   useSmoothScroll();
 
-  const filteredYears = Object.keys(fileList).filter((year) =>
-    Object.values(fileList[year as keyof typeof fileList]).some(
-      (images) => getImages(images, author, title).length > 0
-    )
+  useEffect(() => {
+    if (urlYear && !selectedImage) {
+        const element = document.getElementById(urlYear);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+  }, [urlYear, selectedImage]);
+
+  const filteredYearsData = useMemo(() => {
+    return Object.keys(fileList).map(year => {
+        const yearContent = fileList[year as keyof typeof fileList];
+        const filteredReleases = Object.entries(yearContent)
+            .map(([release, images]) => {
+                const filtered = getImages(images as ImageEntry[], author, title);
+                return { release, images: filtered };
+            })
+            .filter(item => item.images.length > 0);
+        
+        return { year, releases: filteredReleases };
+    }).filter(item => item.releases.length > 0);
+  }, [author, title]);
+
+  const filteredYears = useMemo(() => 
+    filteredYearsData.map(d => d.year),
+    [filteredYearsData]
   );
+
+  const handleSetSelectedImage = useCallback((image: string | null) => {
+    if (image) {
+        setSearchParams({ image });
+    } else {
+        const newParams = new URLSearchParams(searchParams);
+        newParams.delete('image');
+        setSearchParams(newParams);
+    }
+  }, [searchParams, setSearchParams]);
 
   return (
     <div className="image-gallery">
@@ -72,14 +106,12 @@ function ImageGallery() {
         selectedImage={selectedImage}
         filteredYears={filteredYears}
       />
-      {filteredYears.map((year, z) => (
+      {filteredYearsData.map(({ year, releases }, z) => (
         <div key={year} className="year-section" id={year}>
           <h2 className="year-section-title" style={{ zIndex: z }}>
             {year}
           </h2>
-          {Object.entries(fileList[year as keyof typeof fileList])
-            .filter(([, images]) => getImages(images, author, title).length > 0)
-            .map(([release, images]) => {
+          {releases.map(({ release, images }) => {
                 const isDoubleRelease = DOUBLE_RELEASE.includes(
                   `${year}-${release}`
                 )
@@ -90,13 +122,13 @@ function ImageGallery() {
                     {releaseNumber}. szám
                   </h3>
                   <div className="year-images">
-                    {getImages(images, author, title).map((image) => (
+                    {images.map((image) => (
                       <ImageCard
                         key={image.image}
                         date={image.date}
                         preview={image.image_k}
                         full={image.image}
-                        setSelectedImage={setSelectedImage}
+                        setSelectedImage={handleSetSelectedImage}
                       />
                     ))}
                   </div>
@@ -108,7 +140,7 @@ function ImageGallery() {
 
       <FullSizeImage
         selectedImage={selectedImage}
-        setSelectedImage={setSelectedImage}
+        setSelectedImage={handleSetSelectedImage}
         selectedYear={selectedYear}
       />
     </div>

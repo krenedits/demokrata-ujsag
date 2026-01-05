@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# Demokrata Újság Archívum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ez a projekt a **Demokrata Újság** (1989-1998) digitális archívumát tartalmazza. Az alkalmazás lehetővé teszi az újság oldalainak böngészését évek és lapszámok szerint, valamint keresést biztosít a cikkek címei és szerzői alapján.
 
-Currently, two official plugins are available:
+## 🚀 Technológiai Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React 18 + TypeScript + Vite
+- **Routing:** React Router 7
+- **Állapotkezelés:** URL alapú (deep linking támogatással)
+- **Styling:** Vanilla CSS
+- **Biztonság:** DOMPurify az XSS védelem érdekében
 
-## Expanding the ESLint configuration
+## 📂 Projekt Struktúra
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `src/components/ImageGallery`: A fő galéria komponens és alalkatrészei.
+- `src/hooks`: Egyedi hook-ok (pl. smooth scroll).
+- `public/images`: Az újság képei évfolyamok szerint csoportosítva.
+- `src/fileList.json`: Automatikusan generált metaadat állomány.
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Fejlesztői Scriptek
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Adatok generálása
+
+A projekt két scriptet használ az adatstruktúra felépítéséhez:
+
+1. **`jsonCreatorScript.js`**: Beolvassa a `public/images` mappát és legenerálja az alap `fileList.json`-t.
+   ```bash
+   node jsonCreatorScript.js
+   ```
+
+2. **`createArticles.js`**: Beolvassa a `Demokrata.csv` fájlt és összefűzi a cikkadatokat a `fileList.json`-nal.
+   ```bash
+   node createArticles.js
+   ```
+
+### Futtatás
+
+```bash
+# Függőségek telepítése
+yarn install
+
+# Fejlesztői szerver indítása
+yarn dev
+
+# Production build készítése
+yarn build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## ✨ Főbb Funkciók
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Évválasztó:** Gyors navigáció az évfolyamok között.
+- **Szűrés:** Keresés szerzőre vagy cikk címére.
+- **Nagyítás:** Képek megtekintése teljes méretben, billentyűzet navigációval (nyilak).
+- **Megosztható linkek:** Az aktuális nézet és a kiválasztott kép az URL-ben tárolódik.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📜 Történet
+
+1989 októberétől a versegyházi MDF kiadásában indult a Demokrata Újság, amelyet 1998-as megszűnéséig Horváth Lajos és Krenedits Sándor vezetett. Ez az oldal ennek a fontos helytörténeti és országos jelentőségű lapnak állít emléket.
+
+---
+Készítette: Krenedits Sándor & AI asszisztens

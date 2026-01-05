@@ -1,5 +1,7 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import fileList from '../../fileList.json';
+import { parseImagePath, typedFileList } from './utils';
+import { ImageEntry } from '../../types';
 
 interface FullSizeImageProps {
     selectedImage: string | null;
@@ -38,33 +40,26 @@ export default function FullSizeImage({
     setSelectedImage,
     selectedYear,
 }: FullSizeImageProps) {
-    const ref = React.createRef<HTMLDivElement>();
-    const currentYear = fileList[selectedYear];
-    const selectedRelease = selectedImage
-        ?.split('/')[3]
-        .split('-')[1] as keyof typeof currentYear;
-    const currentRelease = currentYear?.[selectedRelease];
+    const ref = useRef<HTMLDivElement>(null);
+    const currentYear = typedFileList[selectedYear];
+    
+    const { release: selectedRelease, page: selectedPage, version: selectedVersion } = selectedImage ? parseImagePath(selectedImage) : { release: '', page: '', version: '' };
+    
+    const currentRelease = currentYear?.[selectedRelease] as ImageEntry[] | undefined;
+    
     const isPreviousDisabled =
-        !selectedYear ||
-        currentRelease.findIndex((image) => image.image === selectedImage) ===
-            0;
+        !selectedYear || !currentRelease ||
+        currentRelease.findIndex((image) => image.image === selectedImage) === 0;
+        
     const isNextDisabled =
-        !selectedYear ||
+        !selectedYear || !currentRelease ||
         currentRelease.findIndex((image) => image.image === selectedImage) ===
             currentRelease.length - 1;
-
-    const selected = selectedImage
-        ?.split('/')[3]
-        .split('-')[2]
-        .split('.')[0]
-        .split('_') as [keyof typeof currentYear, string | undefined];
-
-    const [selectedPage, selectedVersion] = selected || [];
 
     const handlePrevious = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (selectedImage) {
+            if (selectedImage && currentRelease) {
                 const index = currentRelease.findIndex(
                     (image) => image.image === selectedImage
                 );
@@ -79,7 +74,7 @@ export default function FullSizeImage({
     const handleNext = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (selectedImage) {
+            if (selectedImage && currentRelease) {
                 const index = currentRelease.findIndex(
                     (image) => image.image === selectedImage
                 );

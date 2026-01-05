@@ -2,18 +2,30 @@ import { useEffect } from 'react';
 
 export default function useSmoothScroll() {
     useEffect(() => {
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener('click', function (e) {
+        const anchors = document.querySelectorAll('a[href^="#"]');
+        const handlers: Array<{ anchor: Element; handler: (e: Event) => void }> =
+            [];
+
+        anchors.forEach((anchor) => {
+            const handler = (e: Event) => {
                 e.preventDefault();
-                const target = e.target as HTMLAnchorElement;
-                document
-                    .getElementById(
-                        (target.getAttribute('href') ?? '').replace('#', '')
-                    )
-                    ?.scrollIntoView({
+                const target = e.currentTarget as HTMLAnchorElement;
+                const href = target.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const targetId = href.replace('#', '');
+                    document.getElementById(targetId)?.scrollIntoView({
                         behavior: 'smooth',
                     });
-            });
+                }
+            };
+            anchor.addEventListener('click', handler);
+            handlers.push({ anchor, handler });
         });
+
+        return () => {
+            handlers.forEach(({ anchor, handler }) => {
+                anchor.removeEventListener('click', handler);
+            });
+        };
     }, []);
 }
