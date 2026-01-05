@@ -19,7 +19,8 @@ export interface ImageCardProps {
 const getImages = (
   images: ImageEntry[],
   author: string | null,
-  title: string | null
+  title: string | null,
+  searchText: string | null
 ) => {
   return images
     .filter((image) => {
@@ -33,6 +34,12 @@ const getImages = (
         return image.articles?.some((article) => article.title === title);
       }
       return true;
+    })
+    .filter((image) => {
+      if (searchText) {
+        return image.text?.toLowerCase().includes(searchText.toLowerCase());
+      }
+      return true;
     });
 };
 
@@ -44,6 +51,7 @@ function ImageGallery() {
 
   const [author, setAuthor] = useState<string | null>(null);
   const [title, setTitle] = useState<string | null>(null);
+  const [searchText, setSearchText] = useState<string>('');
   
   const selectedImage = useMemo(() => searchParams.get('image'), [searchParams]);
 
@@ -70,14 +78,14 @@ function ImageGallery() {
         const yearContent = fileList[year as keyof typeof fileList];
         const filteredReleases = Object.entries(yearContent)
             .map(([release, images]) => {
-                const filtered = getImages(images as ImageEntry[], author, title);
+                const filtered = getImages(images as ImageEntry[], author, title, searchText);
                 return { release, images: filtered };
             })
             .filter(item => item.images.length > 0);
         
         return { year, releases: filteredReleases };
     }).filter(item => item.releases.length > 0);
-  }, [author, title]);
+  }, [author, title, searchText]);
 
   const filteredYears = useMemo(() => 
     filteredYearsData.map(d => d.year),
@@ -101,6 +109,8 @@ function ImageGallery() {
         setAuthor={setAuthor}
         title={title ?? ""}
         setTitle={setTitle}
+        searchText={searchText}
+        setSearchText={setSearchText}
       />
       <YearSelector
         selectedImage={selectedImage}
@@ -146,5 +156,6 @@ function ImageGallery() {
     </div>
   );
 }
+
 
 export default ImageGallery;

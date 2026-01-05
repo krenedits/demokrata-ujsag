@@ -8,6 +8,7 @@ export interface ImageEntry {
   image_k?: string;
   date: string;
   articles?: Article[];
+  text?: string;
 }
 
 export interface FileList {
