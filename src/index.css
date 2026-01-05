@@ -10,13 +10,15 @@
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --line-height: 1.5;
+  --font-size-base: 18px;
+  --line-height: 1.6;
 
   /* Base styles */
   color-scheme: light;
-  color: rgba(255, 255, 255, 0.87) !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* Increased contrast slightly */
   background-color: #242424 !important;
   font-family: var(--font-family);
+  font-size: var(--font-size-base);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
 
@@ -57,26 +59,28 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 12px;
+  border: 2px solid transparent; /* Thicker border for better visibility */
+  padding: 14px 24px; /* Larger touch target */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 1.1em; /* Larger text */
   font-weight: var(--font-weight-medium);
   font-family: inherit;
   background-color: var(--button-bg);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s;
 }
 
 button:hover {
   border-color: #dcba1d;
+  background-color: #333;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto var(--focus-outline);
+  outline: 4px solid #ffd700; /* High contrast focus ring */
+  outline-offset: 2px;
 }
 
 input {

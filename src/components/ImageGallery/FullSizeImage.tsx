@@ -113,16 +113,20 @@ export default function FullSizeImage({
             aria-modal="true"
             aria-label="Képnézegető"
         >
-            <span className='close' onClick={() => setSelectedImage(null)} aria-label="Bezárás">
-                &times;
-            </span>
+            <div className='close-container' onClick={() => setSelectedImage(null)}>
+                <span className='close-icon'>&times;</span>
+                <span className='close-label'>Bezárás</span>
+            </div>
             <button
                 className={'previous'}
                 onClick={handlePrevious}
                 disabled={isPreviousDisabled}
                 aria-label="Előző oldal"
             >
-                {'<'}
+                <div className="nav-content">
+                    <span className="nav-icon">{'<'}</span>
+                    <span className="nav-label">Előző</span>
+                </div>
             </button>
             <div
                 onClick={(e) => e.stopPropagation()}
@@ -161,7 +165,10 @@ export default function FullSizeImage({
                 disabled={isNextDisabled}
                 aria-label="Következő oldal"
             >
-                {'>'}
+               <div className="nav-content">
+                    <span className="nav-icon">{'>'}</span>
+                    <span className="nav-label">Következő</span>
+                </div>
             </button>
         </div>
     );

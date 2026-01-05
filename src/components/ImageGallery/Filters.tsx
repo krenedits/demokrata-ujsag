@@ -28,33 +28,38 @@ export default function Filters({
 
     return (
         <div className='filters'>
-            <Autocomplete
-                value={author}
-                setter={setAuthor}
-                items={authors}
-                label='Szerző'
-            />
-            <Autocomplete
-                value={title}
-                setter={setTitle}
-                items={titles}
-                label='Cikk'
-                inputProps={{
-                    style: {
-                        width: 'min(350px, 80dvw)',
-                    },
-                }}
-            />
-            <div className='autocomplete'>
+            <div className='filter-group'>
+                <Autocomplete
+                    value={author}
+                    setter={setAuthor}
+                    items={authors}
+                    label='Szerző keresése'
+                    inputProps={{
+                        placeholder: 'Pl. Horváth Lajos',
+                        className: 'search-input author-input'
+                    }}
+                />
+            </div>
+            <div className='filter-group'>
+                <Autocomplete
+                    value={title}
+                    setter={setTitle}
+                    items={titles}
+                    label='Cikk cím keresése'
+                    inputProps={{
+                        placeholder: 'Cikk címe...',
+                        className: 'search-input title-input'
+                    }}
+                />
+            </div>
+            <div className='autocomplete full-width-search'>
                 <label className='filters-title'>Szöveg keresése:</label>
                 <input
                     type='text'
+                    className='search-input text-search-input'
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
-                    placeholder='Keresés az oldalak szövegében...'
-                    style={{
-                        width: 'min(300px, 80dvw)',
-                    }}
+                    placeholder='Keresés az oldalak teljes szövegében...'
                 />
             </div>
         </div>
