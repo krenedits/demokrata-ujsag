@@ -1,23 +1,26 @@
 :root {
   /* Color variables */
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
-  --link-color: #dcba1d;
-  --button-bg: #1a1a1a;
-  --focus-outline: -webkit-focus-ring-color;
+  --text-color: rgba(255, 255, 255, 0.92);
+  --background-start: #1a1e26;
+  --background-end: #242933;
+  --link-color: #e6b800; /* Rich Gold */
+  --button-bg: rgba(255, 255, 255, 0.1); /* Glassy default */
+  --focus-outline: #ffd700;
 
   /* Typography */
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-serif: "Playfair Display", serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-bold: 600;
   --font-size-base: 18px;
   --line-height: 1.6;
 
   /* Base styles */
-  color-scheme: light;
-  color: rgba(255, 255, 255, 0.9) !important; /* Increased contrast slightly */
-  background-color: #242424 !important;
-  font-family: var(--font-family);
+  color-scheme: dark;
+  color: var(--text-color) !important;
+  background-color: var(--background-start) !important; /* Fallback */
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-base);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
@@ -38,23 +41,54 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll; /* Prevent horizontal jump when scrollbar appears/disappears */
+}
+
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; <-- REMOVED this causes vertical jumping */
+  align-items: flex-start; /* Align to top */
+  justify-content: center; /* Center horizontally */
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--background-start),
+    var(--background-end)
+  );
+  background-attachment: fixed; /* Parallax-like fix */
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
 }
 
 a {
   font-weight: var(--font-weight-medium);
   color: var(--link-color);
   text-decoration: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--font-family-serif);
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  color: #fff;
 }
 
 button {
