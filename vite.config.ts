@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig(() => {
     return {
+        base: '/demokrata-ujsag/', // GitHub Pages subpath
         plugins: [react()],
         test: {
             globals: true,
