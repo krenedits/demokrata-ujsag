@@ -1,16 +1,18 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { parseImagePath, typedFileList } from './utils';
+import { formatVersionLabel, parseImagePath, typedFileList } from './utils';
+import { assetUrl } from '../../utils';
 import { ImageEntry } from '../../types';
 
 interface FullSizeImageProps {
     selectedImage: string | null;
     setSelectedImage: (image: string | null) => void;
-    selectedYear: string;
+    selectedYear: string | undefined;
 }
 
 type PageEvent = React.MouseEvent | KeyboardEvent | TouchEvent;
 
 const usePageScroll = (
+    isOpen: boolean,
     setSelectedImage: (image: string | null) => void,
     handlePrevious: (e: PageEvent) => void,
     handleNext: (e: PageEvent) => void,
@@ -18,16 +20,32 @@ const usePageScroll = (
     handleLast: (e: PageEvent) => void
 ) => {
     useEffect(() => {
+        // Without this guard the listener stays live on the plain gallery,
+        // where Escape would "close" an already-closed viewer and push a
+        // duplicate history entry each press, deadening the Back button.
+        if (!isOpen) {
+            return;
+        }
+
         const handleKeyDown = (e: KeyboardEvent) => {
+            // Only the keys the viewer actually acts on are swallowed — Tab has
+            // to keep reaching the focus trap, and everything else stays
+            // available for the browser's own shortcuts. Without this, Home/End
+            // and the arrows also scroll the gallery behind the fixed modal.
             if (e.key === 'ArrowLeft') {
+                e.preventDefault();
                 handlePrevious(e);
             } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
                 handleNext(e);
             } else if (e.key === 'Escape') {
+                e.preventDefault();
                 setSelectedImage(null);
             } else if (e.key === 'Home') {
+                e.preventDefault();
                 handleFirst(e);
             } else if (e.key === 'End') {
+                e.preventDefault();
                 handleLast(e);
             }
         };
@@ -37,8 +55,27 @@ const usePageScroll = (
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [handlePrevious, handleNext, handleFirst, handleLast, setSelectedImage]);
+    }, [isOpen, handlePrevious, handleNext, handleFirst, handleLast, setSelectedImage]);
 };
+
+/** Stops the gallery scrolling underneath the fixed-position viewer. */
+const useBodyScrollLock = (isOpen: boolean) => {
+    useEffect(() => {
+        if (!isOpen) {
+            return;
+        }
+        // Restore the previous inline value rather than clearing it outright,
+        // so an overflow set elsewhere survives the viewer opening and closing.
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = previous;
+        };
+    }, [isOpen]);
+};
+
+const FOCUSABLE_SELECTOR =
+    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 export default function FullSizeImage({
     selectedImage,
@@ -46,35 +83,45 @@ export default function FullSizeImage({
     selectedYear,
 }: FullSizeImageProps) {
     const ref = useRef<HTMLDivElement>(null);
-    const currentYear = typedFileList[selectedYear];
-    
+    const modalRef = useRef<HTMLDivElement>(null);
+    const closeButtonRef = useRef<HTMLButtonElement>(null);
+    const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+    const wasOpenRef = useRef(false);
+    const currentYear = selectedYear ? typedFileList[selectedYear] : undefined;
+
     const { release: selectedRelease, page: selectedPage, version: selectedVersion } = selectedImage ? parseImagePath(selectedImage) : { release: '', page: '', version: '' };
-    
+
     const currentRelease = currentYear?.[selectedRelease] as ImageEntry[] | undefined;
-    
+
     const currentIndex = currentRelease ? currentRelease.findIndex((image) => image.image === selectedImage) : -1;
     const isPreviousDisabled = !selectedYear || !currentRelease || currentIndex <= 0;
     const isNextDisabled = !selectedYear || !currentRelease || currentIndex === currentRelease.length - 1;
+    const nextImageEntry = currentRelease && currentIndex < currentRelease.length - 1
+        ? currentRelease[currentIndex + 1]
+        : undefined;
 
     const handleFirst = useCallback((e: PageEvent) => {
         e.stopPropagation();
-        if (currentRelease && currentRelease.length > 0) {
-            setSelectedImage(currentRelease[0].image);
+        const first = currentRelease?.[0];
+        if (first) {
+            setSelectedImage(first.image);
         }
     }, [currentRelease, setSelectedImage]);
 
     const handleLast = useCallback((e: PageEvent) => {
         e.stopPropagation();
-        if (currentRelease && currentRelease.length > 0) {
-            setSelectedImage(currentRelease[currentRelease.length - 1].image);
+        const last = currentRelease?.[currentRelease.length - 1];
+        if (last) {
+            setSelectedImage(last.image);
         }
     }, [currentRelease, setSelectedImage]);
 
     const handlePrevious = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (currentIndex > 0 && currentRelease) {
-                setSelectedImage(currentRelease[currentIndex - 1].image);
+            const prev = currentIndex > 0 ? currentRelease?.[currentIndex - 1] : undefined;
+            if (prev) {
+                setSelectedImage(prev.image);
             }
         },
         [currentIndex, currentRelease, setSelectedImage]
@@ -83,22 +130,71 @@ export default function FullSizeImage({
     const handleNext = useCallback(
         (e: PageEvent) => {
             e.stopPropagation();
-            if (currentRelease && currentIndex < currentRelease.length - 1) {
-                setSelectedImage(currentRelease[currentIndex + 1].image);
+            if (nextImageEntry) {
+                setSelectedImage(nextImageEntry.image);
             }
         },
-        [currentIndex, currentRelease, setSelectedImage]
+        [nextImageEntry, setSelectedImage]
     );
 
-    usePageScroll(setSelectedImage, handlePrevious, handleNext, handleFirst, handleLast);
+    usePageScroll(!!selectedImage, setSelectedImage, handlePrevious, handleNext, handleFirst, handleLast);
+    useBodyScrollLock(!!selectedImage);
 
     // Preload next image
     useEffect(() => {
-        if (currentRelease && currentIndex < currentRelease.length - 1) {
+        if (nextImageEntry) {
             const nextImage = new Image();
-            nextImage.src = './' + currentRelease[currentIndex + 1].image;
+            nextImage.src = assetUrl(nextImageEntry.image);
         }
-    }, [currentIndex, currentRelease]);
+    }, [nextImageEntry]);
+
+    // Move focus into the dialog on open, restore it to the trigger on close.
+    // Only act on actual open/close transitions — `selectedImage` also
+    // changes on in-modal next/prev navigation, and reacting to those would
+    // keep re-capturing the close button itself as the "previously focused"
+    // element instead of the original trigger outside the modal.
+    useEffect(() => {
+        const isOpen = !!selectedImage;
+        if (isOpen && !wasOpenRef.current) {
+            previouslyFocusedRef.current = document.activeElement as HTMLElement;
+            closeButtonRef.current?.focus();
+        } else if (!isOpen && wasOpenRef.current) {
+            previouslyFocusedRef.current?.focus();
+            previouslyFocusedRef.current = null;
+        }
+        wasOpenRef.current = isOpen;
+    }, [selectedImage]);
+
+    // Trap Tab focus within the dialog while it's open
+    useEffect(() => {
+        if (!selectedImage) {
+            return;
+        }
+
+        const handleTabTrap = (e: KeyboardEvent) => {
+            if (e.key !== 'Tab' || !modalRef.current) {
+                return;
+            }
+
+            const focusable = modalRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (!first || !last) {
+                return;
+            }
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        };
+
+        window.addEventListener('keydown', handleTabTrap);
+        return () => window.removeEventListener('keydown', handleTabTrap);
+    }, [selectedImage]);
 
     if (!selectedImage) {
         return null;
@@ -108,15 +204,21 @@ export default function FullSizeImage({
         <div
             className='modal'
             onClick={() => setSelectedImage(null)}
+            ref={modalRef}
             tabIndex={-1}
             role="dialog"
             aria-modal="true"
             aria-label="Képnézegető"
         >
-            <div className='close-container' onClick={() => setSelectedImage(null)}>
+            <button
+                type="button"
+                ref={closeButtonRef}
+                className='close-container'
+                onClick={() => setSelectedImage(null)}
+            >
                 <span className='close-icon'>&times;</span>
                 <span className='close-label'>Bezárás</span>
-            </div>
+            </button>
             <button
                 className={'previous'}
                 onClick={handlePrevious}
@@ -135,21 +237,36 @@ export default function FullSizeImage({
             >
                 <figure style={{ display: 'flex', flexDirection: 'column' }}>
                     <a
-                        href={'./' + selectedImage}
+                        href={assetUrl(selectedImage)}
                         target='_blank'
                         rel='noreferrer'
                         title="Kép megnyitása új lapon"
                     >
-                        <img src={'./' + selectedImage} alt={`${selectedYear}. - ${selectedRelease}. szám - ${selectedPage}. oldal`} />
+                        <picture>
+                            {/* The derivative is 960px wide against a 1275px
+                                original, so it's only a win where the viewport
+                                can't show more. Unconditional, it would cost
+                                every desktop reader a quarter of the scan's
+                                resolution — in the one view meant for reading. */}
+                            <source
+                                type="image/webp"
+                                media="(max-width: 960px)"
+                                srcSet={assetUrl(selectedImage.replace(/\.jpe?g$/i, '_m.webp'))}
+                            />
+                            <img
+                                src={assetUrl(selectedImage)}
+                                alt={`${selectedYear}. - ${selectedRelease}. szám - ${selectedPage}. oldal`}
+                            />
+                        </picture>
                     </a>
                     <figcaption>
                         <div className="caption-text">
                             {selectedYear}. - {+selectedRelease}. szám -{' '}
                             {+selectedPage}. oldal
-                            {selectedVersion ? ' (' + (+selectedVersion + 1) + '. verzió)' : ''}
+                            {formatVersionLabel(selectedVersion)}
                         </div>
-                        <a 
-                            href={'./' + selectedImage} 
+                        <a
+                            href={assetUrl(selectedImage)}
                             download={`demokrata_${selectedYear}_${selectedRelease}_${selectedPage}.jpg`}
                             className="download-link"
                             onClick={(e) => e.stopPropagation()}

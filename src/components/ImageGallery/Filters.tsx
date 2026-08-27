@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import Autocomplete from '../Autocomplete';
 import { getAuthors, getTitles } from './utils';
 
@@ -22,14 +22,22 @@ export default function Filters({
     const authors = useMemo(() => getAuthors(), []);
     const titles = useMemo(() => getTitles(author), [author]);
 
+    // Titles are scoped to the selected author, so switching author invalidates
+    // the chosen title. Skip the initial run: filters now come from the URL, and
+    // clearing on mount would drop the title out of a shared link.
+    const previousAuthorRef = useRef(author);
     useEffect(() => {
-        setTitle('');
+        if (previousAuthorRef.current !== author) {
+            previousAuthorRef.current = author;
+            setTitle('');
+        }
     }, [author, setTitle]);
 
     return (
         <div className='filters'>
             <div className='filter-group'>
                 <Autocomplete
+                    id='author-filter'
                     value={author}
                     setter={setAuthor}
                     items={authors}
@@ -42,6 +50,7 @@ export default function Filters({
             </div>
             <div className='filter-group'>
                 <Autocomplete
+                    id='title-filter'
                     value={title}
                     setter={setTitle}
                     items={titles}
@@ -53,8 +62,9 @@ export default function Filters({
                 />
             </div>
             <div className='autocomplete full-width-search'>
-                <label className='filters-title'>Szöveg keresése:</label>
+                <label className='filters-title' htmlFor='text-search-input'>Szöveg keresése:</label>
                 <input
+                    id='text-search-input'
                     type='text'
                     className='search-input text-search-input'
                     value={searchText}

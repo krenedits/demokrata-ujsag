@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Build output. Deployment goes through .github/workflows/deploy.yml, which
+# publishes dist/ straight to Pages, so the built copy is no longer tracked.
+docs
+
+# Derived WebP renditions of the scans. `yarn build` regenerates them from the
+# committed originals via scripts/generateResponsiveImages.js — keeping them out
+# of git avoids carrying a second, redundant ~159MB copy of the archive.
+public/images/**/*_m.webp
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

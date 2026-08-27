@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krenedits.github.io/demokrata-ujsag/sitemap.xml

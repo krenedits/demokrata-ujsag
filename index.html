@@ -2,13 +2,71 @@
 <html lang="hu">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+        <!-- Base-prefixed rather than relative: a deep route like /demokrata-ujsag/1993
+             is served by 404.html, where a "./" path would resolve against the route
+             segment instead of the site root. -->
+        <link rel="icon" type="image/svg+xml" href="%BASE_URL%logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <title>Demokrata Újság Archívum</title>
         <meta
             name="description"
             content="1989 októberétől a versegyházi MDF kiadásában indult a Demokrata Újság, amelyet 1998-as megszűnéséig Horváth Lajos és Krenedits Sándor vezetett. Az oldal ennek a lapnak tartalmazza az archívumát."
         />
+        <link rel="canonical" href="https://krenedits.github.io/demokrata-ujsag/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Demokrata Újság Archívum" />
+        <meta property="og:title" content="Demokrata Újság Archívum" />
+        <meta
+            property="og:description"
+            content="Az 1989 és 1998 között megjelent versegyházi Demokrata Újság beszkennelt lapszámai, évenként böngészhető, teljes szövegében kereshető archívumban."
+        />
+        <meta property="og:url" content="https://krenedits.github.io/demokrata-ujsag/" />
+        <meta property="og:image" content="https://krenedits.github.io/demokrata-ujsag/logo.png" />
+        <meta property="og:locale" content="hu_HU" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Demokrata Újság Archívum" />
+        <meta
+            name="twitter:description"
+            content="Az 1989 és 1998 között megjelent versegyházi Demokrata Újság beszkennelt lapszámai, évenként böngészhető, teljes szövegében kereshető archívumban."
+        />
+        <meta name="twitter:image" content="https://krenedits.github.io/demokrata-ujsag/logo.png" />
+
+        <script>
+            // The archive used to be served by a HashRouter, so links shared before
+            // the move to real paths look like "#/1993" (routes) or "#1993" (the old
+            // year-pill anchors). Rewrite those to the equivalent path before React
+            // mounts, so old links still land on the right view and don't leave a
+            // stale hash behind. Runs ahead of the deferred module bundle.
+            (function () {
+                var raw = window.location.hash.slice(1);
+                if (!raw) {
+                    return;
+                }
+
+                var isLegacyRoute = raw.charAt(0) === '/';
+                var isLegacyYear = /^\d{4}$/.test(raw);
+                // Leave any other hash alone — a plain in-page anchor should keep
+                // behaving like one.
+                if (!isLegacyRoute && !isLegacyYear) {
+                    return;
+                }
+
+                var base = '%BASE_URL%';
+                var queryIndex = raw.indexOf('?');
+                var routePath = queryIndex === -1 ? raw : raw.slice(0, queryIndex);
+                // A HashRouter keeps the query string inside the hash; fall back to a
+                // real one if this link happened to carry it outside.
+                var search =
+                    queryIndex === -1
+                        ? window.location.search
+                        : '?' + raw.slice(queryIndex + 1);
+
+                var path = base + routePath.replace(/^\/+/, '');
+                window.history.replaceState(null, '', path + search);
+            })();
+        </script>
     </head>
     <body>
         <div id="root"></div>

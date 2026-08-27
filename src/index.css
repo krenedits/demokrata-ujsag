@@ -7,14 +7,14 @@
   --focus-outline: -webkit-focus-ring-color;
 
   /* Typography */
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-size-base: 18px;
   --line-height: 1.6;
 
   /* Base styles */
-  color-scheme: light;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.9) !important; /* Increased contrast slightly */
   background-color: #242424 !important;
   font-family: var(--font-family);
@@ -85,4 +85,15 @@ button:focus-visible {
 
 input {
   color: rgba(255, 255, 255, 0.87);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

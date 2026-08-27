@@ -41,12 +41,12 @@ const parseImagePath = (imagePath: string) => {
         return { year: '', release: '', page: '', version: '' };
     }
 
-    const nameParts = filename.split('.')[0].split('-');
-    const year = nameParts[0];
+    const nameParts = (filename.split('.')[0] ?? '').split('-');
+    const year = nameParts[0] ?? '';
     const release = nameParts[1] || '';
-    
+
     const pageAndVersion = (nameParts[2] || '').split('_');
-    const page = pageAndVersion[0];
+    const page = pageAndVersion[0] ?? '';
     const version = pageAndVersion[1] || '';
 
     return {
@@ -57,4 +57,30 @@ const parseImagePath = (imagePath: string) => {
     };
 };
 
-export { getAuthors, getTitles, parseImagePath, typedFileList };
+// hasOwnProperty rather than `in`: `in` also matches Object.prototype keys, so
+// "constructor" / "toString" / "__proto__" would pass as real years and get a
+// canonical URL and a page title of their own.
+const isValidYear = (year: string | undefined): year is keyof typeof fileList =>
+    !!year && Object.prototype.hasOwnProperty.call(fileList, year);
+
+/** Whether an image path points at a page that actually exists in the archive. */
+const isKnownImage = (imagePath: string): boolean => {
+    const { year, release } = parseImagePath(imagePath);
+    if (!isValidYear(year)) {
+        return false;
+    }
+    const releases = typedFileList[year];
+    if (!releases || !Object.prototype.hasOwnProperty.call(releases, release)) {
+        return false;
+    }
+    return (releases[release] ?? []).some((e) => e.image === imagePath);
+};
+
+// A rescanned page's filename carries an explicit "_N" suffix (parseImagePath's
+// `version`); anything without one is the base scan and gets no label. Checked
+// against the empty string, not truthiness, so an explicit "_0" suffix (version
+// index 0) still renders "(1. verzió)" instead of being silently treated as unversioned.
+const formatVersionLabel = (version: string): string =>
+    version !== '' ? ` (${+version + 1}. verzió)` : '';
+
+export { getAuthors, getTitles, parseImagePath, typedFileList, isValidYear, isKnownImage, formatVersionLabel };

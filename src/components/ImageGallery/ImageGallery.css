@@ -5,23 +5,48 @@
   align-items: center;
 }
 
+/* Fallback until useStickyHeaderHeight measures the real header. Close enough
+   that nothing visibly jumps on the first paint. */
+:root {
+  --year-header-h: 60px;
+}
+
 .year-section {
-  margin-bottom: 40px;
   width: 100%;
+  margin-bottom: 40px;
+  /* Anchor jumps (#1996, and the legacy-hash redirect) would otherwise land
+     underneath the sticky year header. */
+  scroll-margin-top: var(--year-header-h);
 }
 
 .year-section-title,
 .year-section-release-title {
   position: sticky;
   background-color: #242424;
+  margin: 0;
 }
 
+/* The year header sits above the issue headers so an issue scrolling up passes
+   behind it rather than through it. */
 .year-section-title {
   top: 0;
+  z-index: 2;
+  padding: 12px 0;
+  font-size: 1.75em;
+  font-weight: 600;
 }
 
 .year-section-release-title {
-  top: 36px;
+  top: var(--year-header-h);
+  z-index: 1;
+  padding: 8px 0;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.release-row {
+  width: 100%;
+  padding-bottom: 32px;
 }
 
 .year-selector {
@@ -61,23 +86,38 @@
   background-color: #444;
 }
 
+.year-selector a.active {
+  background-color: var(--link-color);
+  color: #242424;
+  border-color: var(--link-color);
+}
+
 .year-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  justify-items: center;
   gap: 20px;
 }
 
 .image-card {
   cursor: pointer;
   text-align: center;
-  width: 220px; /* Increased from 150px */
+  width: 100%;
+  max-width: 220px;
   margin-bottom: 20px;
   transition: transform 0.2s;
+  /* reset default <button> chrome from index.css */
+  background: none;
+  border: none;
+  padding: 0;
+  display: block;
+  font: inherit;
+  color: inherit;
 }
 
 .image-card:hover {
   transform: scale(1.05);
+  background: none;
 }
 
 .image-preview {
@@ -87,6 +127,7 @@
 }
 
 .image-date {
+  display: block;
   margin-top: 10px;
   font-size: 1.1em; /* Larger caption */
   color: rgba(255, 255, 255, 0.95);
@@ -116,10 +157,10 @@
 }
 
 .modal-content img {
-  width: 100%;
-  height: 100%;
-  cursor: zoom-in;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .modal-content figcaption {
@@ -167,6 +208,7 @@
   transition: all 0.2s;
   z-index: 10;
   border: 2px solid transparent;
+  font: inherit;
 }
 
 .close-container:hover {
@@ -248,16 +290,27 @@
   }
 }
 
-.previous:hover,
-.next:hover {
-  opacity: 0.8;
-  border: none;
+@media (max-width: 480px) {
+  .year-selector {
+    gap: 8px;
+  }
+
+  .year-selector a {
+    padding: 8px 16px;
+    font-size: 0.95em;
+  }
+
+  .search-input {
+    padding: 10px;
+    font-size: 1em;
+  }
 }
 
-.previous:focus,
-.next:focus {
-  border: none;
-  outline: none;
+.previous:disabled,
+.next:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .filters {
@@ -323,11 +376,22 @@
 }
 
 .filter-item:hover {
-  background-color: #4ba3e3; /* Highlight color */
+  background-color: #6b4f0a; /* Dark gold, ≥4.5:1 contrast with white text */
   color: white;
 }
 
 .highlighted {
-  background-color: #4ba3e3;
+  background-color: #6b4f0a;
   color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.empty-state p {
+  font-size: 1.2em;
+  margin-bottom: 16px;
 }

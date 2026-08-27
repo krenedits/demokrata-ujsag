@@ -9,10 +9,10 @@ describe('ImageCard', () => {
         setSelectedImage: vi.fn(),
     };
 
-    it('renders the image with correct alt text', () => {
+    it('renders the image with a descriptive alt text', () => {
         render(<ImageCard {...defaultProps} />);
         const img = screen.getByRole('img');
-        expect(img).toHaveAttribute('alt', '1991-04-01');
+        expect(img).toHaveAttribute('alt', '1991. - 04. szám - 01. oldal');
     });
 
     it('displays the correct page number', () => {
@@ -20,10 +20,14 @@ describe('ImageCard', () => {
         expect(screen.getByText('1. oldal')).toBeInTheDocument();
     });
 
+    it('renders as a real, keyboard-accessible button', () => {
+        render(<ImageCard {...defaultProps} />);
+        expect(screen.getByRole('button')).toBeInTheDocument();
+    });
+
     it('calls setSelectedImage when clicked', () => {
         render(<ImageCard {...defaultProps} />);
-        const card = screen.getByText('1. oldal').parentElement;
-        if (card) fireEvent.click(card);
+        fireEvent.click(screen.getByRole('button'));
         expect(defaultProps.setSelectedImage).toHaveBeenCalledWith(defaultProps.full);
     });
 

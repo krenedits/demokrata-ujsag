@@ -1,5 +1,7 @@
 import React from "react";
 import { ImageCardProps } from ".";
+import { formatVersionLabel, parseImagePath } from "./utils";
+import { assetUrl } from "../../utils";
 
 // Render a single image card, either preview or full size
 export const ImageCard: React.FC<ImageCardProps> = ({
@@ -8,19 +10,24 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   full,
   setSelectedImage,
 }) => {
-    const version = full.includes('_') ? +(full.split('_')[1].match(/\d+/) ?? 0) : 0;
+  const parsed = parseImagePath(full);
+  const pageNumber = parsed.page ? +parsed.page : +(date.split("-")[2] ?? 0);
+  const versionLabel = formatVersionLabel(parsed.version);
+  const altText = parsed.year
+    ? `${parsed.year}. - ${parsed.release}. szám - ${parsed.page}. oldal`
+    : date;
 
   return (
-    <div className="image-card" onClick={() => setSelectedImage(full)}>
+    <button type="button" className="image-card" onClick={() => setSelectedImage(full)}>
       <img
-        src={"." + (preview ?? full)}
-        alt={date}
+        src={assetUrl(preview ?? full)}
+        alt={altText}
         className="image-preview"
         loading="lazy"
         width="148"
         height="203"
       />
-      <p className="image-date">{+date.split("-")[2]}. oldal{version ? ' (' + (version + 1) + '. verzió)' : ''}</p>
-    </div>
+      <span className="image-date">{pageNumber}. oldal{versionLabel}</span>
+    </button>
   );
 };
