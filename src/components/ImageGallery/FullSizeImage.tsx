@@ -520,12 +520,19 @@ export default function FullSizeImage({
                             </div>
                         )}
                     </div>
+                </figure>
+
+                {/* The caption and every control share one paper deck below the
+                    dark stage. Without it they sit straight on the stage, where
+                    the light theme's ink lands near-invisibly (measured at
+                    1.09:1) — the scan is meant to be the only lit thing here,
+                    so the text that describes it needs its own ground. */}
+                <div className="panel-deck">
                     <figcaption className="panel-caption">
                         {selectedYear}. - {+selectedRelease}. szám -{' '}
                         {+selectedPage}. oldal
                         {formatVersionLabel(selectedVersion)}
                     </figcaption>
-                </figure>
 
                 {/* One bar for every control that operates the scan. Previously
                     these sat in five places around the screen — two of them
@@ -616,6 +623,7 @@ export default function FullSizeImage({
                     >
                         Letöltés
                     </a>
+                </div>
                 </div>
             </div>
         </div>

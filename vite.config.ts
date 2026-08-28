@@ -74,6 +74,12 @@ export default defineConfig(() => {
         base: '/demokrata-ujsag/', // GitHub Pages subpath
         build: { outDir },
         plugins: [react(), staticRoutes(outDir)],
+        // Two React instances in one graph is a recurring failure here: it has
+        // crashed the dev server ("Cannot read properties of null (reading
+        // 'useState')") and made a test suite fail to collect
+        // ("React.createContext is not a function") while passing on its own.
+        // Deduping pins every importer to the same copy.
+        resolve: { dedupe: ['react', 'react-dom'] },
         test: {
             globals: true,
             environment: 'jsdom',
