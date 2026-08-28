@@ -1,10 +1,214 @@
+/* Full-bleed shell: the masthead, the meta band and the footer run edge to
+   edge, and only their contents are held to the reading width. The old
+   `#root { padding: 2rem; text-align: center }` centred everything including
+   body copy, which is the hardest thing to read at length. */
 #root {
-  max-width: min(1280px, 100%);
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-.card {
-  padding: 2em;
+.shell {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* --- Masthead ------------------------------------------------------------ */
+.site-header {
+  background-color: var(--paper-card);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+}
+
+.masthead-crest {
+  display: block;
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.masthead-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.masthead-name {
+  font-family: var(--font-serif);
+  font-size: calc(2.2rem * var(--scale));
+  font-weight: 700;
+  line-height: 1.02;
+  color: var(--ink);
+}
+
+/* 15px rather than the 13px this kind of eyebrow usually gets: it carries the
+   town and the date range, which is half of what a first-time visitor needs. */
+.masthead-eyebrow {
+  font-size: calc(0.79rem * var(--scale));
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold-deep);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-actions button[aria-pressed='true'],
+.header-actions button[aria-expanded='true'] {
+  background-color: var(--gold);
+  border-color: var(--gold-deep);
+}
+
+/* --- Meta band ----------------------------------------------------------- */
+.site-meta {
+  background-color: var(--paper-sunk);
+  border-bottom: 1px solid var(--rule);
+  font-size: calc(0.9rem * var(--scale));
+  color: var(--ink-2);
+}
+
+.site-meta .shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* --- The one instruction ------------------------------------------------- */
+.site-hint {
+  background-color: var(--paper-gold);
+  border-bottom: 1px solid var(--rule-gold);
+  border-left: 6px solid var(--gold);
+}
+
+.site-hint .shell {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.site-hint svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.site-hint p {
+  margin: 0;
+  font-size: calc(1.05rem * var(--scale));
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.about {
+  margin-top: 8px;
+}
+
+.about summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: calc(0.95rem * var(--scale));
+  font-weight: 700;
+  color: var(--gold-deeper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.about p {
+  max-width: 68ch;
+  margin: 4px 0 0;
+  font-size: calc(0.95rem * var(--scale));
+  color: var(--ink-2);
+}
+
+/* --- Footer -------------------------------------------------------------- */
+.site-footer {
+  margin-top: 48px;
+  background-color: var(--paper-sunk);
+  border-top: 1px solid var(--rule);
+}
+
+.site-footer .shell {
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+
+.site-footer p {
+  max-width: 72ch;
+  margin: 0;
+  font-size: calc(0.9rem * var(--scale));
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+@media (max-width: 620px) {
+  .shell {
+    padding: 0 16px;
+  }
+
+  .site-header .shell {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .masthead-crest {
+    width: 38px;
+  }
+
+  .masthead-name {
+    font-size: calc(1.6rem * var(--scale));
+  }
+
+  .masthead-eyebrow {
+    font-size: calc(0.74rem * var(--scale));
+    letter-spacing: 0.12em;
+  }
+
+  /* Both actions full width and side by side: thumbs, not pointers. */
+  .header-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .header-actions button {
+    padding: 0 10px;
+    font-size: calc(0.92rem * var(--scale));
+  }
+
+  .site-meta .shell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 }

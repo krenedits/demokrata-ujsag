@@ -1,16 +1,263 @@
 .image-gallery {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-top: 28px;
 }
 
 /* Fallback until useStickyHeaderHeight measures the real header. Close enough
    that nothing visibly jumps on the first paint. */
 :root {
-  --year-header-h: 60px;
+  --year-header-h: 64px;
 }
 
+/* ---------------------------------------------------------------------------
+   Search panel. Not the first thing the archive asks of you any more: it opens
+   from the masthead, and the three fields are stacked and labelled rather than
+   sitting in a row of unexplained boxes.
+   --------------------------------------------------------------------------- */
+.search-panel {
+  margin-bottom: 32px;
+  padding: 24px 26px 26px;
+  background-color: var(--paper-card);
+  border: 2px solid var(--rule-strong);
+  border-radius: 14px;
+}
+
+.search-panel-title {
+  margin: 0 0 6px;
+  font-size: calc(1.4rem * var(--scale));
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.search-panel-hint {
+  margin: 0 0 20px;
+  font-size: calc(0.95rem * var(--scale));
+  color: var(--ink-2);
+}
+
+/* "VAGY": the fields are alternatives, and saying so removes the commonest
+   misreading — that all three have to be filled in. */
+.search-or {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+  font-size: calc(0.9rem * var(--scale));
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+}
+
+.search-or::before,
+.search-or::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background-color: var(--rule);
+}
+
+.search-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  width: 100%;
+}
+
+.filter-group,
+.autocomplete {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.full-width-search {
+  flex-basis: 100%;
+}
+
+.filters-title {
+  font-size: calc(1rem * var(--scale));
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.filters-hint {
+  margin-top: -2px;
+  font-size: calc(0.82rem * var(--scale));
+  color: var(--ink-2);
+}
+
+.search-input {
+  padding: 15px 16px;
+  border-radius: 10px;
+  border: 2px solid var(--rule-strong);
+  background-color: var(--paper-card);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: calc(1.05rem * var(--scale));
+  width: 100%;
+  min-height: 60px;
+  transition: border-color 0.15s;
+}
+
+.search-input:hover {
+  border-color: var(--ink-3);
+}
+
+.search-input:focus {
+  border-color: var(--ink);
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.search-input::placeholder {
+  color: var(--ink-3);
+}
+
+/* Autocomplete suggestions. 56px rows, because this list is read and tapped by
+   the same people the rest of this stylesheet is sized for. */
+.filter-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--rule);
+  background-color: var(--paper-card);
+  color: var(--ink);
+  font-size: calc(0.98rem * var(--scale));
+  text-align: left;
+}
+
+.filter-item:first-child {
+  border-top: none;
+}
+
+.filter-item:hover,
+.highlighted {
+  background-color: var(--paper-gold);
+  box-shadow: inset 5px 0 0 var(--gold);
+}
+
+/* ---------------------------------------------------------------------------
+   Year navigation. The first and only decision on the page.
+   --------------------------------------------------------------------------- */
+.year-nav {
+  margin-bottom: 34px;
+}
+
+.year-nav-title {
+  margin: 0 0 16px;
+  font-size: calc(1.35rem * var(--scale));
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.year-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.year-selector li {
+  margin: 0;
+}
+
+.year-selector a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 80px;
+  padding: 6px 10px;
+  border: 2px solid var(--rule-strong);
+  border-radius: 12px;
+  background-color: var(--paper-card);
+  color: var(--ink);
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.year-selector a:hover {
+  background-color: var(--paper-sunk);
+  border-color: var(--gold-deep);
+  color: var(--ink);
+}
+
+.year-selector a.active {
+  background-color: var(--gold);
+  border-color: var(--gold-deep);
+  color: var(--ink);
+}
+
+.year-pill-name {
+  font-family: var(--font-serif);
+  font-size: calc(1.4rem * var(--scale));
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+/* Tells you how much is behind the pill before you spend a click on it. */
+.year-pill-count {
+  font-size: calc(0.78rem * var(--scale));
+  color: var(--ink-2);
+}
+
+.year-selector a.active .year-pill-count {
+  color: #4a3c07;
+  font-weight: 700;
+}
+
+/* The phone's picker; hidden on wide screens, where the pills are better. */
+.year-select {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.year-select-label {
+  font-size: calc(1rem * var(--scale));
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.year-select-input {
+  width: 100%;
+  min-height: 64px;
+  padding: 0 44px 0 16px;
+  border: 2px solid var(--gold-deep);
+  border-radius: 10px;
+  background-color: var(--paper-gold);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: calc(1.25rem * var(--scale));
+  font-weight: 700;
+  /* The native arrow is tiny and low-contrast on most platforms. */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23241f19' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9 L12 16 L19 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 22px 22px;
+}
+
+/* ---------------------------------------------------------------------------
+   The archive itself.
+   --------------------------------------------------------------------------- */
 .year-section {
   width: 100%;
   margin-bottom: 40px;
@@ -22,7 +269,10 @@
 .year-section-title,
 .year-section-release-title {
   position: sticky;
-  background-color: #242424;
+  /* Opaque, and the same paper as the page: content has to pass behind these,
+     not through them. */
+  background-color: var(--paper);
+  font-family: var(--font-serif);
   margin: 0;
 }
 
@@ -31,17 +281,19 @@
 .year-section-title {
   top: 0;
   z-index: 2;
-  padding: 12px 0;
-  font-size: 1.75em;
-  font-weight: 600;
+  padding: 14px 0 10px;
+  border-bottom: 3px solid var(--ink);
+  font-size: calc(1.9rem * var(--scale));
+  font-weight: 700;
 }
 
 .year-section-release-title {
   top: var(--year-header-h);
   z-index: 1;
-  padding: 8px 0;
-  font-size: 1.25em;
-  font-weight: 500;
+  padding: 18px 0 10px;
+  border-bottom: 1px solid var(--rule);
+  font-size: calc(1.3rem * var(--scale));
+  font-weight: 600;
 }
 
 .release-row {
@@ -49,121 +301,114 @@
   padding-bottom: 32px;
 }
 
-.year-selector {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-.year-selector li {
-  margin: 5px;
-}
-
-.year-selector a {
-  cursor: pointer;
-  padding: 15px 30px; /* Much larger padding */
-  border-radius: 50px; /* Pill shape */
-  background-color: #333;
-  color: white;
-  border: 2px solid transparent; /* Prepare for hover/focus */
-  transition: all 0.3s;
-  display: inline-block;
-  font-size: 1.2em; /* Larger text */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.year-selector a:hover {
-  background-color: #444;
-  border-color: #dcba1d;
-  transform: translateY(-2px);
-}
-
-.year-selector a:focus {
-  outline: 4px solid #ffd700;
-  background-color: #444;
-}
-
-.year-selector a.active {
-  background-color: var(--link-color);
-  color: #242424;
-  border-color: var(--link-color);
-}
-
 .year-images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  justify-items: center;
-  gap: 20px;
+  /* 200px, not 140: at the old size a page of dense newsprint was a grey
+     rectangle. */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
 }
 
 .image-card {
   cursor: pointer;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 220px;
-  margin-bottom: 20px;
-  /* reset default <button> chrome from index.css */
-  background: none;
-  border: none;
   padding: 0;
-  display: block;
+  background-color: var(--paper-card);
+  /* Always 2px, only the colour changes on hover — a width change here would
+     nudge every card in the row. */
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
   font: inherit;
   color: inherit;
+  text-align: left;
+  min-height: 0;
+  box-shadow: 0 1px 3px rgba(36, 31, 25, 0.07);
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-/* Deliberately no transform here. A scale() grew the card past its grid cell
-   and into the band of the sticky issue header, which is opaque and sits at a
-   higher z-index — so the top of every first-row scan was painted over and
-   looked cropped. Everything below stays inside the card's own box. */
-.image-card:hover {
-  background: none;
+.image-card:hover,
+.image-card:focus-visible {
+  border-color: var(--gold-deep);
+  box-shadow: 0 8px 22px rgba(36, 31, 25, 0.18);
+}
+
+.image-mat {
+  display: block;
+  padding: 9px 9px 0;
+  background-color: var(--paper-sunk);
 }
 
 .image-preview {
-  max-width: 100%;
-  border-radius: 12px;
-  /* Inset, so the highlight can never extend under the sticky header. */
-  box-shadow:
-    inset 0 0 0 0 transparent,
-    0 8px 16px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.15s ease-out;
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
 }
 
-.image-card:hover .image-preview {
-  box-shadow:
-    inset 0 0 0 3px var(--link-color),
-    0 12px 28px rgba(0, 0, 0, 0.6);
+.image-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px 13px;
+  transition: background-color 0.15s;
 }
 
-/* Drawn inside the box (negative offset) for the same reason as the hover ring:
-   a focus ring outside it gets sliced by the sticky header on the top row. */
-.image-card:focus-visible {
-  outline: 4px solid #ffd700;
-  outline-offset: -4px;
-  border-radius: 12px;
-}
-
-.image-card:hover .image-date,
-.image-card:focus-visible .image-date {
-  color: var(--link-color);
+.image-card:hover .image-label,
+.image-card:focus-visible .image-label {
+  background-color: var(--gold);
 }
 
 .image-date {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.1em; /* Larger caption */
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: 500;
+  font-size: calc(1.02rem * var(--scale));
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.image-note {
+  font-size: calc(0.8rem * var(--scale));
+  color: var(--gold-deep);
+  white-space: nowrap;
+}
+
+.image-open {
+  display: none;
+  font-size: calc(0.8rem * var(--scale));
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.image-card:hover .image-note,
+.image-card:focus-visible .image-note {
+  display: none;
+}
+
+.image-card:hover .image-open,
+.image-card:focus-visible .image-open {
+  display: inline;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 56px 20px;
+  color: var(--ink-2);
+}
+
+.empty-state p {
+  font-size: calc(1.1rem * var(--scale));
+  margin-bottom: 20px;
+  color: var(--ink);
 }
 
 /* ---------------------------------------------------------------------------
-   Full-size viewer. One idea: the scanned page is the only bright thing on
-   screen, and every control lives on one surface beneath it. The gallery used
-   to stay legible through the scrim while controls floated over it in five
-   separate places, which read as clutter.
+   Full-size viewer. One idea: the scanned page is the only bright thing on the
+   dark stage, and every control sits on solid paper above and below it — dark
+   grey buttons on a dark grey panel were the hardest thing here to read.
    --------------------------------------------------------------------------- */
 .modal {
   display: flex;
@@ -173,8 +418,7 @@
   inset: 0;
   padding: 16px;
   overflow: auto;
-  /* Near-opaque: nothing behind the viewer should be readable. */
-  background-color: rgba(10, 10, 10, 0.96);
+  background-color: rgba(18, 16, 13, 0.97);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -183,7 +427,7 @@
 /* Without the blur to soften it, the scrim has to carry the separation alone. */
 @supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
   .modal {
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(18, 16, 13);
   }
 }
 
@@ -194,21 +438,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   /* Sized so the labelled toolbar fits on one line with margin to spare —
-     narrower and "Következő" is clipped off the edge. The scan is bound by
-     height rather than width here, so the extra width costs it nothing. */
-  width: min(100%, 840px);
+     narrower and "Következő oldal" is clipped off the edge. */
+  width: min(100%, 1000px);
   /* A definite height, not just a cap: the scan sizes itself by flexing into
      what the chrome leaves, and flex can only distribute space the container
      actually has. */
   height: 100%;
   max-height: 100%;
-  padding: 12px 16px 16px;
-  background-color: #1c1c1c;
-  border: 1px solid #3d3d3d;
+  /* The stage colour; the header and deck paint their own paper over it. */
+  background-color: #1a1712;
+  border: 1px solid #3a3229;
   border-radius: 14px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
   /* The panel can still outgrow the window on short/landscape screens; without
      a scroller the toolbar would be clipped away unreachably. */
   overflow: auto;
@@ -217,15 +458,41 @@
 /* The chrome keeps its natural height; only the scan flexes. Without this a
    long toolbar could squeeze the caption or the links instead of the image. */
 .panel-header,
-.panel-caption,
-.viewer-toolbar,
-.panel-secondary {
+.panel-deck {
   flex: 0 0 auto;
 }
 
 .panel-header {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 20px;
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Says which page you are looking at, directly above the scan. */
+.panel-caption {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: calc(1.3rem * var(--scale));
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.panel-subcaption {
+  margin: 0;
+  font-size: calc(0.85rem * var(--scale));
+  color: var(--ink-2);
 }
 
 /* Flexes to whatever the chrome leaves over, at every size. A viewport-height
@@ -235,8 +502,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
   margin: 0;
+  padding: 20px;
   width: 100%;
   flex: 1 1 auto;
   min-height: 0;
@@ -249,15 +517,12 @@
   position: relative;
   overflow: hidden;
   /* Takes every pixel the chrome leaves over. A vh guess can't know how tall
-     the header, caption and toolbar actually are, and the previous one
-     (58vh) left a 900px-tall window showing a 379px-wide page marooned in a
-     780px panel — in the one view meant for reading. */
+     the header, caption and toolbar actually are. */
   flex: 1 1 auto;
   min-height: 0;
   /* Width follows from the flexed height and the inline aspect-ratio, so the
      box is exactly the page's shape at whatever size it ends up. `auto` is
-     safe here precisely because aspect-ratio gives it a basis — it is not the
-     shrink-to-fit that would collapse around the absolutely-positioned scan. */
+     safe here precisely because aspect-ratio gives it a basis. */
   width: auto;
   max-width: 100%;
   /* Only an upper bound now, for very tall windows. */
@@ -265,10 +530,8 @@
   /* The browser must not claim the gestures: pinch and drag are ours. */
   touch-action: none;
   cursor: zoom-in;
-  /* Transparent, not a dark plate: when a short window squeezes the box, the
-     leftover space would otherwise read as an empty frame around the page. */
   background-color: transparent;
-  border-radius: 10px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
 }
 
 .scan-viewport.is-zoomed {
@@ -315,11 +578,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 36px;
-  height: 36px;
-  margin: -18px 0 0 -18px;
-  border: 3px solid rgba(255, 255, 255, 0.25);
-  border-top-color: var(--link-color);
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--gold);
   border-radius: 50%;
   animation: scan-spin 800ms linear infinite;
 }
@@ -328,6 +591,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* The control deck: solid paper, so nothing here is dark-on-dark. */
+.panel-deck {
+  padding: 14px 20px 14px;
+  background-color: var(--paper);
+  border-top: 1px solid var(--rule);
 }
 
 /* One toolbar, inside the panel, never over the scan. Paging sits at the two
@@ -345,8 +615,8 @@
 }
 
 /* nowrap: a wrapped "Eredeti méret" dropped out of the row and dragged the
-   whole toolbar's height with it. If it can't fit, the breakpoint below moves
-   it, rather than letting it break the line. */
+   whole toolbar's height with it. If it can't fit, the breakpoint below lets
+   its label take two lines rather than letting it break the line. */
 .tool-zoom {
   display: flex;
   align-items: center;
@@ -365,17 +635,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 9px;
   height: 56px;
   min-width: 56px;
-  padding: 0 14px;
-  background-color: #2e2e2e;
-  color: #fff;
-  border: 2px solid #7a7a7a;
+  padding: 0 18px;
+  background-color: var(--paper-card);
+  color: var(--ink);
+  border: 2px solid var(--ink);
   border-radius: 10px;
   font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: var(--font-weight-medium);
+  font-size: calc(0.98rem * var(--scale));
+  font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
   cursor: pointer;
@@ -383,22 +653,32 @@
 }
 
 .tool-button:hover:not(:disabled) {
-  background-color: #3b3b3b;
-  border-color: var(--link-color);
+  background-color: var(--paper-sunk);
+  border-color: var(--gold-deep);
 }
 
 /* Quiet and inert, never decorated. A dashed border reads as a placeholder or
    an error — "something is broken here" — rather than "not available now".
    Three signals at once (fill, contrast, cursor) so it never rests on colour
-   alone, but all of them recede: the enabled controls should draw the eye. */
-/* Recessive but still legible: #8a8a8a on #232323 measures 4.55:1, just over the
-   4.5:1 AA threshold, because an older reader still has to be able to read what
-   is currently unavailable. There is almost no headroom — do not dim further. */
+   alone, but all of them recede: the enabled controls should draw the eye.
+   The text still clears 5.5:1, because an older reader has to be able to read
+   what is currently unavailable. */
 .tool-button:disabled {
-  background-color: #232323;
-  color: #8a8a8a;
-  border-color: #383838;
+  background-color: var(--paper-sunk);
+  color: var(--ink-off);
+  border-color: var(--rule);
   cursor: not-allowed;
+}
+
+/* The one action a reader almost always wants next. */
+.tool-next:not(:disabled) {
+  background-color: var(--gold);
+  border-color: var(--gold-deep);
+}
+
+.tool-next:not(:disabled):hover {
+  background-color: #cfae14;
+  border-color: var(--ink);
 }
 
 .tool-icon {
@@ -407,7 +687,7 @@
 }
 
 .tool-label {
-  font-size: 0.95rem;
+  font-size: calc(0.98rem * var(--scale));
 }
 
 /* 48px rather than the toolbar's 56: still a comfortable target, and the
@@ -415,7 +695,8 @@
 .panel-close {
   gap: 10px;
   height: 48px;
-  padding: 0 20px;
+  padding: 0 18px;
+  flex-shrink: 0;
 }
 
 /* Sits between the two zoom buttons and must not shift as the digits change,
@@ -427,40 +708,59 @@
   justify-content: center;
   min-width: 68px;
   height: 56px;
-  color: #fff;
-  font-size: 1.15rem;
+  color: var(--ink);
+  font-size: calc(1.1rem * var(--scale));
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Says which page you are looking at, directly above the controls that change
-   it. Nothing else in the panel repeats this. */
-.panel-caption {
-  margin: 0;
-  color: #fff;
-  font-size: 1.05rem;
-  text-align: center;
 }
 
 .panel-secondary {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 28px;
-  padding-top: 8px;
-  border-top: 1px solid #333;
+  gap: 16px;
+  margin-top: 13px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+
+/* First/last page: the Home and End keys have always done this, but nothing on
+   screen ever said so. */
+.panel-jump {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.panel-jump button {
+  min-height: 48px;
+  padding: 0 14px;
+  border-width: 2px;
+  border-color: var(--rule-strong);
+  font-size: calc(0.88rem * var(--scale));
+}
+
+.panel-tip {
+  flex: 1 1 220px;
+  margin: 0;
+  text-align: center;
+  font-size: calc(0.85rem * var(--scale));
+  color: var(--ink-3);
+}
+
+.panel-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Long spelling on a desktop, short on a phone — see the note in the markup. */
+.label-short {
+  display: none;
 }
 
 /* Quieter than the toolbar on purpose: neither is why anyone opened a scan. */
@@ -468,8 +768,8 @@
   display: inline-flex;
   align-items: center;
   min-height: 48px;
-  color: var(--link-color);
-  font-size: 1rem;
+  color: var(--gold-deep);
+  font-size: calc(0.9rem * var(--scale));
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -482,9 +782,20 @@
     padding: 8px;
   }
 
-  .modal-panel {
-    gap: 6px;
-    padding: 8px 12px 10px;
+  .panel-header {
+    padding: 8px 14px;
+  }
+
+  .panel-deck {
+    padding: 10px 14px;
+  }
+
+  .scan-figure {
+    padding: 10px;
+  }
+
+  .panel-caption {
+    font-size: calc(1.05rem * var(--scale));
   }
 
   /* 48px stays the floor even here — the space has to come from padding and
@@ -493,21 +804,42 @@
     height: 48px;
   }
 
-  .panel-caption {
-    font-size: 0.95rem;
-  }
-
   .panel-secondary {
-    gap: 20px;
-    padding-top: 6px;
-  }
-
-  .secondary-link {
-    font-size: 0.95rem;
+    margin-top: 9px;
+    padding-top: 9px;
+    gap: 12px;
   }
 }
 
 @media (max-width: 620px) {
+  .image-gallery {
+    padding-top: 20px;
+  }
+
+  .search-panel {
+    padding: 18px 16px 20px;
+  }
+
+  /* The pills would take a third of a phone screen before a single page was
+     visible; the native picker is one line and every reader knows it. */
+  .year-selector {
+    display: none;
+  }
+
+  .year-select {
+    display: flex;
+  }
+
+  .year-nav-title {
+    font-size: calc(1.15rem * var(--scale));
+    margin-bottom: 12px;
+  }
+
+  .year-images {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+
   /* Full screen on a phone. The chrome keeps its natural height and the scan
      absorbs whatever is left, so no control can ever end up half off the
      bottom edge — which no viewport-height guess can guarantee. */
@@ -521,9 +853,19 @@
     max-height: 100%;
     border: none;
     border-radius: 0;
-    padding: 8px 10px 12px;
-    gap: 10px;
     overflow: hidden;
+  }
+
+  .panel-header {
+    padding: 9px 12px;
+  }
+
+  .panel-caption {
+    font-size: calc(1.05rem * var(--scale));
+  }
+
+  .scan-figure {
+    padding: 12px;
   }
 
   /* The panel is full-height here, so the flex line has a definite height to
@@ -534,6 +876,10 @@
     min-height: 0;
     max-width: 100%;
     max-height: none;
+  }
+
+  .panel-deck {
+    padding: 11px 12px 12px;
   }
 
   /* Two rows, no more: paging together on the first, zoom on the second.
@@ -562,12 +908,8 @@
     gap: 8px;
   }
 
-  /* "400%" is 4 tabular digits — 56px is still a fixed, non-shifting box, and
-     the 12px it gives back is what buys "Eredeti méret" its full label on a
-     360px phone instead of a second line. Not a tap target, so the 48px floor
-     doesn't apply to it. */
-  .zoom-level {
-    min-width: 56px;
+  .tool-button {
+    padding: 0 12px;
   }
 
   /* Four labelled buttons cannot fit one phone-width row, and stacking them
@@ -600,7 +942,7 @@
        panel's edge and clipped, with nothing to scroll it back into view. It
        gets ~96px there, so the label takes two lines instead. Whole words, not
        an ellipsis: the reader has to be able to tell what the button does, and
-       two 20px lines still sit inside the 56px target, so the toolbar stays
+       two short lines still sit inside the 56px target, so the toolbar stays
        two rows rather than growing a third at the scan's expense. */
     white-space: normal;
     text-align: center;
@@ -613,107 +955,53 @@
     min-width: min-content;
   }
 
+  /* "400%" is 4 tabular digits — 56px is still a fixed, non-shifting box, and
+     the 12px it gives back is what buys "Eredeti méret" its full label on a
+     360px phone instead of a second line. Not a tap target, so the 48px floor
+     doesn't apply to it. */
+  .zoom-level {
+    min-width: 56px;
+  }
+
+  /* One row, not three. Every row here is height taken straight off the scan,
+     which on a 320x640 phone was down to 35% of the screen. */
   .panel-secondary {
-    gap: 24px;
-    padding-top: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .year-selector {
+    flex-wrap: nowrap;
+    justify-content: space-between;
     gap: 8px;
+    margin-top: 9px;
+    padding-top: 9px;
   }
 
-  .year-selector a {
-    padding: 8px 16px;
-    font-size: 0.95em;
+  .label-long {
+    display: none;
   }
 
-  .search-input {
-    padding: 10px;
-    font-size: 1em;
+  .label-short {
+    display: inline;
   }
-}
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 20px;
-}
+  .panel-jump {
+    gap: 6px;
+  }
 
-.filter-group,
-.autocomplete {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-  min-width: 250px;
-}
+  .panel-jump button {
+    padding: 0 10px;
+    font-size: calc(0.8rem * var(--scale));
+  }
 
-.full-width-search {
-  flex-basis: 100%;
-}
+  /* The tip is the first thing to go when space is short: the gestures it
+     describes are all still discoverable by trying them, and the two that
+     matter most (swipe, double-tap) are the ones a phone reader tries first. */
+  .panel-tip {
+    display: none;
+  }
 
-.filters-title {
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-left: 4px;
-  color: rgba(255, 255, 255, 0.9);
-}
+  .panel-links {
+    gap: 14px;
+  }
 
-.search-input {
-  padding: 15px; /* Large padding */
-  border-radius: 8px;
-  border: 2px solid #555;
-  background-color: #333;
-  color: white;
-  font-size: 1.1em; /* Large text */
-  width: 100%;
-  transition: all 0.3s;
-}
-
-.search-input:focus {
-  border-color: #ffd700;
-  outline: none;
-  background-color: #444;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.filter-item {
-  cursor: pointer;
-  padding: 12px 20px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-  background-color: #333;
-  margin: 4px 0;
-  text-align: left;
-  font-size: 1.1em;
-}
-
-.filter-item:hover {
-  background-color: #6b4f0a; /* Dark gold, ≥4.5:1 contrast with white text */
-  color: white;
-}
-
-.highlighted {
-  background-color: #6b4f0a;
-  color: white;
-}
-
-.empty-state {
-  text-align: center;
-  padding: 60px 20px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.empty-state p {
-  font-size: 1.2em;
-  margin-bottom: 16px;
+  .secondary-link {
+    font-size: calc(0.8rem * var(--scale));
+  }
 }

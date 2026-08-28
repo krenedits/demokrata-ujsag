@@ -6,7 +6,7 @@ import useStickyHeaderHeight from "../../hooks/useStickyHeaderHeight";
 import FullSizeImage from "./FullSizeImage";
 import { ImageCard } from "./ImageCard";
 import "./ImageGallery.css";
-import YearSelector from "./YearSelector";
+import YearSelector, { YearOption } from "./YearSelector";
 import Filters from "./Filters";
 import { isKnownImage, isValidYear, parseImagePath } from "./utils";
 import { ImageEntry } from "../../types";
@@ -58,7 +58,13 @@ const releaseLabel = (year: string, release: string) =>
     ? [+release, +release + 1].join('-')
     : `${+release}`;
 
-function ImageGallery() {
+interface ImageGalleryProps {
+  /** The masthead owns the toggle; the panel and its state live down here. */
+  isSearchOpen: boolean;
+  onCloseSearch: () => void;
+}
+
+function ImageGallery({ isSearchOpen, onCloseSearch }: ImageGalleryProps) {
   const { year: urlYear } = useParams<{ year: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -205,19 +211,29 @@ function ImageGallery() {
   // selector off it would blink the entire year navigation away and back on
   // the first search of a session. Author/title alone is cheap to evaluate and
   // keeps the pills stable through the fetch.
-  const filteredYears = useMemo(() => {
+  // Each pill carries how much is behind it, so the reader can tell a thin year
+  // from a thick one before spending a click on it. The counts follow the
+  // current filters for the same reason the pill list does.
+  const yearOptions = useMemo<YearOption[]>(() => {
     if (!isSearchIndexPending) {
-        return matchingYearsData.map(d => d.year);
+        return matchingYearsData.map((d) => ({
+            year: d.year,
+            issues: d.releases.length,
+            pages: d.releases.reduce((sum, r) => sum + r.images.length, 0),
+        }));
     }
     return Object.entries(fileList)
-        .filter(([, yearContent]) =>
-            Object.values(yearContent).some(
-                (images) =>
-                    getImages(images as ImageEntry[], author, title, null, null)
-                        .length > 0
-            )
-        )
-        .map(([year]) => year);
+        .map(([year, yearContent]) => {
+            const releases = Object.values(yearContent)
+                .map((images) => getImages(images as ImageEntry[], author, title, null, null))
+                .filter((images) => images.length > 0);
+            return {
+                year,
+                issues: releases.length,
+                pages: releases.reduce((sum, images) => sum + images.length, 0),
+            };
+        })
+        .filter((option) => option.issues > 0);
   }, [matchingYearsData, isSearchIndexPending, author, title]);
 
   const filteredYearsData = useMemo(() =>
@@ -336,18 +352,22 @@ function ImageGallery() {
   }
 
   return (
-    <div className="image-gallery">
-      <Filters
-        author={author ?? ""}
-        setAuthor={setAuthor}
-        title={title ?? ""}
-        setTitle={setTitle}
-        searchText={searchText}
-        setSearchText={setSearchText}
-      />
+    <div className="image-gallery shell">
+      {isSearchOpen && (
+        <Filters
+          author={author ?? ""}
+          setAuthor={setAuthor}
+          title={title ?? ""}
+          setTitle={setTitle}
+          searchText={searchText}
+          setSearchText={setSearchText}
+          onClear={handleClearFilters}
+          onClose={onCloseSearch}
+        />
+      )}
       <YearSelector
         selectedYear={activeYear}
-        filteredYears={filteredYears}
+        years={yearOptions}
       />
       {isSearchIndexPending && (
         <div className="empty-state" aria-live="polite">
@@ -356,7 +376,7 @@ function ImageGallery() {
       )}
       {searchIndexFailed && (
         <div className="empty-state" role="alert">
-          <p>A keresési index nem tölthető be. Próbáld újra.</p>
+          <p>A keresési index nem tölthető be. Kérjük, próbálja újra.</p>
           <button type="button" onClick={retrySearchIndex}>
             Újrapróbálkozás
           </button>

@@ -13,15 +13,21 @@ import ImageGallery from './index';
 // issue and card. That's what lets the counts below act as a real regression
 // net: a virtualized build once silently dropped the last three years' headers
 // and several whole issues, and nothing in this file caught it.
-const renderGallery = (initialEntries: string[] = ['/']) =>
-    render(
+// The search panel now opens from the masthead, so most of these render it
+// open: that is the state in which the filter controls exist at all.
+const renderGallery = (initialEntries: string[] = ['/'], isSearchOpen = true) => {
+    const gallery = (
+        <ImageGallery isSearchOpen={isSearchOpen} onCloseSearch={() => {}} />
+    );
+    return render(
         <MemoryRouter initialEntries={initialEntries}>
             <Routes>
-                <Route path="/" element={<ImageGallery />} />
-                <Route path="/:year" element={<ImageGallery />} />
+                <Route path="/" element={gallery} />
+                <Route path="/:year" element={gallery} />
             </Routes>
         </MemoryRouter>
     );
+};
 
 // Derived from the data rather than hardcoded, so growing the archive doesn't
 // turn these into false failures.
@@ -53,17 +59,29 @@ describe('ImageGallery', () => {
     it('mounts without crashing and renders its filter controls', () => {
         expect(() => renderGallery()).not.toThrow();
 
-        expect(screen.getByLabelText('Szöveg keresése:')).toBeInTheDocument();
-        expect(screen.getByLabelText('Szerző keresése:')).toBeInTheDocument();
-        expect(screen.getByLabelText('Cikk cím keresése:')).toBeInTheDocument();
+        expect(screen.getByLabelText('Keresés a lapok szövegében')).toBeInTheDocument();
+        expect(screen.getByLabelText('Szerző neve')).toBeInTheDocument();
+        expect(screen.getByLabelText('Cikk címe')).toBeInTheDocument();
     });
 
     // A year reads twice on the page — once as a navigation pill, once as the
-    // section header — so these assertions target the pill by role.
-    const yearPill = (year: string) => screen.getByRole('link', { name: year });
+    // section header — so these assertions target the pill by role. The pill's
+    // accessible name now carries its issue count too, hence the prefix match.
+    const yearPill = (year: string) =>
+        screen.getByRole('link', { name: new RegExp(`^${year}`) });
 
     it('lists the archive years, so the data actually reached the render', () => {
         renderGallery();
+        expect(yearPill('1989')).toBeInTheDocument();
+    });
+
+    // The masthead owns the toggle; with it closed the archive still browses.
+    it('hides the filter panel until search is opened, keeping the years', () => {
+        renderGallery(['/'], false);
+
+        expect(
+            screen.queryByLabelText('Keresés a lapok szövegében')
+        ).not.toBeInTheDocument();
         expect(yearPill('1989')).toBeInTheDocument();
     });
 
@@ -110,21 +128,21 @@ describe('ImageGallery', () => {
         renderGallery(['/1993']);
 
         expect(yearPill('1993')).toHaveClass('active');
-        expect(screen.getByText('Mind')).not.toHaveClass('active');
+        expect(yearPill('Mind')).not.toHaveClass('active');
         expect(document.title).toBe('1993 — Demokrata Újság Archívum');
     });
 
     it('falls back to the whole archive for a year that does not exist', () => {
         renderGallery(['/2050']);
 
-        expect(screen.getByText('Mind')).toHaveClass('active');
+        expect(yearPill('Mind')).toHaveClass('active');
         expect(document.title).toBe('Demokrata Újság Archívum');
     });
 
     it('reads filters out of the URL so a shared link keeps them', () => {
         renderGallery(['/?author=Horv%C3%A1th%20Lajos']);
 
-        expect(screen.getByLabelText('Szerző keresése:')).toHaveValue(
+        expect(screen.getByLabelText('Szerző neve')).toHaveValue(
             'Horváth Lajos'
         );
     });
@@ -137,7 +155,7 @@ describe('ImageGallery', () => {
 
         renderGallery();
 
-        fireEvent.change(screen.getByLabelText('Szöveg keresése:'), {
+        fireEvent.change(screen.getByLabelText('Keresés a lapok szövegében'), {
             target: { value: 'zzzznincsilyen' },
         });
 
@@ -158,9 +176,11 @@ describe('ImageGallery', () => {
                 screen.getByText('Nincs találat a megadott szűrőkre.')
             ).toBeInTheDocument();
         });
+        // Offered twice with the panel open — once in it, once in the empty
+        // state — and either is a way out of a search that found nothing.
         expect(
-            screen.getByRole('button', { name: 'Szűrők törlése' })
-        ).toBeInTheDocument();
+            screen.getAllByRole('button', { name: 'Szűrők törlése' }).length
+        ).toBeGreaterThan(0);
     });
 
     // The search box syncs both ways: the URL feeds the input, and typing is
@@ -174,7 +194,7 @@ describe('ImageGallery', () => {
         );
 
         renderGallery();
-        const input = screen.getByLabelText('Szöveg keresése:');
+        const input = screen.getByLabelText('Keresés a lapok szövegében');
 
         fireEvent.change(input, { target: { value: 'szabadság' } });
         await act(async () => {
@@ -210,7 +230,7 @@ describe('ImageGallery', () => {
         );
 
         renderGallery();
-        fireEvent.change(screen.getByLabelText('Szöveg keresése:'), {
+        fireEvent.change(screen.getByLabelText('Keresés a lapok szövegében'), {
             target: { value: 'szabadság' },
         });
         await act(async () => {
@@ -219,7 +239,7 @@ describe('ImageGallery', () => {
 
         await waitFor(() => {
             expect(
-                screen.getByText('A keresési index nem tölthető be. Próbáld újra.')
+                screen.getByText('A keresési index nem tölthető be. Kérjük, próbálja újra.')
             ).toBeInTheDocument();
         });
         expect(
@@ -238,7 +258,7 @@ describe('ImageGallery', () => {
         ]);
 
         expect(screen.getByRole('dialog')).toBeInTheDocument();
-        expect(screen.getByLabelText('Szerző keresése:')).toHaveValue(
+        expect(screen.getByLabelText('Szerző neve')).toHaveValue(
             'Horváth Lajos'
         );
         expect(yearPill('1989')).toHaveClass('active');

@@ -1,37 +1,84 @@
+/* ---------------------------------------------------------------------------
+   Paper, not screen.
+
+   The archive is read by people around 60 and older, and the single biggest
+   legibility win for that group is losing the dark background: light text on a
+   dark field scatters in an ageing lens (and in the astigmatism that usually
+   comes with it), which blurs edges and slows reading. So the surface is a warm
+   off-white and the ink is a warm near-black — which also happens to be what a
+   newspaper archive should look like.
+
+   The brand gold survives as a FILL (gold plate, ink text — 8.6:1). As a text
+   colour on paper it is illegible, so text and icons use a darkened bronze.
+   --------------------------------------------------------------------------- */
 :root {
-  /* Color variables */
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
-  --link-color: #dcba1d;
-  --button-bg: #1a1a1a;
-  --focus-outline: -webkit-focus-ring-color;
+  /* Surfaces */
+  --paper: #fbf8f2;
+  --paper-card: #ffffff;
+  --paper-sunk: #f4eee2;
+  --paper-gold: #f8f0d2;
+
+  /* Ink */
+  --ink: #241f19;
+  --ink-2: #574d40;
+  --ink-3: #7c7060;
+  /* Disabled text. Deliberately still readable (5.5:1): an older reader has to
+     be able to tell what a currently unavailable control says. */
+  --ink-off: #6b5f50;
+
+  /* Rules */
+  --rule: #ded5c3;
+  --rule-strong: #c2b69e;
+  --rule-gold: #e7d9a4;
+
+  /* Brand */
+  --gold: #dcba1d;
+  --gold-deep: #8a6a12;
+  --gold-deeper: #6b520a;
+  --danger: #8c2f39;
+
+  --focus-ring: #1c4f9c;
+
+  /* Kept as a variable name for the components that already reference it, now
+     pointing at the on-paper accent rather than the on-black one. */
+  --link-color: var(--gold-deep);
 
   /* Typography */
-  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-serif: Spectral, Georgia, "Times New Roman", serif;
+  --font-sans: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --font-family: var(--font-sans);
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-size-base: 18px;
-  --line-height: 1.6;
+  --font-weight-medium: 700;
+  --font-size-base: 19px;
+  --line-height: 1.55;
 
-  /* Base styles */
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.9) !important; /* Increased contrast slightly */
-  background-color: #242424 !important;
-  font-family: var(--font-family);
+  /* The page-wide type scale. "Nagyobb betűk" moves this one number. */
+  --scale: 1;
+
+  --content-max: 1180px;
+
+  color-scheme: light;
+  color: var(--ink);
+  background-color: var(--paper);
+  font-family: var(--font-sans);
   font-size: var(--font-size-base);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
 
-  /* Rendering optimizations */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Set on <html> by the "Nagyobb betűk" switch; persists in localStorage. */
+:root[data-textsize='large'] {
+  --scale: 1.15;
+}
+
 ::selection {
-  background-color: var(--link-color);
-  color: #242424;
+  background-color: var(--gold);
+  color: var(--ink);
 }
 
 * {
@@ -40,51 +87,102 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--paper);
+  color: var(--ink);
 }
 
 a {
   font-weight: var(--font-weight-medium);
-  color: var(--link-color);
-  text-decoration: inherit;
+  color: var(--gold-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--gold-deeper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: calc(2.4rem * var(--scale));
+  line-height: 1.05;
 }
 
 button {
-  border-radius: 8px;
-  border: 2px solid transparent; /* Thicker border for better visibility */
-  padding: 14px 24px; /* Larger touch target */
-  display: flex;
+  border-radius: 10px;
+  /* 2px, not 1: a hairline border is the first thing to disappear for a reader
+     who needs the page zoomed. */
+  border: 2px solid var(--ink);
+  padding: 0 22px;
+  min-height: 56px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1em; /* Larger text */
+  gap: 10px;
+  font-size: calc(1.05rem * var(--scale));
   font-weight: var(--font-weight-medium);
   font-family: inherit;
-  background-color: var(--button-bg);
+  color: var(--ink);
+  background-color: var(--paper-card);
   cursor: pointer;
-  transition: all 0.25s;
+  transition: background-color 0.15s, border-color 0.15s;
 }
 
-button:hover {
-  border-color: #dcba1d;
-  background-color: #333;
+button:hover:not(:disabled) {
+  background-color: var(--paper-sunk);
+  border-color: var(--gold-deep);
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px solid #ffd700; /* High contrast focus ring */
+button:disabled {
+  background-color: var(--paper-sunk);
+  border-color: var(--rule);
+  color: var(--ink-off);
+  cursor: not-allowed;
+}
+
+/* Blue, not gold: the focus ring has to be unmistakably not-the-brand-colour,
+   or on this palette it reads as "selected" rather than "your keyboard is
+   here". 3px + offset so it survives a zoomed page. */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Gold plate, ink text: 8.6:1, and the one thing on a screen that says "this is
+   the action". At most one per view. */
+.button-primary {
+  background-color: var(--gold);
+  border-color: var(--gold-deep);
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: #cfae14;
+  border-color: var(--ink);
 }
 
 input {
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

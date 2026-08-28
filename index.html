@@ -6,8 +6,23 @@
              is served by 404.html, where a "./" path would resolve against the route
              segment instead of the site root. -->
         <link rel="icon" type="image/svg+xml" href="%BASE_URL%logo.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <!-- No maximum-scale / user-scalable=0: this archive is read by older
+             people, and pinching the page bigger is the first thing many of them
+             do. Blocking it also contradicted the viewer, which deliberately
+             leaves Ctrl/Cmd +/-/0 and ctrl+wheel to the browser's own zoom. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Demokrata Újság Archívum</title>
+
+        <!-- Spectral for headings (an editorial serif, the paper's own register),
+             Atkinson Hyperlegible for everything else - a face drawn specifically
+             to keep letterforms apart for low-vision readers. Both carry the full
+             Hungarian accent set. display=swap so a slow font never blanks text. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        />
         <meta
             name="description"
             content="1989 októberétől a versegyházi MDF kiadásában indult a Demokrata Újság, amelyet 1998-as megszűnéséig Horváth Lajos és Krenedits Sándor vezetett. Az oldal ennek a lapnak tartalmazza az archívumát."

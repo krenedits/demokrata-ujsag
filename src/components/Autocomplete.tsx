@@ -15,17 +15,25 @@ interface AutocompleteProps extends Omit<Props, 'renderItem' | 'getItemValue'> {
     items: string[];
     label: string;
     id: string;
+    /** Optional line under the label — e.g. that titles follow the author. */
+    hint?: string;
 }
 
 const menuStyle: CSSProperties = {
     overflow: 'auto',
     position: 'absolute',
     zIndex: 1000,
-    background: '#242424',
-    borderRadius: '4px',
-    maxHeight: '200px',
-    top: 50,
+    background: '#ffffff',
+    border: '2px solid #241f19',
+    borderRadius: '10px',
+    boxShadow: '0 14px 34px rgba(36, 31, 25, 0.22)',
+    // Roomier than the old 200px: these rows are taller now, and 200px showed
+    // three and a half of them.
+    maxHeight: '320px',
+    top: '100%',
+    marginTop: '6px',
     left: 0,
+    minWidth: '100%',
 };
 
 export default function Autocomplete({
@@ -34,6 +42,7 @@ export default function Autocomplete({
     items,
     label,
     id,
+    hint,
     inputProps,
     ...props
 }: AutocompleteProps) {
@@ -45,7 +54,8 @@ export default function Autocomplete({
 
     return (
         <div className='autocomplete'>
-            <label className='filters-title' htmlFor={id}>{label}:</label>
+            <label className='filters-title' htmlFor={id}>{label}</label>
+            {hint && <span className='filters-hint'>{hint}</span>}
             <AutocompleteField
                 items={items}
                 value={input}
