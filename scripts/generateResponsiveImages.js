@@ -8,7 +8,7 @@
 // Existing files are left alone, so a rebuild costs nothing once they exist.
 //
 // Run: node scripts/generateResponsiveImages.js [--limit N] [--force]
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -81,6 +81,14 @@ for (const imagePath of targets) {
       console.log(`  ${processed}/${targets.length} done...`);
     }
   } catch (err) {
+    // existsSync at the top of the loop is the only freshness test there is, so
+    // ANY dest file still on disk after a failure — a --force run that threw
+    // over an existing rendition, a partial write, one left by an interrupted
+    // run — is counted as up to date by the next run: failed is 0, the gate at
+    // the bottom passes, and the build ships the corrupt file. (Measured: a
+    // 21-byte junk .webp survives a throw and is picked up as "already
+    // present".) Deleting it keeps the failure visible as work still to do.
+    rmSync(destPath, { force: true });
     console.error(`Failed on ${imagePath}: ${err.message}`);
     failed++;
   }
@@ -90,3 +98,13 @@ console.log('---');
 console.log(`Processed: ${processed}, already present: ${upToDate}, skipped (missing source): ${skipped}, failed: ${failed}`);
 console.log(`Original total: ${(totalOriginalBytes / 1024 / 1024).toFixed(1)} MB`);
 console.log(`Derivative total: ${(totalDerivativeBytes / 1024 / 1024).toFixed(1)} MB`);
+
+// This runs inside `yarn build`, so a silent partial failure would ship pages
+// whose derivative is missing and go green in CI. Fail the build instead.
+if (failed > 0 || skipped > 0) {
+    console.error(
+        `\nERROR: ${failed} image(s) failed and ${skipped} source(s) were missing. ` +
+        `The build would ship scans without their WebP rendition.`
+    );
+    process.exit(1);
+}

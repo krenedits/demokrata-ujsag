@@ -105,7 +105,6 @@
   width: 100%;
   max-width: 220px;
   margin-bottom: 20px;
-  transition: transform 0.2s;
   /* reset default <button> chrome from index.css */
   background: none;
   border: none;
@@ -115,15 +114,41 @@
   color: inherit;
 }
 
+/* Deliberately no transform here. A scale() grew the card past its grid cell
+   and into the band of the sticky issue header, which is opaque and sits at a
+   higher z-index — so the top of every first-row scan was painted over and
+   looked cropped. Everything below stays inside the card's own box. */
 .image-card:hover {
-  transform: scale(1.05);
   background: none;
 }
 
 .image-preview {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  /* Inset, so the highlight can never extend under the sticky header. */
+  box-shadow:
+    inset 0 0 0 0 transparent,
+    0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.15s ease-out;
+}
+
+.image-card:hover .image-preview {
+  box-shadow:
+    inset 0 0 0 3px var(--link-color),
+    0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Drawn inside the box (negative offset) for the same reason as the hover ring:
+   a focus ring outside it gets sliced by the sticky header on the top row. */
+.image-card:focus-visible {
+  outline: 4px solid #ffd700;
+  outline-offset: -4px;
+  border-radius: 12px;
+}
+
+.image-card:hover .image-date,
+.image-card:focus-visible .image-date {
+  color: var(--link-color);
 }
 
 .image-date {
@@ -134,159 +159,463 @@
   font-weight: 500;
 }
 
-/* Modal styling */
+/* ---------------------------------------------------------------------------
+   Full-size viewer. One idea: the scanned page is the only bright thing on
+   screen, and every control lives on one surface beneath it. The gallery used
+   to stay legible through the scrim while controls floated over it in five
+   separate places, which read as clutter.
+   --------------------------------------------------------------------------- */
 .modal {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  inset: 0;
+  padding: 16px;
+  overflow: auto;
+  /* Near-opaque: nothing behind the viewer should be readable. */
+  background-color: rgba(10, 10, 10, 0.96);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-.modal-content {
-  max-width: min(90%, 800px);
-  max-height: 80%;
-  border-radius: 8px;
-  overflow: auto;
+/* Without the blur to soften it, the scrim has to carry the separation alone. */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  .modal {
+    background-color: rgb(8, 8, 8);
+  }
+}
+
+/* An explicit width, not just max-width: everything inside the viewport is
+   absolutely positioned, so a fit-content box would collapse to zero and the
+   scan would never be visible. */
+.modal-panel {
   position: relative;
-}
-
-.modal-content img {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Sized so the labelled toolbar fits on one line with margin to spare —
+     narrower and "Következő" is clipped off the edge. The scan is bound by
+     height rather than width here, so the extra width costs it nothing. */
+  width: min(100%, 840px);
+  /* A definite height, not just a cap: the scan sizes itself by flexing into
+     what the chrome leaves, and flex can only distribute space the container
+     actually has. */
+  height: 100%;
   max-height: 100%;
-  cursor: pointer;
-  object-fit: contain;
+  padding: 12px 16px 16px;
+  background-color: #1c1c1c;
+  border: 1px solid #3d3d3d;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  /* The panel can still outgrow the window on short/landscape screens; without
+     a scroller the toolbar would be clipped away unreachably. */
+  overflow: auto;
 }
 
-.modal-content figcaption {
-  text-align: center;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
+/* The chrome keeps its natural height; only the scan flexes. Without this a
+   long toolbar could squeeze the caption or the links instead of the image. */
+.panel-header,
+.panel-caption,
+.viewer-toolbar,
+.panel-secondary {
+  flex: 0 0 auto;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Flexes to whatever the chrome leaves over, at every size. A viewport-height
+   guess can't know how tall the toolbar wrapped to, and on a short window it
+   pushed controls off the bottom edge. */
+.scan-figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  margin: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
-.caption-text {
-  color: white;
+/* The aspect ratio is set inline from the file's own dimensions (one scan is
+   landscape), so the box is the right shape before any pixels arrive and the
+   layout never jumps when the full image lands. */
+.scan-viewport {
+  position: relative;
+  overflow: hidden;
+  /* Takes every pixel the chrome leaves over. A vh guess can't know how tall
+     the header, caption and toolbar actually are, and the previous one
+     (58vh) left a 900px-tall window showing a 379px-wide page marooned in a
+     780px panel — in the one view meant for reading. */
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Width follows from the flexed height and the inline aspect-ratio, so the
+     box is exactly the page's shape at whatever size it ends up. `auto` is
+     safe here precisely because aspect-ratio gives it a basis — it is not the
+     shrink-to-fit that would collapse around the absolutely-positioned scan. */
+  width: auto;
+  max-width: 100%;
+  /* Only an upper bound now, for very tall windows. */
+  max-height: 1000px;
+  /* The browser must not claim the gestures: pinch and drag are ours. */
+  touch-action: none;
+  cursor: zoom-in;
+  /* Transparent, not a dark plate: when a short window squeezes the box, the
+     leftover space would otherwise read as an empty frame around the page. */
+  background-color: transparent;
+  border-radius: 10px;
 }
 
-.download-button {
-  padding: 12px 24px; /* Larger button */
-  font-size: 16px;
-  background-color: var(--link-color);
-  color: #242424;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-  margin-top: 8px;
-  cursor: pointer;
+.scan-viewport.is-zoomed {
+  cursor: grab;
 }
 
-.close-container {
+.scan-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.scan-stage {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.2s;
-  z-index: 10;
-  border: 2px solid transparent;
-  font: inherit;
+  inset: 0;
+  transform-origin: center center;
+  will-change: transform;
 }
 
-.close-container:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  border-color: #ffd700;
+.scan-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-.close-icon {
-  color: white;
-  font-size: 40px;
-  line-height: 0.8;
+/* Reuses the thumbnail the gallery already downloaded, so the wait for a
+   ~700KB scan shows the page rather than an empty rectangle. */
+.scan-lqip {
+  filter: blur(8px);
+  transform: scale(1.04); /* hides the blur's soft edge */
 }
 
-.close-label {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
+.scan-full {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
 }
 
-.previous,
-.next {
+.scan-full.is-loaded {
+  opacity: 1;
+}
+
+.scan-spinner {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  cursor: pointer;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px 10px;
-  border: 2px solid transparent;
-  z-index: 1;
-  border-radius: 8px;
-  min-width: 80px;
-  transition: all 0.2s;
-  height: auto;
-  width: auto;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--link-color);
+  border-radius: 50%;
+  animation: scan-spin 800ms linear infinite;
 }
 
-.nav-content {
-  display: flex;
-  flex-direction: column;
+@keyframes scan-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* One toolbar, inside the panel, never over the scan. Paging sits at the two
+   ends with the zoom group between them, so a hand reaching for "next" is
+   nowhere near "zoom". */
+/* A grid, not a wrapping flex row: paging must hold the two ends at every
+   width, and wrapping once dropped "Következő" onto its own line. */
+.viewer-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  /* Centre, not stretch: stretch made the paging buttons grow to whatever
+     height the zoom group happened to take, which is what left the row ragged. */
   align-items: center;
-  gap: 4px;
+  gap: 16px;
 }
 
-.nav-icon {
-  font-size: 40px;
+/* nowrap: a wrapped "Eredeti méret" dropped out of the row and dragged the
+   whole toolbar's height with it. If it can't fit, the breakpoint below moves
+   it, rather than letting it break the line. */
+.tool-zoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+/* One height for every control in the chrome, so the toolbar reads as a single
+   aligned row rather than a ragged pile. 56px in both axes: this archive is
+   read by older people, and a mis-tap here turns the page instead of
+   magnifying it. Icon and label sit side by side — vertical space in the panel
+   belongs to the scan. */
+.tool-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 56px;
+  min-width: 56px;
+  padding: 0 14px;
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 2px solid #7a7a7a;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.tool-button:hover:not(:disabled) {
+  background-color: #3b3b3b;
+  border-color: var(--link-color);
+}
+
+/* Quiet and inert, never decorated. A dashed border reads as a placeholder or
+   an error — "something is broken here" — rather than "not available now".
+   Three signals at once (fill, contrast, cursor) so it never rests on colour
+   alone, but all of them recede: the enabled controls should draw the eye. */
+/* Recessive but still legible: #8a8a8a on #232323 measures 4.55:1, just over the
+   4.5:1 AA threshold, because an older reader still has to be able to read what
+   is currently unavailable. There is almost no headroom — do not dim further. */
+.tool-button:disabled {
+  background-color: #232323;
+  color: #8a8a8a;
+  border-color: #383838;
+  cursor: not-allowed;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
   line-height: 1;
 }
 
-.nav-label {
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
+.tool-label {
+  font-size: 0.95rem;
 }
 
-.previous:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #ffd700;
-  border-color: #ffd700;
-  transform: translateY(-50%) scale(1.05); /* slightly less scale for stable text */
+/* 48px rather than the toolbar's 56: still a comfortable target, and the
+   header row is pure chrome sitting on height the scan wants. */
+.panel-close {
+  gap: 10px;
+  height: 48px;
+  padding: 0 20px;
 }
 
-.previous {
-  left: 20px;
+/* Sits between the two zoom buttons and must not shift as the digits change,
+   so it gets a fixed box and tabular figures rather than centring on whatever
+   width "100%" happens to be. */
+.zoom-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 68px;
+  height: 56px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.next {
-  right: 20px;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-@media (max-width: 768px) {
-  .previous,
-  .next {
-    font-size: 30px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+/* Says which page you are looking at, directly above the controls that change
+   it. Nothing else in the panel repeats this. */
+.panel-caption {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.panel-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-top: 8px;
+  border-top: 1px solid #333;
+}
+
+/* Quieter than the toolbar on purpose: neither is why anyone opened a scan. */
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--link-color);
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A short window (a laptop, or any browser with toolbars open) is the case
+   where fixed chrome starves the scan: at 560px tall it was taking 278px and
+   leaving the page 250px. Everything that isn't the scan gets tighter here. */
+@media (max-height: 700px) {
+  .modal {
+    padding: 8px;
+  }
+
+  .modal-panel {
+    gap: 6px;
+    padding: 8px 12px 10px;
+  }
+
+  /* 48px stays the floor even here — the space has to come from padding and
+     type, not from the size of things people have to hit. */
+  .panel-close {
+    height: 48px;
+  }
+
+  .panel-caption {
+    font-size: 0.95rem;
+  }
+
+  .panel-secondary {
+    gap: 20px;
+    padding-top: 6px;
+  }
+
+  .secondary-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 620px) {
+  /* Full screen on a phone. The chrome keeps its natural height and the scan
+     absorbs whatever is left, so no control can ever end up half off the
+     bottom edge — which no viewport-height guess can guarantee. */
+  .modal {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .modal-panel {
+    width: 100%;
+    max-height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 8px 10px 12px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  /* The panel is full-height here, so the flex line has a definite height to
+     hand the scan — it takes whatever the chrome leaves rather than a vh
+     guess, and no control can end up half off the bottom edge. */
+  .scan-viewport {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-width: 100%;
+    max-height: none;
+  }
+
+  /* Two rows, no more: paging together on the first, zoom on the second.
+     The rows are assigned explicitly because auto-placement follows DOM
+     order, and the full-width zoom group sitting between the two paging
+     buttons pushed "Következő" onto a third row — leaving the pair split
+     with the zoom controls wedged between them. */
+  .viewer-toolbar {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .tool-prev {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .tool-next {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .tool-zoom {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 8px;
+  }
+
+  /* "400%" is 4 tabular digits — 56px is still a fixed, non-shifting box, and
+     the 12px it gives back is what buys "Eredeti méret" its full label on a
+     360px phone instead of a second line. Not a tap target, so the 48px floor
+     doesn't apply to it. */
+  .zoom-level {
+    min-width: 56px;
+  }
+
+  /* Four labelled buttons cannot fit one phone-width row, and stacking them
+     is what produced the pile. The glyphs sit either side of the "100%"
+     readout, which says what they do; the words stay for screen readers via
+     aria-label. "Eredeti méret" keeps its text — it has no obvious glyph. */
+  .tool-zoom .tool-button .tool-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  /* Needs to outrank `.tool-zoom .tool-button .tool-label` above, which is a
+     three-class selector — a two-class one loses and the button renders as an
+     empty box. */
+  .tool-zoom .tool-reset .tool-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    /* The row is nowrap and the panel is overflow: hidden, so at 320-360px
+       "Eredeti méret" — 117px on one line — was painted straight through the
+       panel's edge and clipped, with nothing to scroll it back into view. It
+       gets ~96px there, so the label takes two lines instead. Whole words, not
+       an ellipsis: the reader has to be able to tell what the button does, and
+       two 20px lines still sit inside the 56px target, so the toolbar stays
+       two rows rather than growing a third at the scan's expense. */
+    white-space: normal;
+    text-align: center;
+  }
+
+  .tool-reset {
+    flex: 1 1 auto;
+    /* Below the label's own min-content the words would overflow again, so the
+       button is allowed to keep the width its longest word needs. */
+    min-width: min-content;
+  }
+
+  .panel-secondary {
+    gap: 24px;
+    padding-top: 8px;
   }
 }
 
@@ -304,13 +633,6 @@
     padding: 10px;
     font-size: 1em;
   }
-}
-
-.previous:disabled,
-.next:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .filters {
